@@ -1,0 +1,44 @@
+@use "sass:math";
+
+:root {
+  --color-white: #ffffff;
+  --color-light-grey: #adadad;
+  --color-light-blue: #1f64fb;
+  --color-blue: #1e0e62;
+  --color-dark-blue: #000212;
+  --color-dark-blue-o: rgba(0, 13, 41, 0.6);
+  --card-bg-gradient: linear-gradient(#052f32 40%, #0d2432 10%);
+  --dark-green-gradient: radial-gradient(#073F3D 100%, #000212 100%);
+}
+
+@function rem($px) {
+  @if math.is-unitless($px) {
+    @return calc($px / 16) * 1rem;
+  } @else {
+    @return calc($px / 16) * 1rem;
+  }
+}
+
+$color-text: var(--color-white);
+$color-background: var(--color-dark-blue);
+$color-header-background: var(--color-dark-blue-o);
+$font-main: 'Inter', 'Arial', sans-serif;
+$transition-time: 0.3s;
+
+$sm: 576px;
+$md: 768px;
+$lg: 1000px;
+$xl: 1200px;
+$xxl: 1440px;
+
+$content-width: $xxl;
+$min-width: 325px;
+
+// $cursor-default: url(/images/cursors/default.cur) 0 0, default;
+// $cursor-pointer: url(/images/cursors/pointer.cur) 10 0, pointer;
+
+@mixin bp-sm { @media (max-width: $sm) { @content; } }
+@mixin bp-md { @media (max-width: $md) { @content; } }
+@mixin bp-lg { @media (max-width: $lg) { @content; } }
+@mixin bp-xl { @media (max-width: $xl) { @content; } }
+@mixin bp-xxl { @media (max-width: $xxl) { @content; } }

@@ -1,0 +1,12 @@
+{
+  "menu": {
+    "about": "About",
+    "projects": "Projects",
+    "contacts": "Contacts"
+  },
+  "main": {
+    "title": "Technology That Inspires Confidence",
+    "description": "Delivering clarity and efficiency through\ninnovative tools and expertise.",
+    "contact_us": "Contact us"
+  }
+}
