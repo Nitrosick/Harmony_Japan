@@ -8,5 +8,24 @@
     "title": "Technology That Inspires Confidence",
     "description": "Delivering clarity and efficiency through\ninnovative tools and expertise.",
     "contact_us": "Contact us"
+  },
+  "description": {
+    "title": "Technology that solves real business problems.",
+    "text": "Harmony Technologies provides independent solutions in data analytics, event management, and custom development, designed to match your specific needs. Each product works on its own, so you only invest in what truly matters to your business."
+  },
+  "projects": {
+    "title": "Our work is built around three key directions",
+    "items": {
+      "titles": [
+        "Search Anywhere Framework — platform that unifies all data for instant search and analytics",
+        "Eventico — Online platform for effortless event management",
+        "Custom Websites & Automation"
+      ],
+      "descriptions": [
+        "Harmony Technology is the official distributor and trusted partner",
+        "Clients run and manage events with a simple monthly subscription",
+        "Harmony Technology builds custom websites and automation systems tailored to your business needs — from processes to customer platforms, built to scale"
+      ]
+    }
   }
 }

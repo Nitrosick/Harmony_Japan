@@ -15,7 +15,6 @@
 <script setup>
 const { setLocale, locale } = useI18n()
 const l = ref('en')
-console.log(locale)
 l.value = locale.value ?? 'en'
 watch(l, (value) => { setLocale(value) })
 </script>

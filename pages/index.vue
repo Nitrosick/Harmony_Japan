@@ -1,10 +1,8 @@
 <template>
   <!-- <Loader :on="loading" /> -->
   <Main />
-  <!-- <AboutMe />
+  <Description />
   <Projects />
-  <Contacts />
-  <Back /> -->
 </template>
 
 <script setup>

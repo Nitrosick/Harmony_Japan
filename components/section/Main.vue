@@ -25,5 +25,6 @@
   justify-content: center;
   gap: rem(60);
   text-align: center;
+  padding: 0 rem(80);
 }
 </style>

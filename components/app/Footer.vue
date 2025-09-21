@@ -1,58 +1,36 @@
 <template>
   <footer class="footer">
-    <div class="author">
-      <div class="name caption">Nikita Buzhinskiy</div>
-      <div class="caption">A Frontend Developer</div>
+    <div class="footer-content content">
+      <img
+        src="/images/logo_2.svg"
+        alt="logo"
+        class="footer-logo"
+        loading="lazy"
+        width="271"
+        height="21"
+      >
     </div>
-    <Logo class="logo" />
-    <Social class="social-desktop" />
-    <Social class="social-mobile" :minimized="true" />
   </footer>
 </template>
 
 <style lang="scss" scoped>
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: $unit;
-  padding-top: $unit;
-  line-height: 1.5;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // width: 100%;
+  // background-color: $color-header-background;
 
-  @include bp-md {
-    padding-top: 0;
-  }
-}
-
-.author {
-  @include bp-md {
-    display: none;
-  }
-}
-
-.logo {
-  display: none;
-
-  @include bp-md {
-    display: inline-block;
-  }
-}
-
-.name {
-  font-weight: 700;
-}
-
-.social-desktop {
-  @include bp-sm {
-    display: none;
-  }
-}
-
-.social-mobile {
-  display: none;
-
-  @include bp-sm {
+  &-content {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(70) rem(80);
+  }
+
+  &-logo {
+    max-width: rem(271);
+    max-height: rem(21);
   }
 }
 </style>

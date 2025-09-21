@@ -90,7 +90,7 @@ button {
 
 ::selection {
   color: $color-text;
-  background-color: $color-background;
+  background-color: var(--color-blue);
 }
 
 ::-moz-selection {
