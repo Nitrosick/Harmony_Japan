@@ -8,7 +8,7 @@
   --color-dark-blue: #000212;
   --color-dark-blue-o: rgba(0, 13, 41, 0.6);
   --card-bg-gradient: linear-gradient(rgba(5, 47, 50, 0.4), rgba(13, 36, 50, 0.1));
-  --dark-green-gradient: radial-gradient(#073F3D 100%, #000212 100%);
+  --dark-green-gradient: radial-gradient(#073F3D, transparent 75%);
 }
 
 @function rem($px) {

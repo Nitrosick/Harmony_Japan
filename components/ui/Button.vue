@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     v-if="to"
-    :to="to"
+    :to="$localePath(to)"
     class="button"
   >
     <div class="button-text">

@@ -3,6 +3,7 @@
   <Main />
   <Description />
   <Projects />
+  <Contacts />
 </template>
 
 <script setup>

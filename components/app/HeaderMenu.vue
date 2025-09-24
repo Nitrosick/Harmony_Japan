@@ -3,7 +3,7 @@
     <NuxtLink
       v-for="item in menuItems"
       :key="item.id"
-      :to="item.to"
+      :to="$localePath(item.to)"
       class="menu-item"
     >
       {{ $t(`menu.${item.text}`) }}

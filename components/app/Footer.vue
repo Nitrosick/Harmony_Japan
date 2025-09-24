@@ -15,17 +15,15 @@
 
 <style lang="scss" scoped>
 .footer {
-  // position: absolute;
-  // bottom: 0;
-  // left: 0;
-  // width: 100%;
-  // background-color: $color-header-background;
-
   &-content {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: rem(70) rem(80);
+    background: var(--dark-green-gradient);
+    background-size: 90% 120%;
+    background-position: center rem(110);
+    background-repeat: no-repeat;
   }
 
   &-logo {

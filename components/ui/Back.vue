@@ -70,7 +70,7 @@ onUnmounted(() => {
   &:focus,
   &:active {
     .back-button-bg {
-      opacity: 0.5;
+      opacity: 0.4;
     }
 
     .back-button-icon {
