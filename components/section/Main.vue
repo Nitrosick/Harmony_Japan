@@ -1,10 +1,14 @@
 <template>
   <div class="main">
     <h1>{{ $t('main.title') }}</h1>
-    <p v-html="$t('main.description')" />
+    <p
+      class="main-text"
+      v-html="$t('main.description')"
+    />
     <Button
       :text="$t('main.contact_us')"
       to="#contacts"
+      :adaptable="false"
     />
   </div>
 </template>
@@ -25,6 +29,10 @@
   justify-content: center;
   gap: rem(60);
   text-align: center;
-  padding: 0 rem(80);
+  padding: 0 fluid(80, 20);
+
+  &-text {
+    max-width: rem(400);
+  }
 }
 </style>

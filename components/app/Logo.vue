@@ -13,10 +13,7 @@
 
 <style lang="scss" scoped>
 .logo {
-  max-width: rem(156);
-  max-height: rem(42);
-
-  // @include bp-sm {
-  // }
+  max-width: fluid(156, 108);
+  max-height: fluid(42, 26);
 }
 </style>

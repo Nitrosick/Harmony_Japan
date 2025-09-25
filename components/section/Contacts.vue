@@ -30,7 +30,7 @@
 
 <style lang="scss" scoped>
 .contacts {
-  padding: rem(80);
+  padding: rem(80) fluid(80, 20);
   background: var(--dark-green-gradient);
   background-size: 130% 150%;
   background-position: center -25%;
@@ -46,11 +46,12 @@
   &-description {
     opacity: 0.4;
     text-align: center;
+    max-width: rem(800);
   }
 
   &-mail {
     font-weight: 700;
-    font-size: rem(48);
+    font-size: fluid(48, 26);
     line-height: 1.3;
     letter-spacing: -0.4px;
   }

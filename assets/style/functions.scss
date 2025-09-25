@@ -1,0 +1,30 @@
+@use 'sass:math';
+
+@function decimalRound($n, $precision: 2) {
+  $precision: math.pow(10, $precision);
+
+  @return math.div(math.round($precision * $n), $precision);
+}
+
+@function rem($px) {
+  @return decimalRound(1rem * math.div($px, 16));
+}
+
+@function fluid($max, $min: null) {
+  @if $max == 0 {
+    @return 0;
+  }
+
+  @if not $min {
+    $min: 0.5625 * $max;
+  }
+
+  $min: rem($min);
+  $vw: decimalRound(math.div(100vw * $max, 1440));
+
+  @if $max > 0 {
+    @return clamp($min, $vw, rem($max));
+  } @else {
+    @return clamp(rem($max), $vw, $min);
+  }
+}

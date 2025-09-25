@@ -13,9 +13,9 @@
 
 <script setup>
 const projects = [
-  { id: 1, image: 'saf.webp', contain: true, bg: 'bg_2.webp' },
-  { id: 2, image: 'eventico.webp' },
-  { id: 3, image: 'custom.webp' }
+  { id: 1, image: 'saf', contain: true, bg: 'bg_2.webp' },
+  { id: 2, image: 'eventico' },
+  { id: 3, image: 'custom' }
 ]
 </script>
 
@@ -25,11 +25,15 @@ const projects = [
   flex-direction: column;
   align-items: center;
   gap: rem(60);
-  padding: 0 rem(80);
+  padding: 0 fluid(80, 20);
 
   &-title {
     text-align: center;
     max-width: rem(800);
+  }
+
+  @include bp-sm {
+    padding: 0;
   }
 }
 </style>

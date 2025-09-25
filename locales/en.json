@@ -1,12 +1,12 @@
 {
   "menu": {
     "about": "About",
-    "projects": "Projects",
+    "services": "Our Services",
     "contacts": "Contacts"
   },
   "main": {
-    "title": "Technology That Inspires Confidence",
-    "description": "Delivering clarity and efficiency through\ninnovative tools and expertise.",
+    "title": "Technology that Inspires Confidence",
+    "description": "Delivering clarity and efficiency through innovative tools and expertise",
     "contact_us": "Contact us"
   },
   "description": {
@@ -30,6 +30,6 @@
   },
   "contacts": {
     "title": "Let’s Build Together",
-    "description": "Tell us about your project — whether it’s data, events, or custom development.\nOur team will help you find the right solution"
+    "description": "Tell us about your project — whether it’s data, events, or custom development. Our team will help you find the right solution"
   }
 }

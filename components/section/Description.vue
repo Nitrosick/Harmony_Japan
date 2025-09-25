@@ -16,7 +16,7 @@
 
 <style lang="scss" scoped>
 .description {
-  padding: rem(120) rem(80);
+  padding: fluid(120, 80) fluid(80, 20);
   max-width: rem(1150);
 
   &-title {

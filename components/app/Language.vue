@@ -29,5 +29,10 @@ watch(l, (value) => { setLocale(value) })
     height: rem(40);
     padding-right: rem(10);
   }
+
+  @include bp-md {
+    padding: 0;
+    margin-top: rem(30);
+  }
 }
 </style>

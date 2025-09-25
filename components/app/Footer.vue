@@ -19,16 +19,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: rem(70) rem(80);
+    padding: fluid(70, 45) fluid(80, 20);
     background: var(--dark-green-gradient);
     background-size: 90% 120%;
-    background-position: center rem(110);
+    background-position: center fluid(110, 20);
     background-repeat: no-repeat;
   }
 
   &-logo {
     max-width: rem(271);
     max-height: rem(21);
+
+    @include bp-sm {
+      max-width: rem(188);
+      max-height: rem(13);
+    }
   }
 }
 </style>

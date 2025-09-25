@@ -3,6 +3,7 @@
     v-if="to"
     :to="$localePath(to)"
     class="button"
+    :class="{ 'button-adaptable': adaptable }"
   >
     <div class="button-text">
       <span v-if="text">{{ text }}</span>
@@ -37,7 +38,8 @@ const props = defineProps({
   icon: { type: String, default: null },
   href: { type: String, default: undefined },
   to: { type: String, default: undefined },
-  download: { type: [String, Boolean], default: undefined }
+  download: { type: [String, Boolean], default: undefined },
+  adaptable: { type: Boolean, default: true }
 })
 
 const target = computed(() => {
@@ -54,29 +56,44 @@ const target = computed(() => {
   align-items: center;
   justify-content: center;
   font-family: $font-main;
+  font-weight: 600;
   background-color: $color-text;
-  color: $color-background;
-  border-radius: 100rem;
-  padding: rem(25) rem(100);
+  color: var(--color-blue);
+  border-radius: fluid(24, 16);
+  padding: fluid(25, 15) fluid(100, 57);
   overflow: hidden;
+  transition: color $transition-time;
 
   &-text {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: rem(20);
+    font-size: fluid(20, 16);
     white-space: nowrap;
-    z-index: 1;
   }
 
-  // &:hover {
-  // }
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--color-light-blue);
+  }
+}
 
-  // &:focus {
-  // }
+.button-adaptable {
+  padding: fluid(25, 10) fluid(100, 45);
 
-  // &:active {
-  // }
+  @include bp-sm {
+    background-color: var(--color-white-o);
+    color: $color-text;
+    font-weight: 400;
+    border: 1px solid var(--color-light-grey);
+    transition: border-color $transition-time;
+
+    &:hover {
+      color: $color-text;
+      border-color: $color-text;
+    }
+  }
 }
 </style>

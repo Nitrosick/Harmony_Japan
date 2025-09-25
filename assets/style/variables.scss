@@ -1,36 +1,29 @@
-@use "sass:math";
+@import './functions.scss';
 
 :root {
   --color-white: #ffffff;
+  --color-white-o: #ffffff33;
   --color-light-grey: #adadad;
   --color-light-blue: #1f64fb;
   --color-blue: #1e0e62;
   --color-dark-blue: #000212;
-  --color-dark-blue-o: rgba(0, 13, 41, 0.6);
-  --card-bg-gradient: linear-gradient(rgba(5, 47, 50, 0.4), rgba(13, 36, 50, 0.1));
+  --color-dark-blue-o: #000d2999;
+  --card-bg-gradient: linear-gradient(#052f3266, #0d24321a);
   --dark-green-gradient: radial-gradient(#073F3D, transparent 75%);
 }
 
-@function rem($px) {
-  @if math.is-unitless($px) {
-    @return calc($px / 16) * 1rem;
-  } @else {
-    @return calc($px / 16) * 1rem;
-  }
-}
-
-$color-text: var(--color-white);
-$color-background: var(--color-dark-blue);
-$color-header-background: var(--color-dark-blue-o);
-$font-main: 'Inter', 'Arial', sans-serif;
-$transition-time: 0.3s;
-
+$xs: 320px;
 $sm: 576px;
 $md: 768px;
 $lg: 1000px;
 $xl: 1200px;
 $xxl: 1440px;
 
+$color-text: var(--color-white);
+$color-background: var(--color-dark-blue);
+$color-header-background: var(--color-dark-blue-o);
+$font-main: 'Inter', 'Arial', sans-serif;
+$transition-time: 0.3s;
 $content-width: $xxl;
 $min-width: 325px;
 

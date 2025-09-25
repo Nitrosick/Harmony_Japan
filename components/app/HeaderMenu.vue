@@ -15,7 +15,7 @@
 <script setup>
 const menuItems = [
   { id: 1, to: '#about', text: 'about' },
-  { id: 2, to: '#projects', text: 'projects' },
+  { id: 2, to: '#services', text: 'services' },
   { id: 3, to: '#contacts', text: 'contacts' }
 ]
 </script>
@@ -29,6 +29,17 @@ const menuItems = [
     line-height: rem(45);
     padding: 0 rem(20);
     font-size: rem(16);
+
+    @include bp-md {
+      padding: 0;
+      font-size: rem(21);
+      font-weight: 500;
+    }
+  }
+
+  @include bp-md {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 </style>
