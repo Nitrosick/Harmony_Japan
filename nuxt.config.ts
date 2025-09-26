@@ -43,13 +43,16 @@ export default defineNuxtConfig({
     'motion-v/nuxt'
   ],
   i18n: {
+    defaultLocale: 'en',
+    detectBrowserLanguage: false,
     strategy: 'prefix',
     locales: [
       { code: 'en', iso: 'en-US', file: 'en.json' },
       { code: 'ja', iso: 'ja-JP', file: 'ja.json' }
     ],
-    defaultLocale: 'en',
-    // lazy: true,
-    langDir: '../locales/'
+    langDir: '../locales/',
+    experimental: {
+      typedOptionsAndMessages: 'default',
+    }
   }
 })

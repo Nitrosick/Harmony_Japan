@@ -17,7 +17,7 @@
     />
     <Button
       :text="$t('main.contact_us')"
-      to="#contacts"
+      to="/#contacts"
       :adaptable="false"
     />
   </div>

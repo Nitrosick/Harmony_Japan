@@ -12,13 +12,8 @@
 <script setup>
 const loading = ref(true)
 
-document.body.classList.add('lock-scroll');
-
 onMounted(() => {
-  setTimeout(() => {
-    loading.value = false
-    document.body.classList.remove('lock-scroll');
-  }, 500);
+  setTimeout(() => { loading.value = false }, 500);
 })
 </script>
 
