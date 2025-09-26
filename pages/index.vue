@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-const loading = ref(true)
+// const loading = ref(true)
 
-onMounted(() => loading.value = false)
+// onMounted(() => loading.value = false)
 </script>

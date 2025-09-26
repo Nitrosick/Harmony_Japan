@@ -3,7 +3,7 @@
     <NuxtLink
       v-for="item in menuItems"
       :key="item.id"
-      :to="$localePath(item.to)"
+      :to="item.to"
       class="menu-item"
     >
       {{ $t(`menu.${item.text}`) }}
@@ -14,9 +14,9 @@
 
 <script setup>
 const menuItems = [
-  { id: 1, to: '#about', text: 'about' },
-  { id: 2, to: '#services', text: 'services' },
-  { id: 3, to: '#contacts', text: 'contacts' }
+  { id: 1, to: '/#about', text: 'about' },
+  { id: 2, to: '/#services', text: 'services' },
+  { id: 3, to: '/#contacts', text: 'contacts' }
 ]
 </script>
 

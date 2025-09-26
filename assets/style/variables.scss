@@ -22,10 +22,10 @@ $xxl: 1440px;
 $color-text: var(--color-white);
 $color-background: var(--color-dark-blue);
 $color-header-background: var(--color-dark-blue-o);
-$font-main: 'Inter', 'Arial', sans-serif;
+$font-main: 'DM Sans', 'Arial', sans-serif;
 $transition-time: 0.3s;
 $content-width: $xxl;
-$min-width: 325px;
+$min-width: $xs;
 
 // $cursor-default: url(/images/cursors/default.cur) 0 0, default;
 // $cursor-pointer: url(/images/cursors/pointer.cur) 10 0, pointer;

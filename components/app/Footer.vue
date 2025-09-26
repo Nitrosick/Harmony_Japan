@@ -27,13 +27,8 @@
   }
 
   &-logo {
-    max-width: rem(271);
-    max-height: rem(21);
-
-    @include bp-sm {
-      max-width: rem(188);
-      max-height: rem(13);
-    }
+    max-width: fluid(271, 188);
+    max-height: fluid(21, 13);
   }
 }
 </style>

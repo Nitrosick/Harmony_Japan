@@ -1,5 +1,8 @@
 <template>
-  <div class="description content">
+  <div
+    id="about"
+    class="description content"
+  >
     <h3 class="description-title">
       {{ $t('description.title') }}
     </h3>

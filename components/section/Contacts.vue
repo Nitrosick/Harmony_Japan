@@ -1,5 +1,8 @@
 <template>
-  <div class="contacts">
+  <div
+    id="contacts"
+    class="contacts"
+  >
     <div class="contacts-content content">
       <h2>{{ $t('contacts.title') }}</h2>
       <p
