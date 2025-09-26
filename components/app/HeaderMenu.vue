@@ -5,14 +5,17 @@
       :key="item.id"
       :to="item.to"
       class="menu-item"
+      @click="emits('close')"
     >
       {{ $t(`menu.${item.text}`) }}
     </NuxtLink>
-    <Language />
+    <Language @close="emits('close')" />
   </nav>
 </template>
 
 <script setup>
+const emits = defineEmits(['close'])
+
 const menuItems = [
   { id: 1, to: '/#about', text: 'about' },
   { id: 2, to: '/#services', text: 'services' },

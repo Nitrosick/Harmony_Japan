@@ -1,5 +1,6 @@
 <template>
   <div class="layout">
+    <Loader :on="loading" />
     <Header />
     <main class="layout-content">
       <slot />
@@ -9,7 +10,16 @@
 </template>
 
 <script setup>
+const loading = ref(true)
 
+document.body.classList.add('lock-scroll');
+
+onMounted(() => {
+  setTimeout(() => {
+    loading.value = false
+    document.body.classList.remove('lock-scroll');
+  }, 500);
+})
 </script>
 
 <style lang="scss" scoped>

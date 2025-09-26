@@ -38,7 +38,10 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['store']
   },
-  modules: ['@nuxtjs/i18n'],
+  modules: [
+    '@nuxtjs/i18n',
+    'motion-v/nuxt'
+  ],
   i18n: {
     strategy: 'prefix',
     locales: [

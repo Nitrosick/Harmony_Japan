@@ -3,7 +3,7 @@
     <div class="header-content content">
       <Logo />
       <div class="header-menu">
-        <HeaderMenu />
+        <HeaderMenu @close="menuOpened = false" />
       </div>
       <button
         class="header-menu-switcher"
@@ -21,7 +21,7 @@
     class="header-dropdown-menu"
     :class="{ 'header-dropdown-menu-opened': menuOpened }"
   >
-    <HeaderMenu />
+    <HeaderMenu @close="menuOpened = false" />
   </nav>
 </template>
 
@@ -42,7 +42,7 @@ watch(menuOpened, (value) => {
   width: 100%;
   background-color: $color-header-background;
   backdrop-filter: blur(3px);
-  z-index: 2;
+  z-index: 3;
 
   &-content {
     display: flex;
@@ -78,7 +78,7 @@ watch(menuOpened, (value) => {
     height: 100%;
     backdrop-filter: blur(30px);
     padding: rem(110) fluid(80, 20) rem(40) fluid(80, 20);
-    z-index: 1;
+    z-index: 2;
     transition: opacity $transition-time;
     opacity: 0;
     pointer-events: none;

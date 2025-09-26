@@ -13,10 +13,22 @@
       />
       <Button
         :text="$t('main.contact_us')"
-        to="#contacts"
+        to="/#contacts"
       />
     </div>
-    <div class="project-card-image">
+    <Motion
+      class="project-card-image"
+      :initial="{
+        x: 30,
+        opacity: 0
+      }"
+      :while-in-view="{
+        x: 0,
+        opacity: 1,
+        transition: { duration: 2, ease: 'easeInOut' }
+      }"
+      :inViewOptions="{ once: true }"
+    >
       <picture>
         <source
           :srcset="`/images/${data.image}_m.webp`"
@@ -31,7 +43,7 @@
           height="480"
         >
       </picture>
-    </div>
+    </Motion>
   </div>
 </template>
 
@@ -46,7 +58,7 @@ const props = defineProps({
   position: relative;
   display: grid;
   grid-template-columns: 2fr 3fr;
-  gap: rem(20);
+  gap: rem(65);
   width: 100%;
   padding: fluid(80, 30);
   padding-right: 0;
@@ -54,6 +66,7 @@ const props = defineProps({
   background: var(--card-bg-gradient);
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 
   &-content {
     display: flex;

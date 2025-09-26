@@ -13,10 +13,15 @@
 </template>
 
 <script setup>
+const emits = defineEmits(['close'])
 const { setLocale, locale } = useI18n()
 const l = ref('en')
 l.value = locale.value ?? 'en'
-watch(l, (value) => { setLocale(value) })
+
+watch(l, (value) => {
+  setLocale(value)
+  emits('close')
+})
 </script>
 
 <style lang="scss" scoped>
