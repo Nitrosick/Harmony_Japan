@@ -16,9 +16,9 @@
 
 <script setup>
 const projects = [
-  { id: 1, image: 'saf', btnLabel: 'discover', to: '/products/saf', contain: true, bg: 'bg_2.webp' },
-  { id: 2, image: 'eventico', btnLabel: 'explore', to: '#' },
-  { id: 3, image: 'custom', btnLabel: 'learn', to: '#' }
+  { id: 1, image: 'saf/main', btnLabel: 'discover', to: '/products/saf', contain: true, bg: 'bg_2.webp' },
+  { id: 2, image: 'eventico/main', btnLabel: 'explore', to: '#' },
+  { id: 3, image: 'custom/main', btnLabel: 'learn', to: '#' }
 ]
 </script>
 

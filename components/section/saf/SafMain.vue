@@ -11,7 +11,7 @@
       }"
     />
     <img
-      src="/images/saf_logo.svg"
+      src="/images/saf/logo.svg"
       alt="SAF logo"
       loading="lazy"
       class="main-logo"

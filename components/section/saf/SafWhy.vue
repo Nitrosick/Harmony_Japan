@@ -1,33 +1,33 @@
 <template>
-  <div class="features-container">
+  <div class="why-container">
     <div
-      id="saf-features"
-      class="features content"
+      id="why-saf"
+      class="why content"
     >
       <div
-        v-for="feature in features"
-        :key="feature.id"
-        class="features-item"
+        v-for="item in items"
+        :key="item.id"
+        class="why-item"
         :class="{
-          'glass-card': !feature.onlyTitle,
-          'only-title': feature.onlyTitle
+          'glass-card': !item.onlyTitle,
+          'only-title': item.onlyTitle
         }"
       >
         <img
-          v-if="!feature.onlyTitle"
-          :src="`/icons/${feature.icon}.svg`"
-          :alt="feature.icon"
+          v-if="!item.onlyTitle"
+          :src="`/icons/${item.icon}.svg`"
+          :alt="item.icon"
           loading="lazy"
           width="48"
           height="48"
         >
         <h4>
-          {{ $t(`saf.features.titles[${feature.id - 1}]`) }}
+          {{ $t(`saf.why.titles[${item.id - 1}]`) }}
         </h4>
         <p
-          v-if="!feature.onlyTitle"
-          class="features-item-description"
-          v-html="$t(`saf.features.descriptions[${feature.id - 1}]`)"
+          v-if="!item.onlyTitle"
+          class="why-item-description"
+          v-html="$t(`saf.why.descriptions[${item.id - 1}]`)"
         />
       </div>
     </div>
@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-const features = [
+const items = [
   { id: 1, icon: 'saf' },
   { id: 2, icon: 'network' },
   { id: 3, onlyTitle: true },
@@ -46,14 +46,14 @@ const features = [
 </script>
 
 <style lang="scss" scoped>
-.features-container {
+.why-container {
   background: var(--dark-green-gradient);
   background-size: 100vh 100vh;
   background-position: 5vw -10vh;
   background-repeat: no-repeat;
 }
 
-.features {
+.why {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);

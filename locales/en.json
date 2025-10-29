@@ -41,7 +41,7 @@
     "title": "search anywhere framework",
     "description": "Universal platform for IT operations, cybersecurity, and business analytics. Eliminate reindexing, reduce costs, and unlock real-time insights",
     "contact_sales": "Contact sales",
-    "features": {
+    "why": {
       "titles": [
         "Search Anywhere™",
         "Ecosystem",
@@ -57,6 +57,38 @@
         "share knowledge with docs and diagrams, and build dashboards from simple metrics to advanced charts",
         "model dependencies, detect anomalies, and uncover hidden trends",
         "extend SAF language, integrate APIs, and automate data transformations"
+      ]
+    },
+    "features": {
+      "title": "Modular, Flexible, Powerful",
+      "description": "SAF modules are designed to address specific needs across IT, cybersecurity, and business environments. They can work independently or together in a unified ecosystem",
+      "titles": [
+        "Core",
+        "Incident Manager",
+        "Inventory",
+        "Compliance",
+        "Cyber Security",
+        "MITRE ATT&CK",
+        "Network",
+        "Servers",
+        "Microsoft Active Directory",
+        "Microsoft Exchange",
+        "NetMap",
+        "UBA"
+      ],
+      "descriptions": [
+        "the central engine with SAF Processing Language, automated actions, and Asset-Service-Model constructor",
+        "capture, track, and resolve incidents with customizable workflows, automation, and meta-incident throttling",
+        "unify users and assets into a deduplicated database enriched with digital fingerprints and automatic updates from sources like AD, CMDB, IPAM, and more",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
       ]
     }
   }
