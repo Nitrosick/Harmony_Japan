@@ -1,35 +1,40 @@
 {
   "menu": {
-    "about": "About",
-    "services": "Our Services",
-    "contacts": "Contacts"
+    "about": "当社について",
+    "services": "ソリューション",
+    "contacts": "お問い合わせ"
   },
   "main": {
-    "title": "Technology that Inspires Confidence",
-    "description": "Delivering clarity and efficiency through innovative tools and expertise",
-    "contact_us": "Contact us"
+    "title": "信頼を生むテクノロジー",
+    "description": "革新的なツールと専門知識で、明確さと効率を実現します",
+    "contact_us": "お問い合わせ"
   },
   "description": {
-    "title": "Technology that solves real business problems.",
-    "text": "Harmony Technologies provides independent solutions in data analytics, event management, and custom development, designed to match your specific needs. Each product works on its own, so you only invest in what truly matters to your business."
+    "title": "事業課題を解決するテクノロジー",
+    "text": "Harmony Technology (ハーモニーテクノロジー) は、データ分析、イベント管理、カスタム開発の分野で、お客様のビジネスニーズに的確に応える独立型ソリューションを提供します。各製品はそれぞれ単独で機能するため、ビジネスに本当に必要なものだけに投資することができます。"
   },
   "projects": {
-    "title": "Our work is built around three key directions",
+    "title": "当社の事業は、3つの重点領域を中心にしています。",
     "items": {
       "titles": [
-        "Search Anywhere Framework — platform that unifies all data for instant search and analytics",
-        "Eventico — Online platform for effortless event management",
-        "Custom Websites & Automation"
+        "Search Anywhere Framework — すべてのデータを一元化し、即時検索とアナリティクスを実現するプラットフォームです",
+        "Eventico — 余計な労力をかけずにイベントを管理できるオンラインプラットフォームです",
+        "カスタムWebサイト開発と業務自動化"
       ],
       "descriptions": [
-        "Harmony Technology is the official distributor and trusted partner",
-        "Clients run and manage events with a simple monthly subscription",
-        "Harmony Technology builds custom websites and automation systems tailored to your business needs — from processes to customer platforms, built to scale"
+        "Harmony Technology (ハーモニーテクノロジー) は正規販売代理店であり、信頼できるパートナーです",
+        "お客様はサブスクリプションでイベントの運営・管理ができます",
+        "Harmony Technology (ハーモニーテクノロジー) は、お客様のビジネスニーズに合わせたカスタムWebサイトと自動化システムを構築します——業務プロセスからカスタマー向けプラットフォームまで、スケールを前提に設計されています"
       ]
+    },
+    "buttons": {
+      "discover": "Discover Benefits",
+      "explore": "Explore Features",
+      "learn": "Learn More"
     }
   },
   "contacts": {
-    "title": "Let’s Build Together",
-    "description": "Tell us about your project — whether it’s data, events, or custom development. Our team will help you find the right solution"
+    "title": "緒に創りましょう",
+    "description": "プロジェクトについてお聞かせください。 データ活用、イベント運営、カスタム開発のいずれでも結構です。最適なソリューション選定を当社チームがご支援します。"
   }
 }

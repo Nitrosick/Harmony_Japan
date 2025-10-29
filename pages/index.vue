@@ -1,6 +1,8 @@
 <template>
-  <Main />
-  <Description />
-  <Projects />
-  <Contacts />
+  <div>
+    <Main />
+    <Description />
+    <Projects />
+    <Contacts />
+  </div>
 </template>

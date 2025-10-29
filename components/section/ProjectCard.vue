@@ -12,8 +12,8 @@
         v-html="$t(`projects.items.descriptions[${data.id - 1}]`)"
       />
       <Button
-        :text="$t('main.contact_us')"
-        to="/#contacts"
+        :text="$t(`projects.buttons.${data.btnLabel}`)"
+        :to="data.to"
       />
     </div>
     <Motion

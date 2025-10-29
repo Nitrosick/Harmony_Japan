@@ -11,7 +11,8 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ],
       noscript: [{ textContent: 'JavaScript is required' }]
-    }
+    },
+    pageTransition: { name: 'fade', mode: 'out-in' }
   },
   components: {
     dirs: [
@@ -40,7 +41,8 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/i18n',
-    'motion-v/nuxt'
+    'motion-v/nuxt',
+    'nuxt-gtag'
   ],
   i18n: {
     defaultLocale: 'en',
@@ -54,5 +56,10 @@ export default defineNuxtConfig({
     experimental: {
       typedOptionsAndMessages: 'default',
     }
+  },
+  gtag: {
+    id: 'G-0QJHDP20Y3',
+    enabled: process.env.NODE_ENV === 'production',
+    config: { anonymize_ip: true }
   }
 })
