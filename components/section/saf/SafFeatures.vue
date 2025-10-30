@@ -72,7 +72,6 @@ const onImgError = (event) => {
   flex-direction: column;
   align-items: center;
   gap: rem(40);
-  min-height: 100vh;
 
   &-description {
     opacity: 0.4;

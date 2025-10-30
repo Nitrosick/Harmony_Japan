@@ -90,6 +90,38 @@
         "",
         ""
       ]
+    },
+    "maintenance": {
+      "title": "Operations & Maintenance",
+      "description": "Designed for Usability and Long-Term Efficiency",
+      "titles": [
+        "Customizable UI",
+        "Seamless Integrations",
+        "Continuous Support & Updates",
+        "Training & Resources"
+      ],
+      "descriptions": [
+        "personalize dashboards and layouts for your team’s needs",
+        "connect via APIs, webhooks, syslog, JDBC, or agentless collection",
+        "bugfixes, improvements, and new features included",
+        "certified courses, wiki, webinars, and partner network to ensure your success"
+      ]
+    },
+    "calculaion": {
+      "title": "Flexible, Transparent, and Scalable",
+      "description": "With SAF, you pay only for what you use — scalable units, all connectors and agents included, and modules that grow with your needs. No hidden fees, no rigid plans. Just transparent, tailored pricing that fits any scale",
+      "sub_title": "Calculate your plan in seconds",
+      "sub_description": "Use the calculator to see how SAF adapts to your business needs — pay only for what you use",
+      "support_title": "Need additional support?",
+      "support_description": "You can purchase extra support hours and implementation assistance directly from us — the official SAF distributor — available on request",
+      "form": {
+        "dataflow": "Dataflow (GB / d)",
+        "operational": "Operational retention (days)",
+        "retrospective": "Retrospective retention (days)",
+        "replics": "Data replics",
+        "amount": "Your total annual payment will be:",
+        "order": "Order SAF"
+      }
     }
   }
 }
