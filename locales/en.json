@@ -80,15 +80,15 @@
         "the central engine with SAF Processing Language, automated actions, and Asset-Service-Model constructor",
         "capture, track, and resolve incidents with customizable workflows, automation, and meta-incident throttling",
         "unify users and assets into a deduplicated database enriched with digital fingerprints and automatic updates from sources like AD, CMDB, IPAM, and more",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Data-Driven compliance assessments with real-time dashboards, automated audits, and objective evaluations",
+        "curated correlation rules, playbooks, integrations, and dashboards updated regularly",
+        "visual tactics/techniques matrix with coverage assessment, threat modeling, and risk scoring",
+        "monitor routers, switches, configs, and resource usage. Prevent overloads, misconfigurations, and unauthorized changes",
+        "monitor CPU, RAM, disks, S.M.A.R.T. metrics, and processes. Predict failures and optimize performance",
+        "control domain accounts, track changes, detect inactive users, and ensure password/security compliance",
+        "analyze mail flows, audit mailbox access, detect anomalies like auto-forwarding and spikes in traffic",
+        "auto-discover and visualize network topology with LLDP, MAC, ARP, and port-level details",
+        "detect anomalies, fraud, and unauthorized access using user and group activity models"
       ]
     },
     "maintenance": {

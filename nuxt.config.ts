@@ -45,7 +45,7 @@ export default defineNuxtConfig({
     'nuxt-gtag'
   ],
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'ja',
     detectBrowserLanguage: false,
     strategy: 'prefix',
     locales: [
