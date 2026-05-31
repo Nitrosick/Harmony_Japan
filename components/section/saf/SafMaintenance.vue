@@ -1,111 +1,106 @@
 <template>
-  <div
-    id="saf-maintenance"
-    class="maintenance content"
-  >
-    <h2>{{ $t('saf.maintenance.title') }}</h2>
-    <p
-      class="maintenance-description"
-      v-html="$t('saf.maintenance.description')"
-    />
+  <section class="maintenance content">
+    <p class="maintenance-eyebrow">
+      {{ $t('saf.page.partner_value.eyebrow') }}
+    </p>
+    <h2>{{ $t('saf.page.partner_value.title') }}</h2>
+    <p class="maintenance-description">
+      {{ $t('saf.page.partner_value.text') }}
+    </p>
+
     <div class="maintenance-content">
       <Motion
-        v-for="num in count"
-        :key="num"
-        :initial="{
-          ...getInitialPosition(num),
-          opacity: 0
-        }"
-        :while-in-view="{
-          x: 0,
-          y: 0,
-          opacity: 1,
-          transition: { duration: 2, ease: 'easeInOut' }
-        }"
+        v-for="item in items"
+        :key="item.key"
+        :initial="{ y: 20, opacity: 0 }"
+        :while-in-view="{ y: 0, opacity: 1, transition: { duration: 0.7, ease: 'easeInOut' } }"
         :inViewOptions="{ once: true }"
       >
-        <div class="maintenance-content-item">
-          <h4>{{ $t(`saf.maintenance.titles[${num - 1}]`) }}</h4>
-          <p
-            class="maintenance-description"
-            v-html="$t(`saf.maintenance.descriptions[${num - 1}]`)"
-          />
-        </div>
+        <article class="maintenance-content-item">
+          <h3>{{ $t(`saf.page.partner_value.items.${item.key}.title`) }}</h3>
+          <p>{{ $t(`saf.page.partner_value.items.${item.key}.text`) }}</p>
+        </article>
       </Motion>
-      <img
-        src="/icons/saf.svg"
-        alt="SAF"
-        loading="lazy"
-        class="maintenance-icon"
-        width="50"
-        height="50"
-      >
     </div>
-  </div>
+
+    <div class="maintenance-actions">
+      <Button
+        :text="$t('saf.page.partner_value.primary_cta')"
+        to="/partners"
+        :adaptable="false"
+      />
+      <Button
+        :text="$t('saf.page.partner_value.secondary_cta')"
+        to="/services/saf-solution-development"
+      />
+    </div>
+  </section>
 </template>
 
 <script setup>
-const count = 4
-
-const getInitialPosition = (num) => {
-  switch (num) {
-    case 1: return { x: -30, y: -30 }
-    case 2: return { x: 30, y: -30 }
-    case 3: return { x: -30, y: 30 }
-    case 4: return { x: 30, y: 30 }
-  }
-}
+const items = [
+  { key: 'market_context' },
+  { key: 'partner_discussions' },
+  { key: 'solution_scenarios' },
+  { key: 'next_steps' }
+]
 </script>
 
 <style lang="scss" scoped>
 .maintenance {
-  padding: rem(80) fluid(80, 20);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: rem(40);
+  align-items: flex-start;
+  gap: rem(20);
+  padding: rem(64) fluid(80, 20);
+}
 
-  &-description {
-    opacity: 0.4;
-    text-align: center;
+.maintenance-eyebrow {
+  margin: 0;
+  font-size: rem(14);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.maintenance-description {
+  max-width: rem(920);
+  margin: 0;
+  opacity: 0.72;
+}
+
+.maintenance-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(20);
+  width: 100%;
+  margin-top: rem(12);
+
+  @include bp-md {
+    grid-template-columns: 1fr;
   }
+}
 
-  &-content {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    background:
-      url("/images/bg_4.webp"),
-      var(--dark-green-gradient);
-    background-position: center calc(50% - rem(15));
-    background-size: contain;
-    background-repeat: no-repeat, no-repeat;
-    max-width: rem(1062);
-    margin-top: rem(20);
+.maintenance-content-item {
+  display: flex;
+  flex-direction: column;
+  gap: rem(14);
+  height: 100%;
+  padding: fluid(30, 22);
+  border-radius: rem(28);
+  background: var(--card-bg-gradient);
 
-    &-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: rem(16);
-      padding: fluid(52, 26) fluid(32, 16) fluid(82, 41) fluid(32, 16);
-
-      h4 {
-        text-align: center;
-      }
-
-      .maintenance-description {
-        max-width: rem(400);
-      }
-    }
+  p {
+    margin: 0;
+    opacity: 0.72;
   }
+}
 
-  &-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.maintenance-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(16);
+  margin-top: rem(8);
 }
 </style>

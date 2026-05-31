@@ -15,11 +15,17 @@
       class="main-text"
       v-html="$t('main.description')"
     />
-    <Button
-      :text="$t('main.contact_us')"
-      to="/#contacts"
-      :adaptable="false"
-    />
+    <div class="main-actions">
+      <Button
+        :text="$t('main.primary_cta')"
+        to="/saf"
+        :adaptable="false"
+      />
+      <Button
+        :text="$t('main.secondary_cta')"
+        to="/contact"
+      />
+    </div>
   </div>
 </template>
 
@@ -61,6 +67,15 @@
     max-width: rem(400);
     position: relative;
     z-index: 1;
+  }
+
+  &-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(16);
   }
 }
 

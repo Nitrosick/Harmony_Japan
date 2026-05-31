@@ -1,8 +1,13 @@
 <template>
   <div>
-    <Main />
-    <Description />
-    <Projects />
-    <Contacts />
+    <HomeHero />
+    <HomeRelationship />
+    <HomeAudience />
+    <HomeSupport />
+    <HomeWhy />
+    <HomeUseCases />
+    <HomePricingTeaser />
+    <HomeTrust />
+    <HomeFinalCta />
   </div>
 </template>

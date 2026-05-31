@@ -1,24 +1,25 @@
 <template>
-  <div
-    id="saf-features"
-    class="features content"
-  >
-    <h2>{{ $t('saf.features.title') }}</h2>
-    <p
-      class="features-description"
-      v-html="$t('saf.features.description')"
-    />
+  <section class="features content">
+    <p class="features-eyebrow">
+      {{ $t('saf.page.modules.eyebrow') }}
+    </p>
+    <h2>{{ $t('saf.page.modules.title') }}</h2>
+    <p class="features-description">
+      {{ $t('saf.page.modules.text') }}
+    </p>
+
     <div class="features-tabs">
       <button
-        v-for="num in count"
-        :key="num"
+        v-for="item in modules"
+        :key="item.key"
         class="features-tabs-item"
-        :class="{ 'tab-active': currentTab === num }"
-        @click.prevent="currentTab = num"
+        :class="{ 'tab-active': currentTab === item.key }"
+        @click.prevent="currentTab = item.key"
       >
-        {{ $t(`saf.features.titles[${num - 1}]`) }}
+        {{ $t(`saf.page.modules.items.${item.key}.title`) }}
       </button>
     </div>
+
     <div class="features-content">
       <Motion
         :key="currentTab"
@@ -27,8 +28,8 @@
       >
         <div class="features-content-image">
           <img
-            :src="`/images/saf/feature_${currentTab}.webp`"
-            alt="SAF feature"
+            :src="currentImage"
+            alt="SAF module"
             loading="lazy"
             width="520"
             height="400"
@@ -36,111 +37,135 @@
           >
         </div>
       </Motion>
+
       <Motion
-        :key="currentTab"
+        :key="`${currentTab}-text`"
         :initial="motionInitial"
         :while-in-view="motionInView"
       >
         <div class="features-content-text">
-          <h3>{{ $t(`saf.features.titles[${currentTab - 1}]`) }}</h3>
-          <p
-            class="features-content-description"
-            v-html="$t(`saf.features.descriptions[${currentTab - 1}]`)"
+          <h3>{{ $t(`saf.page.modules.items.${currentTab}.title`) }}</h3>
+          <p class="features-content-description">
+            {{ $t(`saf.page.modules.items.${currentTab}.text`) }}
+          </p>
+          <Button
+            :text="$t('saf.page.modules.cta')"
+            to="/contact"
+            :adaptable="false"
           />
         </div>
       </Motion>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
-const count = 12
-const currentTab = ref(1)
+const modules = [
+  { key: 'search', image: '/images/saf/feature_1.webp' },
+  { key: 'observability', image: '/images/saf/feature_4.webp' },
+  { key: 'security', image: '/images/saf/feature_5.webp' },
+  { key: 'incident_response', image: '/images/saf/feature_2.webp' },
+  { key: 'compliance', image: '/images/saf/feature_4.webp' },
+  { key: 'ai_assisted_analysis', image: '/images/saf/feature_12.webp' }
+]
+
+const currentTab = ref(modules[0].key)
 
 const motionInitial = { x: 30, opacity: 0 }
-const motionInView = { x: 0, opacity: 1, transition: { duration: 2, ease: 'easeInOut' } }
+const motionInView = { x: 0, opacity: 1, transition: { duration: 0.8, ease: 'easeInOut' } }
+
+const currentImage = computed(() => {
+  return modules.find(item => item.key === currentTab.value)?.image || modules[0].image
+})
 
 const onImgError = (event) => {
-  event.target.src = '/images/saf/feature_1.webp'
+  event.target.src = modules[0].image
 }
 </script>
 
 <style lang="scss" scoped>
 .features {
-  padding: 0 fluid(80, 20);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: rem(40);
+  gap: rem(24);
+  padding: rem(64) fluid(80, 20);
+}
 
-  &-description {
-    opacity: 0.4;
-    text-align: center;
-    max-width: rem(1024);
+.features-eyebrow {
+  margin: 0;
+  font-size: rem(14);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.features-description {
+  max-width: rem(960);
+  margin: 0;
+  text-align: center;
+  opacity: 0.72;
+}
+
+.features-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: rem(10);
+  margin-top: rem(12);
+}
+
+.features-tabs-item {
+  padding: rem(10) rem(18);
+  border-radius: rem(999);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0.65;
+  transition: opacity $transition-time, border-color $transition-time, background-color $transition-time;
+
+  &:hover {
+    opacity: 1;
   }
+}
 
-  &-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: fluid(8, 16);
-    margin-top: rem(32);
+.tab-active {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.45);
+  background-color: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
 
-    &-item {
-      padding: rem(4) rem(20);
-      font-weight: 400;
-      font-size: fluid(20, 16);
-      line-height: 1.2;
-      color: $color-text;
-      border-bottom: 1px solid transparent;
-      opacity: 0.4;
-      transition: opacity $transition-time, border-bottom-color $transition-time;
+.features-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: fluid(40, 20);
+  width: 100%;
+  margin-top: rem(12);
 
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .tab-active {
-      opacity: 1;
-      border-bottom-color: $color-text;
-      pointer-events: none;
-    }
+  @include bp-md {
+    flex-direction: column;
   }
+}
 
-  &-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: fluid(40, 20);
-    height: rem(400);
-    margin-top: rem(20);
+.features-content-image img {
+  object-fit: contain;
 
-    @include bp-md {
-      flex-direction: column;
-      height: auto;
-    }
-
-    &-image {
-      img {
-        object-fit: contain;
-
-        @include bp-md {
-          width: 100%;
-          height: auto;
-        }
-      }
-    }
-
-    &-text {
-      display: flex;
-      flex-direction: column;
-      gap: rem(28);
-    }
-
-    &-description {
-      max-width: rem(460);
-      min-width: rem(200);
-    }
+  @include bp-md {
+    width: 100%;
+    height: auto;
   }
+}
+
+.features-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  max-width: rem(500);
+}
+
+.features-content-description {
+  margin: 0;
+  opacity: 0.72;
 }
 </style>

@@ -1,4 +1,4 @@
-const title = 'Harmony Technologies'
+const title = 'Harmony Technology'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-09-20',

@@ -1,9 +1,5 @@
-<template>
-  <div>
-    <SafMain />
-    <SafWhy />
-    <SafFeatures />
-    <SafMaintenance />
-    <Contacts />
-  </div>
-</template>
+<script setup>
+const localePath = useLocalePath()
+
+await navigateTo(localePath('/saf'), { redirectCode: 301 })
+</script>

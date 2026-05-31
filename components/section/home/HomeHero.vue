@@ -2,40 +2,31 @@
   <section class="hero">
     <Motion
       class="hero-background"
-      :initial="{ scale: 1.12 }"
+      :initial="{ scale: 1.08 }"
       :animate="{ scale: 1, transition: { duration: 8 } }"
     />
 
     <div class="hero-content content">
-      <img
-        src="/images/saf/logo.svg"
-        alt="SAF logo"
-        loading="lazy"
-        class="hero-logo"
-        width="180"
-        height="180"
-      >
-
       <p class="hero-eyebrow">
-        {{ $t('saf.page.hero.eyebrow') }}
+        {{ $t('home.hero.eyebrow') }}
       </p>
-      <h1>{{ $t('saf.page.hero.title') }}</h1>
+      <h1>{{ $t('home.hero.title') }}</h1>
       <p class="hero-description">
-        {{ $t('saf.page.hero.description') }}
+        {{ $t('home.hero.description') }}
       </p>
 
       <div class="hero-actions">
         <Button
-          :text="$t('saf.page.hero.actions.materials')"
+          :text="$t('home.hero.actions.materials')"
           to="/contact"
           :adaptable="false"
         />
         <Button
-          :text="$t('saf.page.hero.actions.demo')"
+          :text="$t('home.hero.actions.demo')"
           to="/contact"
         />
         <Button
-          :text="$t('saf.page.hero.actions.pricing')"
+          :text="$t('home.hero.actions.pricing')"
           to="/pricing"
         />
       </div>
@@ -56,8 +47,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(0, 3, 20, 0.42), rgba(0, 3, 20, 0.9)),
-    url('/images/bg_3.webp') center/cover no-repeat;
+    linear-gradient(180deg, rgba(0, 2, 18, 0.45), rgba(0, 2, 18, 0.88)),
+    url('/images/bg_1.webp') center/cover no-repeat;
   transform-origin: 50% 100%;
 }
 
@@ -69,12 +60,7 @@
   align-items: flex-start;
   gap: rem(24);
   width: 100%;
-  padding: rem(140) fluid(80, 20) rem(90);
-}
-
-.hero-logo {
-  width: rem(180);
-  height: auto;
+  padding: rem(130) fluid(80, 20) rem(80);
 }
 
 .hero-eyebrow {
@@ -87,7 +73,7 @@
 }
 
 .hero-description {
-  max-width: rem(920);
+  max-width: rem(900);
   margin: 0;
   opacity: 0.8;
 }
