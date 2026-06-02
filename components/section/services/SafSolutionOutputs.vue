@@ -18,11 +18,13 @@
 </template>
 
 <script setup>
-const { tm } = useI18n()
+const { tm, rt } = useI18n()
 
 const outputItems = computed(() => {
   const value = tm('saf_solution_development.outputs.items')
-  return Array.isArray(value) ? value : []
+  return Array.isArray(value)
+    ? value.map((item) => rt(item))
+    : []
 })
 </script>
 

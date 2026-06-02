@@ -64,7 +64,7 @@ const props = defineProps({
   secondaryTo: { type: String, default: null }
 })
 
-const { t, tm, te } = useI18n()
+const { t, tm, te, rt } = useI18n()
 
 const eyebrow = computed(() => (
   te(`${props.namespace}.hero.eyebrow`)
@@ -74,7 +74,15 @@ const eyebrow = computed(() => (
 
 const sections = computed(() => {
   const value = tm(`${props.namespace}.sections`)
-  return Array.isArray(value) ? value : []
+  return Array.isArray(value)
+    ? value.map((section) => ({
+        title: section?.title ? rt(section.title) : '',
+        text: section?.text ? rt(section.text) : '',
+        items: Array.isArray(section?.items)
+          ? section.items.map((item) => rt(item))
+          : []
+      }))
+    : []
 })
 </script>
 

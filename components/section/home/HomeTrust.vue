@@ -21,11 +21,13 @@
 </template>
 
 <script setup>
-const { tm } = useI18n()
+const { tm, rt } = useI18n()
 
 const trustItems = computed(() => {
   const value = tm('home.trust.items')
-  return Array.isArray(value) ? value : []
+  return Array.isArray(value)
+    ? value.map((item) => rt(item))
+    : []
 })
 </script>
 

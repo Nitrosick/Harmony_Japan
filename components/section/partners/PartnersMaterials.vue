@@ -27,11 +27,13 @@
 </template>
 
 <script setup>
-const { tm } = useI18n()
+const { tm, rt } = useI18n()
 
 const materialItems = computed(() => {
   const value = tm('partners.materials.items')
-  return Array.isArray(value) ? value : []
+  return Array.isArray(value)
+    ? value.map((item) => rt(item))
+    : []
 })
 </script>
 
