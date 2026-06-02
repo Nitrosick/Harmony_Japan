@@ -151,6 +151,19 @@ const textFields = [
 
 const inquiryOptionKeys = ['saf', 'pricing', 'partnership', 'saf_based_development', 'demo', 'media', 'other']
 
+const normalizeInquiryType = (value) => {
+  if (typeof value !== 'string') return ''
+
+  const normalized = value
+    .trim()
+    .toLowerCase()
+    .replace(/[\s-]+/g, '_')
+
+  return inquiryOptionKeys.includes(normalized)
+    ? normalized
+    : ''
+}
+
 const inquiryOptions = computed(() => {
   return inquiryOptionKeys.map(key => ({
     value: key,
@@ -165,7 +178,7 @@ const form = reactive({
   email: '',
   phone: '',
   country_region: '',
-  inquiry_type: '',
+  inquiry_type: normalizeInquiryType(route.query.inquiry) || (typeof route.query.pricing === 'string' ? 'pricing' : ''),
   message: '',
   selected_pricing_configuration: typeof route.query.pricing === 'string' ? route.query.pricing : '',
   consent: false

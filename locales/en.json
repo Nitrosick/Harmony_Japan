@@ -744,30 +744,126 @@
   "pricing": {
     "hero": {
       "eyebrow": "Pricing",
-      "title": "Pricing overview and calculator teaser",
-      "description": "The detailed pricing calculator will arrive in Phase 2. This first-release page introduces the pricing conversation and the estimation modes that will be supported."
-    },
-    "sections": [
-      {
-        "title": "Planned estimation modes",
-        "items": [
-          "Direct TB",
-          "Flow or daily ingest",
-          "EPS"
-        ]
-      },
-      {
-        "title": "Important note",
-        "text": "Any pricing result shown later should be treated as a preliminary estimate and not as a public offer."
-      },
-      {
-        "title": "What to do now",
-        "text": "Contact Harmony Technology to discuss your current data profile, likely scope, and next steps before the calculator is released."
+      "title": "Estimate your SAF license cost",
+      "description": "Use the calculator to prepare a preliminary annual cost estimate based on raw data volume, selected bundle, and SAF modules.",
+      "actions": {
+        "start_calculation": "Start Calculation",
+        "contact_sales": "Contact Sales"
       }
-    ],
-    "cta": {
-      "primary": "Contact us",
-      "secondary": "Explore SAF"
+    },
+    "model": {
+      "eyebrow": "Licensing model",
+      "title": "How SAF licensing is framed for estimation",
+      "intro": "This first-release page explains how the future calculator will prepare an initial annual SAF license estimate before a detailed commercial discussion.",
+      "items": {
+        "volume": "SAF pricing is estimated primarily from raw data volume in terabytes and the selected module scope.",
+        "independence": "Raw data volume is considered independently from compression, replication, storage layout, or infrastructure architecture.",
+        "commercial_terms": "Final commercial terms require confirmation by SAF-Systems and Harmony Technology as part of a real pricing discussion.",
+        "preliminary_estimate": "Any figure shown by the future calculator should be treated as a preliminary estimate, not as a public offer."
+      },
+      "note": "The pricing page is intentionally calculator-ready in this phase, but does not yet provide a final automated result."
+    },
+    "modes": {
+      "eyebrow": "Calculation modes preview",
+      "title": "Three ways the future calculator will help prepare the estimate",
+      "text": "The future calculator will support three common ways to translate customer context into a preliminary SAF license sizing discussion.",
+      "cards": {
+        "direct_tb": {
+          "label": "Mode 1",
+          "title": "Direct TB input",
+          "description": "Use a direct raw data volume value when the estimated annual sizing discussion can start from known terabytes.",
+          "inputs": "Input: Raw Data Volume (TB)"
+        },
+        "flow": {
+          "label": "Mode 2",
+          "title": "Flow / daily ingest",
+          "description": "Use expected daily ingest volume and retention period when teams know how much data is generated per day.",
+          "inputs": "Inputs: Daily ingest rate (GB/day), retention days",
+          "formula": "Formula: storageNumber = (GB/day × retention days) / 1024"
+        },
+        "eps": {
+          "label": "Mode 3",
+          "title": "EPS",
+          "description": "Use EPS and average event size when event-driven sizing is more practical than direct storage estimation.",
+          "inputs": "Inputs: EPS, average event size (bytes), retention days",
+          "formula": "Formula: storageNumber = (EPS × average event size × 86400 × retention days) / 1024^4"
+        }
+      }
+    },
+    "bundles": {
+      "eyebrow": "Bundles preview",
+      "title": "Business-oriented bundle directions that can shape the estimate",
+      "text": "The final commercial structure can vary, but the calculator is being prepared around the bundle direction and module scope relevant to the project.",
+      "items": {
+        "cybersecurity_siem": {
+          "title": "Cybersecurity / SIEM",
+          "text": "For security operations, correlation, detection support, incident handling, and security-focused monitoring scenarios."
+        },
+        "it_ops": {
+          "title": "IT Ops",
+          "text": "For operational visibility, service monitoring, infrastructure context, and platform-oriented observability discussions."
+        },
+        "compliance": {
+          "title": "Compliance",
+          "text": "For reporting, audit-oriented visibility, evidence review, and governance-related operational use cases."
+        },
+        "custom_configuration": {
+          "title": "Custom configuration",
+          "text": "For SAF-based solution scenarios that combine multiple priorities, modules, or customer-specific operational requirements."
+        }
+      }
+    },
+    "modules": {
+      "eyebrow": "Modules preview",
+      "title": "Module categories expected in the pricing scope discussion",
+      "text": "These categories are shown as a preview only in this phase. The future calculator will allow more precise module selection logic.",
+      "items": {
+        "incident_management": "Incident Management",
+        "inventory": "Inventory",
+        "case_management": "Case Management",
+        "manual_actions": "Manual Actions",
+        "network_monitoring": "Network Monitoring",
+        "server_monitoring": "Server Monitoring",
+        "ms_active_directory": "MS Active Directory",
+        "ms_exchange": "MS Exchange",
+        "network_mapping": "Network Mapping",
+        "compliance_reports": "Compliance Reports"
+      }
+    },
+    "calculator_preview": {
+      "eyebrow": "Calculator preview",
+      "title": "Interactive calculator logic is planned for the next implementation phase",
+      "text": "For now, use this page to understand the pricing structure and prepare the information needed for a pricing discussion with Harmony Technology.",
+      "note": "You can already contact Harmony Technology with estimated raw data volume, expected retention, target bundle, and module scope to start a preliminary pricing conversation.",
+      "actions": {
+        "request_quote": "Request Detailed Quote",
+        "discuss_pricing": "Discuss SAF Pricing"
+      }
+    },
+    "inquiry_guide": {
+      "eyebrow": "What to include in your pricing inquiry",
+      "title": "The most useful context for a faster pricing conversation",
+      "items": {
+        "raw_data_volume": "estimated raw data volume",
+        "daily_ingest_or_eps": "daily ingest or EPS if known",
+        "retention_period": "retention period",
+        "target_bundle_or_use_case": "target bundle or use case",
+        "required_modules": "required modules",
+        "deployment_context": "expected deployment or project context"
+      }
+    },
+    "trust": {
+      "eyebrow": "Relationship note",
+      "title": "A safe and practical pricing relationship framing",
+      "text": "SAF is developed by SAF-Systems. Harmony Technology supports SAF's introduction, communication, partner discussions, and SAF-based solution scenarios for the Japanese market. Pricing discussion at this stage should be treated as preliminary and cooperation-oriented."
+    },
+    "final_cta": {
+      "title": "Ready to estimate SAF pricing?",
+      "text": "If you already know your approximate raw data volume, retention profile, or bundle direction, Harmony Technology can help you prepare the next pricing step.",
+      "actions": {
+        "contact_sales": "Contact Sales",
+        "learn_more": "Learn More About SAF"
+      }
     }
   },
   "technology": {

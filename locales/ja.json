@@ -737,22 +737,126 @@
   "pricing": {
     "hero": {
       "eyebrow": "Pricing",
-      "title": "Pricing",
-      "description": "The calculator is planned for a later phase. This route is available now as a page shell."
-    },
-    "sections": [
-      {
-        "title": "Planned modes",
-        "items": [
-          "Direct TB",
-          "Flow or daily ingest",
-          "EPS"
-        ]
+      "title": "Estimate your SAF license cost",
+      "description": "This route is available as a pricing page shell. The interactive calculator will be added in a later phase.",
+      "actions": {
+        "start_calculation": "Start Calculation",
+        "contact_sales": "Contact Sales"
       }
-    ],
-    "cta": {
-      "primary": "Contact",
-      "secondary": "Explore SAF"
+    },
+    "model": {
+      "eyebrow": "Licensing model",
+      "title": "Pricing structure preview",
+      "intro": "English master copy is being introduced first for this route.",
+      "items": {
+        "volume": "Pricing is discussed around raw data volume and module scope.",
+        "independence": "Raw data volume is independent of compression or infrastructure layout.",
+        "commercial_terms": "Final commercial terms require confirmation in a real discussion.",
+        "preliminary_estimate": "Any future result is a preliminary estimate, not a public offer."
+      },
+      "note": "This page is a calculator-ready shell for Phase 1."
+    },
+    "modes": {
+      "eyebrow": "Calculation modes preview",
+      "title": "Planned estimation modes",
+      "text": "The full calculator will be implemented later.",
+      "cards": {
+        "direct_tb": {
+          "label": "Mode 1",
+          "title": "Direct TB input",
+          "description": "Use raw data volume in TB.",
+          "inputs": "Input: Raw Data Volume (TB)"
+        },
+        "flow": {
+          "label": "Mode 2",
+          "title": "Flow / daily ingest",
+          "description": "Use daily ingest and retention days.",
+          "inputs": "Inputs: Daily ingest rate (GB/day), retention days",
+          "formula": "Formula: storageNumber = (GB/day × retention days) / 1024"
+        },
+        "eps": {
+          "label": "Mode 3",
+          "title": "EPS",
+          "description": "Use EPS, average event size, and retention days.",
+          "inputs": "Inputs: EPS, average event size (bytes), retention days",
+          "formula": "Formula: storageNumber = (EPS × average event size × 86400 × retention days) / 1024^4"
+        }
+      }
+    },
+    "bundles": {
+      "eyebrow": "Bundles preview",
+      "title": "Bundle directions",
+      "text": "Localized pricing bundle copy can be added later if needed.",
+      "items": {
+        "cybersecurity_siem": {
+          "title": "Cybersecurity / SIEM",
+          "text": "Security-oriented scenarios."
+        },
+        "it_ops": {
+          "title": "IT Ops",
+          "text": "Operational visibility and monitoring scenarios."
+        },
+        "compliance": {
+          "title": "Compliance",
+          "text": "Governance and reporting scenarios."
+        },
+        "custom_configuration": {
+          "title": "Custom configuration",
+          "text": "Mixed or customer-specific scenarios."
+        }
+      }
+    },
+    "modules": {
+      "eyebrow": "Modules preview",
+      "title": "Module categories",
+      "text": "This is a non-interactive preview in Phase 1.",
+      "items": {
+        "incident_management": "Incident Management",
+        "inventory": "Inventory",
+        "case_management": "Case Management",
+        "manual_actions": "Manual Actions",
+        "network_monitoring": "Network Monitoring",
+        "server_monitoring": "Server Monitoring",
+        "ms_active_directory": "MS Active Directory",
+        "ms_exchange": "MS Exchange",
+        "network_mapping": "Network Mapping",
+        "compliance_reports": "Compliance Reports"
+      }
+    },
+    "calculator_preview": {
+      "eyebrow": "Calculator preview",
+      "title": "Interactive calculator will be added later",
+      "text": "For now, this page prepares the structure for the pricing discussion.",
+      "note": "Use Contact if you want to discuss a preliminary pricing estimate.",
+      "actions": {
+        "request_quote": "Request Detailed Quote",
+        "discuss_pricing": "Discuss SAF Pricing"
+      }
+    },
+    "inquiry_guide": {
+      "eyebrow": "What to include",
+      "title": "Helpful pricing inquiry context",
+      "items": {
+        "raw_data_volume": "estimated raw data volume",
+        "daily_ingest_or_eps": "daily ingest or EPS if known",
+        "retention_period": "retention period",
+        "target_bundle_or_use_case": "target bundle or use case",
+        "required_modules": "required modules",
+        "deployment_context": "expected deployment or project context"
+      }
+    },
+    "trust": {
+      "eyebrow": "Relationship note",
+      "title": "Safe relationship wording",
+      "text": "SAF is developed by SAF-Systems. Harmony Technology supports introduction, communication, partner discussions, and SAF-based solution scenarios for the Japanese market."
+    },
+    "final_cta": {
+      "title": "Ready to estimate SAF pricing?",
+      "text": "Contact Harmony Technology to continue the pricing discussion.",
+      "actions": {
+        "contact_sales": "Contact Sales",
+        "learn_more": "Learn More About SAF"
+      }
     }
   },
   "technology": {

@@ -1,7 +1,13 @@
 <template>
-  <StaticPage
-    namespace="pricing"
-    primary-to="/contact"
-    secondary-to="/saf"
-  />
+  <div class="pricing-page">
+    <PricingHero />
+    <PricingModel />
+    <PricingVolumeModes />
+    <PricingBundles />
+    <PricingModules />
+    <PricingCalculatorPreview />
+    <PricingInquiryGuide />
+    <PricingTrust />
+    <PricingFinalCta />
+  </div>
 </template>
