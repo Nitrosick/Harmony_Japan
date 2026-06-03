@@ -5,7 +5,7 @@
     <PricingVolumeModes />
     <PricingBundles />
     <PricingModules />
-    <PricingCalculatorPreview />
+    <PricingCalculator />
     <PricingInquiryGuide />
     <PricingTrust />
     <PricingFinalCta />

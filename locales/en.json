@@ -840,6 +840,95 @@
         "discuss_pricing": "Discuss SAF Pricing"
       }
     },
+    "calculator": {
+      "eyebrow": "Calculator",
+      "title": "Interactive SAF pricing estimate",
+      "text": "Use this calculator to prepare a preliminary annual SAF license estimate based on data volume mode, selected bundle, and selected modules.",
+      "modes": {
+        "direct_tb": "Direct TB",
+        "flow": "Flow / daily ingest",
+        "eps": "EPS"
+      },
+      "fields": {
+        "mode": {
+          "label": "Data volume mode"
+        },
+        "direct_tb": {
+          "label": "Raw Data Volume (TB)",
+          "placeholder": "Enter TB"
+        },
+        "flow_gb_day": {
+          "label": "Daily ingest (GB/day)",
+          "placeholder": "Enter GB/day"
+        },
+        "flow_retention_days": {
+          "label": "Retention days",
+          "placeholder": "Enter retention days"
+        },
+        "eps": {
+          "label": "EPS",
+          "placeholder": "Enter EPS"
+        },
+        "avg_event_size": {
+          "label": "Average event size (bytes)",
+          "placeholder": "Enter average event size"
+        },
+        "eps_retention_days": {
+          "label": "Retention days",
+          "placeholder": "Enter retention days"
+        },
+        "bundle": {
+          "label": "Bundle",
+          "placeholder": "Select bundle"
+        }
+      },
+      "bundles": {
+        "siem": "Cybersecurity / SIEM",
+        "it_ops": "IT Ops",
+        "compliance": "Compliance",
+        "custom": "Custom configuration"
+      },
+      "modules": {
+        "label": "Modules",
+        "items": {
+          "IM0": "Incident Management",
+          "inventory0": "Inventory",
+          "cs0": "Case Management",
+          "ma0": "Manual Actions",
+          "network0": "Network Monitoring",
+          "servers0": "Server Monitoring",
+          "msad0": "MS Active Directory",
+          "msexch0": "MS Exchange",
+          "netmap0": "Network Mapping",
+          "compl0": "Compliance Reports"
+        }
+      },
+      "storage_label": "Calculated storageNumber",
+      "actions": {
+        "calculate": "Calculate Preliminary Estimate"
+      },
+      "states": {
+        "calculating": "Calculating..."
+      },
+      "errors": {
+        "positive_values": "Please enter positive numeric values.",
+        "bundle_required": "Please select a bundle.",
+        "storage_required": "storageNumber could not be calculated. Check the selected mode inputs.",
+        "api_failed": "Unable to calculate estimate right now. Please try again or contact Harmony Technology.",
+        "cors_or_network": "The calculator request could not be completed from your browser (network or CORS restriction). You can still use the calculated storageNumber and contact Harmony Technology."
+      },
+      "result": {
+        "title": "Preliminary estimate",
+        "annual_estimate": "Annual preliminary estimate (USD)",
+        "bundle_label": "Bundle",
+        "storage_label": "storageNumber",
+        "actions": {
+          "request_quote": "Request Detailed Quote",
+          "schedule_demo": "Schedule Online Demo"
+        }
+      },
+      "disclaimer": "This value is a preliminary estimate only and does not represent a public offer. Final commercial terms require confirmation by SAF-Systems and Harmony Technology."
+    },
     "inquiry_guide": {
       "eyebrow": "What to include in your pricing inquiry",
       "title": "The most useful context for a faster pricing conversation",
