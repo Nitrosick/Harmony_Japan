@@ -1,0 +1,1096 @@
+{
+  "menu": {
+    "about": "当社について",
+    "services": "ソリューション",
+    "contacts": "お問い合わせ"
+  },
+  "nav": {
+    "services": "Services",
+    "saf": "SAF",
+    "partners": "Partners",
+    "use_cases": "Use Cases",
+    "pricing": "Pricing",
+    "technology": "Technology",
+    "blog": "Blog",
+    "company": "Company",
+    "contact": "Contact"
+  },
+  "main": {
+    "title": "信頼を生むテクノロジー",
+    "description": "革新的なツールと専門知識で、明確さと効率を実現します",
+    "contact_us": "お問い合わせ",
+    "primary_cta": "Explore SAF",
+    "secondary_cta": "Contact"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Japan-focused partner of SAF-Systems",
+      "title": "Search Anywhere Framework のご紹介",
+      "description": "English master version をもとに、新しい Home 構成を先行導入しています。Harmony Technology は SAF-Systems と連携し、日本市場向けの紹介・コミュニケーションを支援します。",
+      "actions": {
+        "materials": "資料を依頼",
+        "demo": "オンラインデモを相談",
+        "pricing": "料金の目安を見る"
+      }
+    },
+    "relationship": {
+      "eyebrow": "Relationship with SAF-Systems",
+      "title": "SAF-Systems との連携",
+      "text": "この日本語 Home では、新しい構成に対応する最小限の互換キーを提供しています。詳細な日本語コピーは後続フェーズで調整できます。",
+      "primary_cta": "Partners",
+      "secondary_cta": "SAF"
+    },
+    "audience": {
+      "eyebrow": "Audience",
+      "title": "対象となる読者",
+      "text": "このページは、企業、SI、MSP/MSSP、技術パートナー向けの入口として機能します。",
+      "items": {
+        "enterprises": {
+          "title": "Enterprises",
+          "text": "分散データの検索・分析・可視化を検討する企業向け。"
+        },
+        "system_integrators": {
+          "title": "System Integrators",
+          "text": "提案や構成検討を行う SI 向け。"
+        },
+        "msp_mssp": {
+          "title": "MSP / MSSP",
+          "text": "運用・監視・調査シナリオを検討するサービス事業者向け。"
+        },
+        "technology_partners": {
+          "title": "Technology Partners",
+          "text": "日本市場向けの紹介や連携を検討する技術パートナー向け。"
+        }
+      }
+    },
+    "support": {
+      "eyebrow": "What We Support",
+      "title": "SAF を中心とした支援領域",
+      "cards": {
+        "platform": {
+          "title": "Search Anywhere Framework",
+          "text": "分散した企業データに対する検索・分析・可視化に関する製品紹介。",
+          "cta": "SAF について"
+        },
+        "development": {
+          "title": "SAF-based Solution Support and Development",
+          "text": "導入準備、連携、ダッシュボード、運用フローに関する支援。",
+          "cta": "相談する"
+        },
+        "automation": {
+          "title": "Secondary automation support",
+          "text": "必要に応じて、関連する周辺自動化を補助的に支援します。",
+          "cta": "Contact"
+        }
+      }
+    },
+    "why": {
+      "eyebrow": "Why Harmony Technology",
+      "title": "Harmony Technology の役割",
+      "items": {
+        "market_focus": {
+          "title": "Japan market focus",
+          "text": "日本市場向けの紹介やコミュニケーションを支援します。"
+        },
+        "partner_communication": {
+          "title": "Partner communication",
+          "text": "パートナーや顧客との対話を支援します。"
+        },
+        "solution_alignment": {
+          "title": "SAF-based solution scenarios",
+          "text": "SAF を前提とした導入・連携シナリオ整理を支援します。"
+        },
+        "long_term_view": {
+          "title": "Long-term view",
+          "text": "長期的な B2B 関係を前提とした対話を重視します。"
+        }
+      }
+    },
+    "use_cases": {
+      "eyebrow": "Typical Use Cases",
+      "title": "代表的なユースケース",
+      "text": "詳細ページに進む前に、代表的な利用イメージを確認できます。",
+      "items": {
+        "security_operations": {
+          "title": "Security operations",
+          "text": "複数システムにまたがる調査や分析。"
+        },
+        "observability": {
+          "title": "Observability",
+          "text": "運用監視や可観測性の強化。"
+        },
+        "incident_investigation": {
+          "title": "Incident investigation",
+          "text": "インシデント調査時の相関分析。"
+        },
+        "compliance_visibility": {
+          "title": "Compliance visibility",
+          "text": "コンプライアンス関連データの可視化。"
+        }
+      },
+      "cta": "Use Cases"
+    },
+    "pricing_teaser": {
+      "eyebrow": "Pricing",
+      "title": "SAF ライセンス費用の目安",
+      "text": "料金計算機は後続フェーズで実装されます。ここでは Pricing ページへの導線のみ提供します。",
+      "note": "将来の計算結果は preliminary estimate として扱われます。",
+      "cta": "Pricing"
+    },
+    "trust": {
+      "eyebrow": "Trust",
+      "title": "長期的な B2B 関係を前提に",
+      "text": "Harmony Technology は、SAF の紹介、対話、関連シナリオ整理における実務的な窓口として位置づけられます。",
+      "items": [
+        "過度な法的・独占的表現を避ける",
+        "実務的な次の一歩を明確にする",
+        "資料・デモ・料金・連携の相談導線を提供する"
+      ]
+    },
+    "final_cta": {
+      "title": "次の会話を始めましょう",
+      "text": "資料、デモ、料金、または SAF 関連支援について相談できます。",
+      "primary_cta": "Contact",
+      "secondary_cta": "Pricing"
+    }
+  },
+  "description": {
+    "title": "事業課題を解決するテクノロジー",
+    "text": "Harmony Technology (ハーモニーテクノロジー) は、データ分析、イベント管理、カスタム開発の分野で、お客様のビジネスニーズに的確に応える独立型ソリューションを提供します。各製品はそれぞれ単独で機能するため、ビジネスに本当に必要なものだけに投資することができます。"
+  },
+  "projects": {
+    "title": "当社の事業は、3つの重点領域を中心にしています。",
+    "items": {
+      "titles": [
+        "Search Anywhere Framework — すべてのデータを一元化し、即時検索とアナリティクスを実現するプラットフォームです",
+        "SAF 関連ソリューションの導入・支援",
+        "カスタムWebサイト開発と業務自動化"
+      ],
+      "descriptions": [
+        "Harmony Technology (ハーモニーテクノロジー) は、SAF-Systems の日本市場向けパートナーとして、SAF の導入・紹介・コミュニケーションを支援します",
+        "SAF 関連ソリューションの検討、導入準備、運用に向けたコミュニケーションを支援します",
+        "Harmony Technology (ハーモニーテクノロジー) は、お客様のビジネスニーズに合わせたカスタムWebサイトと自動化システムを構築します——業務プロセスからカスタマー向けプラットフォームまで、スケールを前提に設計されています"
+      ]
+    },
+    "buttons": {
+      "discover": "メリットを発見する",
+      "explore": "機能を見てみる",
+      "learn": "詳細を見る",
+      "support": "View service",
+      "pricing": "View pricing"
+    }
+  },
+  "contacts": {
+    "title": "緒に創りましょう",
+    "description": "プロジェクトについてお聞かせください。 データ活用、イベント運営、カスタム開発のいずれでも結構です。最適なソリューション選定を当社チームがご支援します。"
+  },
+  "saf": {
+    "title": "search anywhere framework",
+    "description": "IT運用・サイバーセキュリティ・ビジネスアナリティクスのためのユニバーサルプラットフォーム。再インデックスを不要にし、コストを削減し、リアルタイムのインサイトを獲得しましょう",
+    "contact_sales": "営業へのお問い合わせ",
+    "why": {
+      "titles": [
+        "Search Anywhere™",
+        "エコシステム",
+        "なぜSAFは他と違うのか",
+        "ナレッジ管理と可視化",
+        "根本原因分析と相関分析",
+        "カスタムコマンド"
+      ],
+      "descriptions": [
+        "Elastic、OpenSearch、Hadoop、ClickHouse、およびSQL系データベースを横断した即時検索を、再インデックス不要で実現",
+        "IT・セキュリティ・ビジネス各モジュールを連携し、ニーズの拡大に合わせて柔軟に拡張",
+        "",
+        "ドキュメントやダイアグラムでナレッジを共有し、シンプルな指標から高度なチャートまでダッシュボードを作成します",
+        "依存関係をモデル化し、異常を検知し、隠れたトレンドを明らかにします",
+        "SAF言語を拡張し、APIを連携し、データ変換を自動化します"
+      ]
+    },
+    "features": {
+      "title": "モジュール型・柔軟・強力",
+      "description": "SAFのモジュールは、IT・サイバーセキュリティ・ビジネスの各環境における個別のニーズに対応するよう設計されています。単体でも統合エコシステムとしても機能します",
+      "titles": [
+        "Core",
+        "Incident Manager",
+        "Inventory",
+        "Compliance",
+        "Cyber Security",
+        "MITRE ATT&CK",
+        "Network",
+        "Servers",
+        "Microsoft Active Directory",
+        "Microsoft Exchange",
+        "NetMap",
+        "UBA"
+      ],
+      "descriptions": [
+        "SAF Processing Language、自動アクション、Asset-Service-Modelビルダーを備えた中核エンジン",
+        "カスタマイズ可能なワークフローと自動化、メタインシデントのスロットリングで、インシデントを記録・追跡・解決しましょう",
+        "ユーザーとアセットを統合し、AD・CMDB・IPAM などのソースからの情報で自動的に拡充される、重複排除済みの単一データベースとして管理します",
+        "リアルタイムダッシュボード、自動監査、客観的評価によるデータドリブンなコンプライアンス評価",
+        "定期的に更新されるキュレーション済みの相関ルール、プレイブック、連携機能、ダッシュボード",
+        "カバレッジ評価、脅威モデリング、リスクスコアリングを備えたビジュアル化された戦術・技術マトリクス",
+        "ルーター、スイッチ、設定、リソース使用状況を監視し、過負荷、設定ミス、無許可の変更を防ぎます",
+        "CPU・RAM・ディスク・S.M.A.R.T.メトリクス・プロセスを監視し、障害を予測してパフォーマンスを最適化します",
+        "ドメインアカウントを管理し、変更を追跡し、非アクティブなユーザーを検知し、パスワード／セキュリティのコンプライアンスを確保します",
+        "メールフローを分析し、メールボックスへのアクセスを監査し、自動転送やトラフィックのスパイクなどの異常を検知します",
+        "LLDP・MAC・ARP・ポートレベルの詳細を用いて、ネットワークトポロジーを自動検出・可視化します",
+        "ユーザーおよびグループのアクティビティモデルを用いて、異常・不正行為・不正アクセスを検知します"
+      ]
+    },
+    "maintenance": {
+      "title": "運用・保守",
+      "description": "ユーザビリティと長期的な効率を重視して設計されています",
+      "titles": [
+        "カスタマイズ可能なUI",
+        "シームレスな連携",
+        "継続的なサポートとアップデート",
+        "トレーニングとリソース"
+      ],
+      "descriptions": [
+        "チームのニーズに合わせてダッシュボードやレイアウトをパーソナライズします",
+        "API・Webhook・Syslog・JDBC・エージェントレス収集で接続できます",
+        "バグ修正、改善、新機能が含まれています",
+        "認定コース、Wiki、ウェビナー、そしてパートナーネットワークにより、貴社の成功を支援します"
+      ]
+    },
+    "calculaion": {
+      "title": "柔軟で、透明性が高く、スケーラブル",
+      "description": "SAFなら、使った分だけお支払い。スケーラブルなユニットに、すべてのコネクタとエージェントが含まれ、モジュールはニーズの拡大に合わせて成長します。隠れた料金や厳格なタリフはありません。あらゆる規模に対応する、透明でお客様に合わせた料金体系です",
+      "sub_title": "数秒で貴社の料金を見積もる",
+      "sub_description": "料金計算ツールを使って、SAFが貴社のビジネスニーズにどのように適応するかをご確認ください――使った分だけお支払いです",
+      "support_title": "追加サポートが必要ですか",
+      "support_description": "SAFの正規ディストリビューターである当社から、追加のサポート時間や導入支援を直接ご購入いただけます (ご要望に応じて提供します)",
+      "form": {
+        "dataflow": "データフロー (GB/日)",
+        "operational": "運用リテンション（日）",
+        "retrospective": "レトロスペクティブ・リテンション（日）",
+        "replics": "データレプリカ",
+        "amount": "年間のお支払い合計金額：",
+        "order": "SAFを注文する"
+      }
+    },
+    "page": {
+      "hero": {
+        "eyebrow": "Search Anywhere Framework",
+        "title": "既存システムをまたいで enterprise data を検索・分析",
+        "description": "English master version をもとに、新しい SAF ページ構成を先行導入しています。Harmony Technology は SAF-Systems と連携し、日本市場向けの紹介、コミュニケーション、パートナー対話を支援します。",
+        "actions": {
+          "materials": "資料を依頼",
+          "demo": "オンラインデモを相談",
+          "pricing": "料金の目安を見る"
+        }
+      },
+      "relationship": {
+        "eyebrow": "Developed by SAF-Systems",
+        "title": "SAF-Systems が開発し、Harmony Technology が日本向け対話を支援",
+        "text": "この日本語ルートでは、新しい SAF 構成に対応する最小限の互換キーを提供しています。Harmony Technology は SAF-Systems の日本市場向けパートナーとして、紹介、コミュニケーション、パートナー対話、関連シナリオ整理を支援します。",
+        "primary_cta": "Partners",
+        "secondary_cta": "Contact"
+      },
+      "why": {
+        "eyebrow": "Why SAF",
+        "title": "SAF を検討する理由",
+        "text": "分散した operational / security / business data を既存システムのまま扱いたいケースに向けた最小限の説明です。",
+        "items": {
+          "distributed_data": {
+            "title": "Distributed data",
+            "text": "既存環境を前提に検索・分析を検討できます。"
+          },
+          "faster_investigation": {
+            "title": "Faster investigation",
+            "text": "複数システムにまたがる調査を素早く進めやすくします。"
+          },
+          "cross_domain_visibility": {
+            "title": "Cross-domain visibility",
+            "text": "運用、セキュリティ、業務データを横断的に把握しやすくします。"
+          },
+          "phased_adoption": {
+            "title": "Phased adoption",
+            "text": "大規模な全面移行を前提にしない段階的検討が可能です。"
+          }
+        }
+      },
+      "problem_solution": {
+        "eyebrow": "Problem and Solution",
+        "title": "分散データへの実務的なアプローチ",
+        "problem": {
+          "title": "Problem",
+          "text": "複数のシステムに分かれたデータは、調査や可視化を遅くしやすくなります。"
+        },
+        "solution": {
+          "title": "Solution",
+          "text": "SAF は、完全な一元化や継続的な再インデックスを前提とせず、検索・分析・相関・可視化の検討を進めやすくします。"
+        },
+        "audience_label": "Relevant for",
+        "audiences": {
+          "enterprises": "Enterprises",
+          "system_integrators": "System Integrators",
+          "msp_mssp": "MSP / MSSP",
+          "technology_partners": "Technology Partners"
+        }
+      },
+      "use_cases": {
+        "eyebrow": "Main Use Cases",
+        "title": "代表的なユースケース",
+        "text": "詳細な日本語コピーは後続フェーズで調整しつつ、ここでは主要シナリオを案内します。",
+        "items": {
+          "security_operations": {
+            "title": "Security operations",
+            "text": "複数環境を横断する分析や調査。"
+          },
+          "observability": {
+            "title": "Observability",
+            "text": "分散環境での可観測性向上。"
+          },
+          "incident_investigation": {
+            "title": "Incident investigation",
+            "text": "インシデント調査時の相関分析。"
+          },
+          "compliance_visibility": {
+            "title": "Compliance visibility",
+            "text": "コンプライアンス関連データの可視化。"
+          }
+        },
+        "cta": "Use Cases"
+      },
+      "architecture": {
+        "eyebrow": "Architecture Diagram",
+        "title": "SAF の位置づけ",
+        "text": "このセクションは確定図ではなく、構成の考え方を示すプレースホルダーです。",
+        "columns": {
+          "sources": {
+            "label": "Existing systems",
+            "title": "Operational / security / business data",
+            "text": "既存のログ、DB、監視、業務システムなどを前提にします。"
+          },
+          "saf_layer": {
+            "label": "SAF layer",
+            "title": "Search / analysis / correlation",
+            "text": "SAF が複数システムをまたぐ検索・分析・相関のレイヤーとして機能します。"
+          },
+          "outcomes": {
+            "label": "Outcomes",
+            "title": "Visibility and investigation support",
+            "text": "可視化、調査、運用判断の支援につなげます。"
+          }
+        },
+        "note": "詳細な技術図や確定構成を示すものではありません。"
+      },
+      "modules": {
+        "eyebrow": "Modules",
+        "title": "主な capability areas",
+        "text": "ここでは SAF の代表的な領域を簡潔に示します。",
+        "items": {
+          "search": {
+            "title": "Search and data access",
+            "text": "既存システムを前提とした検索・分析。"
+          },
+          "observability": {
+            "title": "Observability",
+            "text": "サービスやインフラの可視化。"
+          },
+          "security": {
+            "title": "Cybersecurity",
+            "text": "セキュリティ運用や分析支援。"
+          },
+          "incident_response": {
+            "title": "Incident response",
+            "text": "インシデント対応の文脈整理。"
+          },
+          "compliance": {
+            "title": "Compliance and reporting",
+            "text": "ガバナンスや報告向けの可視化。"
+          },
+          "ai_assisted_analysis": {
+            "title": "AI-assisted analysis",
+            "text": "分析作業を補助する探索支援。"
+          }
+        },
+        "cta": "Contact"
+      },
+      "pricing_cta": {
+        "eyebrow": "Pricing",
+        "title": "SAF ライセンス費用の preliminary estimate",
+        "text": "Pricing は raw data volume と selected modules に依存します。詳細な calculator logic は後続フェーズで実装されます。",
+        "primary_cta": "Pricing",
+        "secondary_cta": "Contact"
+      },
+      "partner_value": {
+        "eyebrow": "Partner Value",
+        "title": "Harmony Technology が日本で支援すること",
+        "text": "紹介、コミュニケーション、パートナー対話、SAF 関連シナリオ整理の観点で支援します。",
+        "items": {
+          "market_context": {
+            "title": "Japan market context",
+            "text": "日本市場向けの実務的な文脈整理。"
+          },
+          "partner_discussions": {
+            "title": "Partner discussions",
+            "text": "企業、SI、MSP/MSSP、技術パートナーとの対話支援。"
+          },
+          "solution_scenarios": {
+            "title": "SAF-based solution scenarios",
+            "text": "導入や連携シナリオの整理支援。"
+          },
+          "next_steps": {
+            "title": "Next-step coordination",
+            "text": "資料、デモ、Pricing、関連相談への導線整理。"
+          }
+        },
+        "primary_cta": "Partners",
+        "secondary_cta": "Services"
+      },
+      "materials": {
+        "eyebrow": "Downloadable Materials",
+        "title": "資料リクエスト",
+        "text": "実ファイルの配布はまだ行わず、Contact ページからリクエストする想定です。",
+        "items": {
+          "overview": {
+            "title": "Platform overview",
+            "text": "SAF の概要説明。"
+          },
+          "use_case_pack": {
+            "title": "Use case pack",
+            "text": "代表的ユースケースの説明。"
+          },
+          "partner_discussion": {
+            "title": "Partner discussion deck",
+            "text": "パートナー対話向けの概要資料。"
+          }
+        },
+        "cta": "資料を依頼"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "よくある質問",
+        "items": {
+          "what_is_saf": {
+            "question": "SAF とは何ですか。",
+            "answer": "Search Anywhere Framework は、分散した enterprise data に対する検索・分析・相関・可視化を支援するプラットフォームです。"
+          },
+          "where_value_comes_from": {
+            "question": "なぜ全面的な一元化の前に SAF を検討するのですか。",
+            "answer": "既存システムを前提に、より早く可視化や調査価値を得やすくするためです。"
+          },
+          "what_harmony_does": {
+            "question": "Harmony Technology の役割は何ですか。",
+            "answer": "Harmony Technology は SAF-Systems の日本市場向けパートナーとして、紹介、コミュニケーション、パートナー対話、関連シナリオ整理を支援します。"
+          },
+          "is_pricing_public": {
+            "question": "Pricing は最終的な公開オファーですか。",
+            "answer": "いいえ。Pricing は preliminary estimate として扱い、詳細な商談の出発点とします。"
+          }
+        }
+      },
+      "final_cta": {
+        "title": "SAF の相談を始めましょう",
+        "text": "資料、デモ、Pricing、または SAF 関連支援について相談できます。",
+        "primary_cta": "Contact",
+        "secondary_cta": "Pricing"
+      }
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "Services",
+      "title": "SAF solutions and implementation support",
+      "description": "English master version をもとに、新しい Services 構成を先行導入しています。",
+      "primary_cta": "SAF",
+      "secondary_cta": "Contact"
+    },
+    "blocks": {
+      "value_label": "Business value",
+      "saf": {
+        "label": "Service line",
+        "title": "Search Anywhere Framework",
+        "description": "分散した enterprise data に対する検索・分析・可視化の紹介。",
+        "value": "可視化、調査速度、observability、security analytics、compliance reporting に関する検討の入口です。",
+        "cta": "SAF"
+      },
+      "development": {
+        "label": "Primary delivery support",
+        "title": "SAF-based Solution Support and Development",
+        "description": "SAF 関連プロジェクトにおける適応、連携、ダッシュボード、ワークフロー、資料支援。",
+        "value": "PoC、ローカライズ、顧客説明、パートナー対話を進めやすくします。",
+        "cta": "Development"
+      },
+      "automation": {
+        "label": "Additional capability",
+        "title": "Selected Automation Support",
+        "description": "必要に応じて、SAF 外の selected automation も補助的に支援します。",
+        "value": "主軸ではなく、追加的な支援能力として位置づけます。",
+        "cta": "Contact"
+      }
+    },
+    "final_cta": {
+      "title": "サービス相談を始めましょう",
+      "text": "詳細な日本語コピーは後続フェーズで調整しつつ、ここでは新しい route structure に対応する互換キーを提供しています。",
+      "primary_cta": "Contact",
+      "secondary_cta": "SAF"
+    }
+  },
+  "saf_solution_development": {
+    "hero": {
+      "eyebrow": "Service",
+      "title": "Support and development for SAF-based solutions",
+      "description": "English master version をもとに、このページの新しい構成を先行導入しています。",
+      "primary_cta": "Discuss",
+      "secondary_cta": "Contact"
+    },
+    "problem": {
+      "eyebrow": "Problem",
+      "title": "Enterprise platforms often need adaptation",
+      "items": [
+        "顧客環境には多くのツール、DB、監視システム、内部ワークフローがすでに存在します",
+        "パートナーや顧客は個別ダッシュボード、レポート、連携、説明資料を必要とすることがあります",
+        "PoC や implementation には product documentation 以上の実務支援が必要です",
+        "日本市場向けのコミュニケーションや資料調整が必要になることがあります",
+        "SAF 関連プロジェクトの周辺で lightweight custom development が必要になることがあります"
+      ]
+    },
+    "areas": {
+      "eyebrow": "Service Areas",
+      "title": "主な支援領域",
+      "items": {
+        "implementation_support": {
+          "title": "SAF implementation support",
+          "text": "導入準備、調整、実装支援。"
+        },
+        "dashboards_reporting": {
+          "title": "Dashboards and reporting",
+          "text": "顧客向けの表示やレポートの調整。"
+        },
+        "integrations_connectors": {
+          "title": "Integrations and connectors",
+          "text": "連携や connector 検討の支援。"
+        },
+        "partner_customer_materials": {
+          "title": "Partner and customer materials",
+          "text": "パートナーや顧客向け資料の調整。"
+        },
+        "workflow_automation": {
+          "title": "Workflow and automation around SAF",
+          "text": "SAF 関連ワークフローや補助的 automation 支援。"
+        },
+        "selected_non_saf_automation": {
+          "title": "Selected non-SAF automation",
+          "text": "主軸ではなく、追加支援としての non-SAF automation。"
+        }
+      }
+    },
+    "flow": {
+      "eyebrow": "Project Flow",
+      "title": "想定フロー",
+      "items": [
+        "Initial discussion",
+        "Context clarification",
+        "Requirements",
+        "Support plan",
+        "Prototype or configuration",
+        "Development or integration",
+        "Testing",
+        "Launch support",
+        "Continuous improvement"
+      ]
+    },
+    "outputs": {
+      "eyebrow": "Typical Outputs",
+      "title": "代表的なアウトプット",
+      "items": [
+        "SAF PoC support package",
+        "customer-specific dashboard or report",
+        "integration scenario or connector specification",
+        "partner sales or demo materials",
+        "workflow automation around incident, reporting, or compliance processes",
+        "internal tool supporting SAF project operations",
+        "selected automation or web workflow outside SAF when relevant"
+      ]
+    },
+    "final_cta": {
+      "title": "SAF 関連シナリオへの適応支援が必要ですか",
+      "text": "詳細な日本語コピーは後続フェーズで調整できます。ここでは新しいページ構成に必要な最小限の互換キーを提供しています。",
+      "primary_cta": "Contact",
+      "secondary_cta": "SAF"
+    }
+  },
+  "partners": {
+    "hero": {
+      "eyebrow": "Partners",
+      "title": "Explore SAF partnership opportunities",
+      "description": "English master version をもとに、新しい Partners 構成を先行導入しています。",
+      "actions": {
+        "discuss": "Discuss Partnership",
+        "materials": "Request Partner Materials",
+        "meeting": "Schedule Online Meeting"
+      }
+    },
+    "audience": {
+      "eyebrow": "Who this page is for",
+      "title": "想定するパートナー像",
+      "text": "この日本語ルートでは、新しい Partners ページ構成に必要な最小限の互換キーを提供しています。",
+      "items": {
+        "system_integrators": {
+          "title": "System Integrators",
+          "text": "顧客向け提案、統合、PoC、可視化、分析シナリオの検討。"
+        },
+        "msp_mssp": {
+          "title": "MSPs / MSSPs",
+          "text": "監視、SOC、incident response、reporting、managed services の検討。"
+        },
+        "technology_providers": {
+          "title": "Technology Providers",
+          "text": "周辺技術、連携、顧客シナリオとの組み合わせ検討。"
+        },
+        "local_business_partners": {
+          "title": "Local Business Partners",
+          "text": "日本市場向けの紹介、対話、実務的な連携機会の検討。"
+        }
+      }
+    },
+    "scenarios": {
+      "eyebrow": "Partnership Scenarios",
+      "title": "代表的な協業シナリオ",
+      "items": {
+        "solution_integration": {
+          "title": "Solution Integration",
+          "text": "IT、security、data analytics、observability、compliance 関連プロジェクトでの SAF 活用。"
+        },
+        "managed_services": {
+          "title": "Managed Services",
+          "text": "monitoring、SOC、incident response、reporting など managed services での活用。"
+        },
+        "joint_sales": {
+          "title": "Joint Sales",
+          "text": "説明、デモ準備、技術確認を含む共同提案の検討。"
+        },
+        "localization_market_development": {
+          "title": "Localization and Market Development",
+          "text": "日本市場向け messaging、materials、customer communication の調整。"
+        },
+        "saf_based_development_support": {
+          "title": "SAF-based Development Support",
+          "text": "dashboards、integrations、workflows、customer-specific extensions での協力。"
+        }
+      }
+    },
+    "materials": {
+      "eyebrow": "Partner Materials",
+      "title": "パートナー向け資料の相談",
+      "text": "実ファイルの直接配布ではなく、Contact ページ経由で相談する想定です。",
+      "items": [
+        "SAF overview",
+        "architecture diagrams",
+        "security and compliance overview",
+        "pricing explanation sheet",
+        "use case sheets",
+        "PoC planning checklist",
+        "proposal templates",
+        "webinar materials"
+      ],
+      "cta": "Request Partner Materials"
+    },
+    "flow": {
+      "eyebrow": "How cooperation can start",
+      "title": "協業開始の流れ",
+      "items": [
+        "Initial discussion",
+        "Partner context",
+        "SAF use case alignment",
+        "Demo and materials",
+        "Customer or service scenario",
+        "Next commercial and technical steps"
+      ]
+    },
+    "trust": {
+      "eyebrow": "Trust and Relationship",
+      "title": "安全で中立的な関係表現",
+      "text": "SAF は SAF-Systems が開発しています。Harmony Technology は日本市場向けパートナーとして、紹介、コミュニケーション、パートナー対話、SAF 関連シナリオ整理を支援します。ここでは誇張的な法的表現や販売チャネル表現を用いません。"
+    },
+    "final_cta": {
+      "title": "SAF 協業について相談しませんか",
+      "text": "パートナーシップ、資料、顧客シナリオ、次の実務ステップについて相談できます。",
+      "actions": {
+        "discuss": "Discuss Partnership",
+        "saf": "SAF",
+        "pricing": "Pricing"
+      }
+    }
+  },
+  "use_cases": {
+    "hero": {
+      "eyebrow": "Use Cases",
+      "title": "Use Cases",
+      "description": "English master copy is being introduced first for this route."
+    },
+    "sections": [
+      {
+        "title": "Phase 1 placeholder",
+        "text": "Use case content will be localized later as needed."
+      }
+    ],
+    "cta": {
+      "primary": "Explore SAF",
+      "secondary": "Contact"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "eyebrow": "Pricing",
+      "title": "Estimate your SAF license cost",
+      "description": "This route is available as a pricing page shell. The interactive calculator will be added in a later phase.",
+      "actions": {
+        "start_calculation": "Start Calculation",
+        "contact_sales": "Contact Sales"
+      }
+    },
+    "model": {
+      "eyebrow": "Licensing model",
+      "title": "Pricing structure preview",
+      "intro": "English master copy is being introduced first for this route.",
+      "items": {
+        "volume": "Pricing is discussed around raw data volume and module scope.",
+        "independence": "Raw data volume is independent of compression or infrastructure layout.",
+        "commercial_terms": "Final commercial terms require confirmation in a real discussion.",
+        "preliminary_estimate": "Any future result is a preliminary estimate, not a public offer."
+      },
+      "note": "This page is a calculator-ready shell for Phase 1."
+    },
+    "modes": {
+      "eyebrow": "Calculation modes preview",
+      "title": "Planned estimation modes",
+      "text": "The full calculator will be implemented later.",
+      "cards": {
+        "direct_tb": {
+          "label": "Mode 1",
+          "title": "Direct TB input",
+          "description": "Use raw data volume in TB.",
+          "inputs": "Input: Raw Data Volume (TB)"
+        },
+        "flow": {
+          "label": "Mode 2",
+          "title": "Flow / daily ingest",
+          "description": "Use daily ingest and retention days.",
+          "inputs": "Inputs: Daily ingest rate (GB/day), retention days",
+          "formula": "Formula: storageNumber = (GB/day × retention days) / 1024"
+        },
+        "eps": {
+          "label": "Mode 3",
+          "title": "EPS",
+          "description": "Use EPS, average event size, and retention days.",
+          "inputs": "Inputs: EPS, average event size (bytes), retention days",
+          "formula": "Formula: storageNumber = (EPS × average event size × 86400 × retention days) / 1024^4"
+        }
+      }
+    },
+    "bundles": {
+      "eyebrow": "Bundles preview",
+      "title": "Bundle directions",
+      "text": "Localized pricing bundle copy can be added later if needed.",
+      "items": {
+        "cybersecurity_siem": {
+          "title": "Cybersecurity / SIEM",
+          "text": "Security-oriented scenarios."
+        },
+        "it_ops": {
+          "title": "IT Ops",
+          "text": "Operational visibility and monitoring scenarios."
+        },
+        "compliance": {
+          "title": "Compliance",
+          "text": "Governance and reporting scenarios."
+        },
+        "custom_configuration": {
+          "title": "Custom configuration",
+          "text": "Mixed or customer-specific scenarios."
+        }
+      }
+    },
+    "modules": {
+      "eyebrow": "Modules preview",
+      "title": "Module categories",
+      "text": "This is a non-interactive preview in Phase 1.",
+      "items": {
+        "incident_management": "Incident Management",
+        "inventory": "Inventory",
+        "case_management": "Case Management",
+        "manual_actions": "Manual Actions",
+        "network_monitoring": "Network Monitoring",
+        "server_monitoring": "Server Monitoring",
+        "ms_active_directory": "MS Active Directory",
+        "ms_exchange": "MS Exchange",
+        "network_mapping": "Network Mapping",
+        "compliance_reports": "Compliance Reports"
+      }
+    },
+    "calculator_preview": {
+      "eyebrow": "Calculator preview",
+      "title": "Interactive calculator will be added later",
+      "text": "For now, this page prepares the structure for the pricing discussion.",
+      "note": "Use Contact if you want to discuss a preliminary pricing estimate.",
+      "actions": {
+        "request_quote": "Request Detailed Quote",
+        "discuss_pricing": "Discuss SAF Pricing"
+      }
+    },
+    "calculator": {
+      "eyebrow": "Calculator",
+      "title": "Interactive SAF pricing estimate",
+      "text": "English master copy is being introduced first. This calculator provides a preliminary estimate only.",
+      "modes": {
+        "direct_tb": "Direct TB",
+        "flow": "Flow / daily ingest",
+        "eps": "EPS"
+      },
+      "fields": {
+        "mode": {
+          "label": "Data volume mode"
+        },
+        "direct_tb": {
+          "label": "Raw Data Volume (TB)",
+          "placeholder": "Enter TB"
+        },
+        "flow_gb_day": {
+          "label": "Daily ingest (GB/day)",
+          "placeholder": "Enter GB/day"
+        },
+        "flow_retention_days": {
+          "label": "Retention days",
+          "placeholder": "Enter retention days"
+        },
+        "eps": {
+          "label": "EPS",
+          "placeholder": "Enter EPS"
+        },
+        "avg_event_size": {
+          "label": "Average event size (bytes)",
+          "placeholder": "Enter average event size"
+        },
+        "eps_retention_days": {
+          "label": "Retention days",
+          "placeholder": "Enter retention days"
+        },
+        "bundle": {
+          "label": "Bundle",
+          "placeholder": "Select bundle"
+        }
+      },
+      "bundles": {
+        "siem": "Cybersecurity / SIEM",
+        "it_ops": "IT Ops",
+        "compliance": "Compliance",
+        "custom": "Custom configuration"
+      },
+      "modules": {
+        "label": "Modules",
+        "items": {
+          "IM0": "Incident Management",
+          "inventory0": "Inventory",
+          "cs0": "Case Management",
+          "ma0": "Manual Actions",
+          "network0": "Network Monitoring",
+          "servers0": "Server Monitoring",
+          "msad0": "MS Active Directory",
+          "msexch0": "MS Exchange",
+          "netmap0": "Network Mapping",
+          "compl0": "Compliance Reports"
+        }
+      },
+      "storage_label": "Calculated storageNumber",
+      "actions": {
+        "calculate": "Calculate Preliminary Estimate"
+      },
+      "states": {
+        "calculating": "Calculating..."
+      },
+      "errors": {
+        "positive_values": "Please enter positive numeric values.",
+        "bundle_required": "Please select a bundle.",
+        "storage_required": "storageNumber could not be calculated. Check the selected mode inputs.",
+        "api_failed": "Unable to calculate estimate right now. Please try again or contact Harmony Technology.",
+        "cors_or_network": "The request could not be completed from your browser. Please use the calculated storageNumber and contact Harmony Technology."
+      },
+      "result": {
+        "title": "Preliminary estimate",
+        "annual_estimate": "Annual preliminary estimate (USD)",
+        "bundle_label": "Bundle",
+        "storage_label": "storageNumber",
+        "actions": {
+          "request_quote": "Request Detailed Quote",
+          "schedule_demo": "Schedule Online Demo"
+        }
+      },
+      "disclaimer": "This value is a preliminary estimate only and does not represent a public offer."
+    },
+    "inquiry_guide": {
+      "eyebrow": "What to include",
+      "title": "Helpful pricing inquiry context",
+      "items": {
+        "raw_data_volume": "estimated raw data volume",
+        "daily_ingest_or_eps": "daily ingest or EPS if known",
+        "retention_period": "retention period",
+        "target_bundle_or_use_case": "target bundle or use case",
+        "required_modules": "required modules",
+        "deployment_context": "expected deployment or project context"
+      }
+    },
+    "trust": {
+      "eyebrow": "Relationship note",
+      "title": "Safe relationship wording",
+      "text": "SAF is developed by SAF-Systems. Harmony Technology supports introduction, communication, partner discussions, and SAF-based solution scenarios for the Japanese market."
+    },
+    "final_cta": {
+      "title": "Ready to estimate SAF pricing?",
+      "text": "Contact Harmony Technology to continue the pricing discussion.",
+      "actions": {
+        "contact_sales": "Contact Sales",
+        "learn_more": "Learn More About SAF"
+      }
+    }
+  },
+  "technology": {
+    "hero": {
+      "eyebrow": "Technology",
+      "title": "Technology",
+      "description": "English master copy is being introduced first for this route."
+    },
+    "sections": [
+      {
+        "title": "Phase 1 placeholder",
+        "text": "Technology content will be localized later if required."
+      }
+    ],
+    "cta": {
+      "primary": "Explore SAF",
+      "secondary": "Contact"
+    }
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "Blog",
+      "title": "Blog",
+      "description": "This route is reserved for future content."
+    },
+    "sections": [
+      {
+        "title": "Phase 1 placeholder",
+        "text": "Localized blog content is not part of the current phase."
+      }
+    ],
+    "cta": {
+      "primary": "Contact",
+      "secondary": "Explore SAF"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Company",
+      "title": "Company",
+      "description": "English master copy is being introduced first for the redesigned structure."
+    },
+    "sections": [
+      {
+        "title": "Phase 1 placeholder",
+        "text": "Company details can be localized later without changing the new route map."
+      }
+    ],
+    "cta": {
+      "primary": "Contact",
+      "secondary": "Partners"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Contact Harmony Technology",
+      "description": "English master version をもとに、新しい Contact ページ構成を先行導入しています。SAF、Pricing、Partnership、Demo、SAF-based Development に関する相談の入口として使えます。",
+      "actions": {
+        "materials": "Request SAF Materials",
+        "partnership": "Discuss Partnership",
+        "pricing": "Estimate Pricing"
+      }
+    },
+    "form": {
+      "eyebrow": "Inquiry Form",
+      "title": "お問い合わせ内容を準備",
+      "submit": "メール下書きを準備",
+      "open_mailto_again": "メール下書きを再度開く",
+      "status": "問い合わせ内容の下書きが準備されました。メールクライアントが自動で開かない場合は、上のリンクを利用してください。",
+      "disclaimer": "初回のお問い合わせには confidential information を含めないでください。",
+      "errors": {
+        "required": "必須項目です。",
+        "email": "有効なメールアドレスを入力してください。",
+        "consent": "初回問い合わせに関する注意事項を確認してください。"
+      },
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "お名前"
+        },
+        "company": {
+          "label": "Company",
+          "placeholder": "会社名"
+        },
+        "job_title": {
+          "label": "Job Title",
+          "placeholder": "任意"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your email address"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "任意"
+        },
+        "country_region": {
+          "label": "Country / Region",
+          "placeholder": "任意"
+        },
+        "inquiry_type": {
+          "label": "Inquiry Type",
+          "placeholder": "種別を選択",
+          "options": {
+            "saf": "SAF",
+            "pricing": "Pricing",
+            "partnership": "Partnership",
+            "saf_based_development": "SAF-based Development",
+            "demo": "Demo",
+            "media": "Media",
+            "other": "Other"
+          }
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "会社や案件の背景、SAF または partner scenario、pricing 関連なら data volume、希望する next step をご記入ください。"
+        },
+        "consent": {
+          "label": "このフォームは初回問い合わせ用のメール下書きを準備するものであり、confidential information を含めないことを理解しました。"
+        }
+      }
+    },
+    "guidance": {
+      "eyebrow": "What to include",
+      "title": "含めると役立つ情報",
+      "items": [
+        "company and project context",
+        "SAF or partner scenario",
+        "estimated data volume if pricing-related",
+        "preferred next step: materials, demo, quote, or discussion"
+      ]
+    },
+    "trust": {
+      "eyebrow": "Relationship Note",
+      "title": "安全で中立的な関係表現",
+      "text": "SAF は SAF-Systems が開発しています。Harmony Technology は日本市場向けパートナーとして、紹介、コミュニケーション、パートナー対話、SAF 関連シナリオ整理を支援します。"
+    },
+    "direct": {
+      "eyebrow": "Direct Email",
+      "title": "直接メールしたい場合",
+      "text": "フォームを使わずに、Harmony Technology へ直接メールすることもできます。"
+    }
+  },
+  "footer": {
+    "description": "Harmony Technology supports SAF introduction and SAF-based solution delivery for teams working in Japan."
+  }
+}
