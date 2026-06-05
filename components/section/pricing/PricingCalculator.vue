@@ -194,7 +194,7 @@
 </template>
 
 <script setup>
-const API_URL = 'https://saf-systems.com/index.php?option=com_ajax&plugin=calculator&group=ajax&format=json'
+const API_URL = '/api/saf-pricing'
 
 const bundleConfig = {
   siem: { calcName: 'CheckSAP', bundle: 'siem', flag: 'sap0', labelKey: 'siem' },
