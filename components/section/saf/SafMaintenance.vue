@@ -25,13 +25,13 @@
 
     <div class="maintenance-actions">
       <Button
-        :text="$t('saf.page.partner_value.primary_cta')"
-        to="/partners"
+        :text="$t('saf.page.pricing_cta.primary_cta')"
+        to="/pricing"
         :adaptable="false"
       />
       <Button
-        :text="$t('saf.page.partner_value.secondary_cta')"
-        to="/services/saf-solution-development"
+        :text="$t('saf.page.pricing_cta.secondary_cta')"
+        to="/contact"
       />
     </div>
   </section>

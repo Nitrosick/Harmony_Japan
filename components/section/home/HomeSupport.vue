@@ -31,7 +31,7 @@ const cardKeys = ['platform', 'development', 'automation']
 
 const cardLinks = {
   platform: '/saf',
-  development: '/services/saf-solution-development',
+  development: '/contact',
   automation: '/contact'
 }
 </script>

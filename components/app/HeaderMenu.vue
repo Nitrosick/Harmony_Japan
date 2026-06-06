@@ -19,15 +19,12 @@ const emits = defineEmits(['close'])
 const localePath = useLocalePath()
 
 const menuItems = [
-  { id: 1, to: '/services', key: 'services' },
-  { id: 2, to: '/saf', key: 'saf' },
-  { id: 3, to: '/partners', key: 'partners' },
-  { id: 4, to: '/use-cases', key: 'use_cases' },
-  { id: 5, to: '/pricing', key: 'pricing' },
-  { id: 6, to: '/technology', key: 'technology' },
-  { id: 7, to: '/blog', key: 'blog' },
-  { id: 8, to: '/about', key: 'company' },
-  { id: 9, to: '/contact', key: 'contact' }
+  { id: 1, to: '/saf', key: 'saf' },
+  { id: 2, to: '/use-cases', key: 'use_cases' },
+  { id: 3, to: '/pricing', key: 'pricing' },
+  { id: 4, to: '/technology', key: 'technology' },
+  { id: 5, to: '/blog', key: 'blog' },
+  { id: 6, to: '/contact', key: 'contact' }
 ]
 </script>
 

@@ -31,7 +31,6 @@ const localePath = useLocalePath()
 
 const links = [
   { key: 'saf', to: '/saf' },
-  { key: 'partners', to: '/partners' },
   { key: 'pricing', to: '/pricing' },
   { key: 'contact', to: '/contact' }
 ]

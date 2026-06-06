@@ -12,13 +12,9 @@
 
     <div class="relationship-actions">
       <Button
-        :text="$t('saf.page.relationship.primary_cta')"
-        to="/partners"
-        :adaptable="false"
-      />
-      <Button
         :text="$t('saf.page.relationship.secondary_cta')"
         to="/contact"
+        :adaptable="false"
       />
     </div>
   </section>

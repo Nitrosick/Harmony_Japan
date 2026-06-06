@@ -12,13 +12,9 @@
 
     <div class="section-actions">
       <Button
-        :text="$t('home.relationship.primary_cta')"
-        to="/partners"
-        :adaptable="false"
-      />
-      <Button
         :text="$t('home.relationship.secondary_cta')"
         to="/saf"
+        :adaptable="false"
       />
     </div>
   </section>
