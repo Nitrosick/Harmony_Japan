@@ -12,6 +12,7 @@
   "dependencies": {
     "@vueuse/core": "^14.0.0",
     "motion-v": "^1.7.1",
+    "nodemailer": "^8.0.10",
     "nuxt": "^3.14.1592",
     "nuxt-gtag": "^4.0.0",
     "vue": "latest",

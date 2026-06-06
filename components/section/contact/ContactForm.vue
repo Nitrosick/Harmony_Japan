@@ -93,6 +93,14 @@
         v-model="form.selected_pricing_configuration"
         type="hidden"
       >
+      <input
+        v-model="form.website"
+        type="text"
+        class="form-honeypot"
+        tabindex="-1"
+        autocomplete="off"
+        aria-hidden="true"
+      >
 
       <label class="form-consent">
         <input
@@ -114,21 +122,15 @@
 
       <div class="form-actions">
         <Button
-          :text="$t('contact.form.submit')"
+          :text="submitButtonText"
           :adaptable="false"
         />
-        <a
-          v-if="preparedMailto"
-          :href="preparedMailto"
-          class="form-mailto"
-        >
-          {{ $t('contact.form.open_mailto_again') }}
-        </a>
       </div>
 
       <p
         v-if="submitMessage"
         class="form-status"
+        :class="submitMessageType"
       >
         {{ submitMessage }}
       </p>
@@ -138,7 +140,7 @@
 
 <script setup>
 const route = useRoute()
-const { t, tm } = useI18n()
+const { t } = useI18n()
 
 const textFields = [
   { key: 'name', type: 'text', required: true },
@@ -171,6 +173,9 @@ const inquiryOptions = computed(() => {
   }))
 })
 
+const initialInquiryType = normalizeInquiryType(route.query.inquiry) || (typeof route.query.pricing === 'string' ? 'pricing' : '')
+const initialSelectedPricingConfiguration = typeof route.query.pricing === 'string' ? route.query.pricing : ''
+
 const form = reactive({
   name: '',
   company: '',
@@ -178,10 +183,11 @@ const form = reactive({
   email: '',
   phone: '',
   country_region: '',
-  inquiry_type: normalizeInquiryType(route.query.inquiry) || (typeof route.query.pricing === 'string' ? 'pricing' : ''),
+  inquiry_type: initialInquiryType,
   message: '',
-  selected_pricing_configuration: typeof route.query.pricing === 'string' ? route.query.pricing : '',
-  consent: false
+  selected_pricing_configuration: initialSelectedPricingConfiguration,
+  consent: false,
+  website: ''
 })
 
 const errors = reactive({
@@ -193,8 +199,9 @@ const errors = reactive({
   consent: ''
 })
 
-const preparedMailto = ref('')
+const loading = ref(false)
 const submitMessage = ref('')
+const submitMessageType = ref('')
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -236,47 +243,69 @@ const validate = () => {
   return !Object.values(errors).some(Boolean)
 }
 
-const buildSubject = () => {
-  const optionLabel = inquiryOptions.value.find(option => option.value === form.inquiry_type)?.label || form.inquiry_type
-  return `[Harmony Technology] ${optionLabel} inquiry from ${form.company}`
+const submitButtonText = computed(() => (
+  loading.value ? t('contact.form.sending') : t('contact.form.submit')
+))
+
+const resetForm = () => {
+  form.name = ''
+  form.company = ''
+  form.job_title = ''
+  form.email = ''
+  form.phone = ''
+  form.country_region = ''
+  form.inquiry_type = initialInquiryType
+  form.message = ''
+  form.selected_pricing_configuration = initialSelectedPricingConfiguration
+  form.consent = false
+  form.website = ''
 }
 
-const buildBody = () => {
-  const optionLabel = inquiryOptions.value.find(option => option.value === form.inquiry_type)?.label || form.inquiry_type
-  const lines = [
-    'Harmony Technology inquiry',
-    '',
-    `Name: ${form.name}`,
-    `Company: ${form.company}`,
-    `Job Title: ${form.job_title || '-'}`,
-    `Email: ${form.email}`,
-    `Phone: ${form.phone || '-'}`,
-    `Country / Region: ${form.country_region || '-'}`,
-    `Inquiry Type: ${optionLabel}`,
-    `Selected pricing configuration: ${form.selected_pricing_configuration || '-'}`,
-    '',
-    'Message:',
-    form.message,
-    '',
-    'Please do not include confidential information in this initial inquiry.'
-  ]
+const onSubmit = async () => {
+  if (loading.value) return
 
-  return lines.join('\n')
-}
-
-const onSubmit = () => {
   submitMessage.value = ''
+  submitMessageType.value = ''
 
   if (!validate()) {
     return
   }
 
-  const mailto = `mailto:info@harmonytec.jp?subject=${encodeURIComponent(buildSubject())}&body=${encodeURIComponent(buildBody())}`
-  preparedMailto.value = mailto
-  submitMessage.value = t('contact.form.status')
+  loading.value = true
 
-  if (import.meta.client) {
-    window.location.href = mailto
+  try {
+    const payload = {
+      name: form.name,
+      company: form.company,
+      jobTitle: form.job_title || '',
+      email: form.email,
+      phone: form.phone || '',
+      countryRegion: form.country_region || '',
+      inquiryType: form.inquiry_type,
+      message: form.message,
+      selectedPricingConfiguration: form.selected_pricing_configuration || '',
+      consent: form.consent,
+      website: form.website || ''
+    }
+
+    const response = await $fetch('/api/contact', {
+      method: 'POST',
+      body: payload
+    })
+
+    if (!response?.success) {
+      throw new Error('contact_submit_failed')
+    }
+
+    resetForm()
+    clearErrors()
+    submitMessageType.value = 'success'
+    submitMessage.value = t('contact.form.status_success')
+  } catch {
+    submitMessageType.value = 'error'
+    submitMessage.value = t('contact.form.status_error')
+  } finally {
+    loading.value = false
   }
 }
 </script>
@@ -370,6 +399,14 @@ const onSubmit = () => {
   opacity: 0.72;
 }
 
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
 .form-actions {
   display: flex;
   flex-wrap: wrap;
@@ -385,5 +422,17 @@ const onSubmit = () => {
 .form-error {
   color: #f09a9a;
   font-size: rem(14);
+}
+
+.form-status {
+  &.success {
+    color: #9ad6a5;
+    opacity: 1;
+  }
+
+  &.error {
+    color: #f09a9a;
+    opacity: 1;
+  }
 }
 </style>
