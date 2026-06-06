@@ -29,7 +29,7 @@
       "actions": {
         "materials": "Request SAF Materials",
         "demo": "Schedule an Online Demo",
-        "pricing": "Estimate Pricing"
+        "pricing": "Open Pricing Calculator"
       }
     },
     "relationship": {

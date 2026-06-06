@@ -10,17 +10,9 @@
 
     <div class="hero-actions">
       <Button
-        :text="$t('contact.hero.actions.materials')"
-        href="#contact-form"
-        :adaptable="false"
-      />
-      <Button
-        :text="$t('contact.hero.actions.partnership')"
-        href="#contact-form"
-      />
-      <Button
         :text="$t('contact.hero.actions.pricing')"
-        href="#contact-form"
+        to="/pricing"
+        :adaptable="false"
       />
     </div>
   </section>
