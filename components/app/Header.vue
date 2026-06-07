@@ -36,7 +36,7 @@ watch(menuOpened, (value) => {
 
 <style lang="scss" scoped>
 .header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
