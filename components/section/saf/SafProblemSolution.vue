@@ -16,27 +16,8 @@
         <p>{{ $t('saf.page.problem_solution.solution.text') }}</p>
       </article>
     </div>
-
-    <div class="problem-solution-audiences">
-      <p class="problem-solution-audiences-label">
-        {{ $t('saf.page.problem_solution.audience_label') }}
-      </p>
-      <div class="problem-solution-audiences-list">
-        <span
-          v-for="key in audienceKeys"
-          :key="key"
-          class="problem-solution-audience"
-        >
-          {{ $t(`saf.page.problem_solution.audiences.${key}`) }}
-        </span>
-      </div>
-    </div>
   </section>
 </template>
-
-<script setup>
-const audienceKeys = ['enterprises', 'system_integrators', 'msp_mssp', 'technology_partners']
-</script>
 
 <style lang="scss" scoped>
 .problem-solution {
@@ -46,8 +27,7 @@ const audienceKeys = ['enterprises', 'system_integrators', 'msp_mssp', 'technolo
   padding: rem(48) fluid(80, 20) rem(64);
 }
 
-.problem-solution-eyebrow,
-.problem-solution-audiences-label {
+.problem-solution-eyebrow {
   margin: 0;
   font-size: rem(14);
   font-weight: 700;
@@ -78,25 +58,5 @@ const audienceKeys = ['enterprises', 'system_integrators', 'msp_mssp', 'technolo
     margin: 0;
     opacity: 0.72;
   }
-}
-
-.problem-solution-audiences {
-  display: flex;
-  flex-direction: column;
-  gap: rem(14);
-  margin-top: rem(8);
-}
-
-.problem-solution-audiences-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: rem(12);
-}
-
-.problem-solution-audience {
-  padding: rem(10) rem(16);
-  border-radius: rem(999);
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 </style>

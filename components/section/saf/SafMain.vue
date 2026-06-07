@@ -16,29 +16,13 @@
         height="180"
       >
 
-      <p class="hero-eyebrow">
-        {{ $t('saf.page.hero.eyebrow') }}
+      <h1 class="hero-title">Search Anywhere Framework</h1>
+      <p class="hero-subtitle">
+        Universal monitoring platform for collection, analytics, and visualization of any machine data type
       </p>
-      <h1>{{ $t('saf.page.hero.title') }}</h1>
       <p class="hero-description">
-        {{ $t('saf.page.hero.description') }}
+        Helps IT staff and business users ask questions to corporate machine data and get human-readable answers
       </p>
-
-      <div class="hero-actions">
-        <Button
-          :text="$t('saf.page.hero.actions.materials')"
-          to="/contact"
-          :adaptable="false"
-        />
-        <Button
-          :text="$t('saf.page.hero.actions.demo')"
-          to="/contact"
-        />
-        <Button
-          :text="$t('saf.page.hero.actions.pricing')"
-          to="/pricing"
-        />
-      </div>
     </div>
   </section>
 </template>
@@ -66,7 +50,8 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: rem(24);
   width: 100%;
   padding: rem(140) fluid(80, 20) rem(90);
@@ -77,25 +62,27 @@
   height: auto;
 }
 
-.hero-eyebrow {
+.hero-title {
   margin: 0;
-  font-size: rem(14);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.68;
+}
+
+.hero-subtitle {
+  margin: 0;
+  max-width: rem(980);
+  font-size: rem(24);
+  line-height: 1.35;
+  opacity: 0.88;
+
+  @include bp-md {
+    font-size: rem(20);
+  }
 }
 
 .hero-description {
-  max-width: rem(920);
+  max-width: rem(880);
   margin: 0;
-  opacity: 0.8;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: rem(16);
-  margin-top: rem(8);
+  font-size: rem(16);
+  line-height: 1.5;
+  opacity: 0.78;
 }
 </style>
