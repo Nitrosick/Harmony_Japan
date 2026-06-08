@@ -17,9 +17,11 @@
       >
 
       <h1 class="hero-title">Search Anywhere Framework</h1>
+
       <p class="hero-subtitle">
         Universal monitoring platform for collection, analytics, and visualization of any machine data type
       </p>
+      
       <p class="hero-description">
         Helps IT staff and business users ask questions to corporate machine data and get human-readable answers
       </p>

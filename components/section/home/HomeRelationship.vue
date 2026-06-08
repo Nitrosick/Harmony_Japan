@@ -4,7 +4,9 @@
       <p class="section-eyebrow">
         {{ $t('home.relationship.eyebrow') }}
       </p>
+
       <h2>{{ $t('home.relationship.title') }}</h2>
+      
       <p class="section-text">
         {{ $t('home.relationship.text') }}
       </p>

@@ -3,6 +3,7 @@
     <p class="problem-solution-eyebrow">
       {{ $t('saf.page.problem_solution.eyebrow') }}
     </p>
+    
     <h2>{{ $t('saf.page.problem_solution.title') }}</h2>
 
     <div class="problem-solution-grid">

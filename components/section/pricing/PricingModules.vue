@@ -3,7 +3,9 @@
     <p class="modules-eyebrow">
       {{ $t('pricing.modules.eyebrow') }}
     </p>
+
     <h2>{{ $t('pricing.modules.title') }}</h2>
+    
     <p class="modules-text">
       {{ $t('pricing.modules.text') }}
     </p>

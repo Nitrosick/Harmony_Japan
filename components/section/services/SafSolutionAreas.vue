@@ -3,6 +3,7 @@
     <p class="areas-eyebrow">
       {{ $t('saf_solution_development.areas.eyebrow') }}
     </p>
+    
     <h2>{{ $t('saf_solution_development.areas.title') }}</h2>
 
     <div class="areas-grid">

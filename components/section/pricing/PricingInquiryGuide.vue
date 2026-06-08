@@ -3,6 +3,7 @@
     <p class="guide-eyebrow">
       {{ $t('pricing.inquiry_guide.eyebrow') }}
     </p>
+    
     <h2>{{ $t('pricing.inquiry_guide.title') }}</h2>
 
     <ul class="guide-list">

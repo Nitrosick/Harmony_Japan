@@ -9,16 +9,21 @@
         <p class="overview-card-label">
           {{ $t(`services.blocks.${key}.label`) }}
         </p>
+
         <h2>{{ $t(`services.blocks.${key}.title`) }}</h2>
+
         <p class="overview-card-description">
           {{ $t(`services.blocks.${key}.description`) }}
         </p>
+
         <p class="overview-card-value-label">
           {{ $t('services.blocks.value_label') }}
         </p>
+
         <p class="overview-card-value">
           {{ $t(`services.blocks.${key}.value`) }}
         </p>
+        
         <Button
           :text="$t(`services.blocks.${key}.cta`)"
           :to="serviceLinks[key]"

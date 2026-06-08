@@ -3,7 +3,9 @@
     <p class="architecture-eyebrow">
       {{ $t('saf.page.architecture.eyebrow') }}
     </p>
+
     <h2>{{ $t('saf.page.architecture.title') }}</h2>
+
     <p class="architecture-text">
       {{ $t('saf.page.architecture.text') }}
     </p>
@@ -17,7 +19,9 @@
         <p class="architecture-column-label">
           {{ $t(`saf.page.architecture.columns.${key}.label`) }}
         </p>
+
         <h3>{{ $t(`saf.page.architecture.columns.${key}.title`) }}</h3>
+
         <p>{{ $t(`saf.page.architecture.columns.${key}.text`) }}</p>
       </article>
     </div>
@@ -29,7 +33,11 @@
 </template>
 
 <script setup>
-const architectureKeys = ['sources', 'saf_layer', 'outcomes']
+const architectureKeys = [
+  'sources',
+  'saf_layer',
+  'outcomes'
+]
 </script>
 
 <style lang="scss" scoped>

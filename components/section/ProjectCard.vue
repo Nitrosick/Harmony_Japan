@@ -7,10 +7,12 @@
       <h3 class="project-card-title">
         {{ $t(`projects.items.titles[${data.id - 1}]`) }}
       </h3>
+
       <p
         class="project-card-description"
         v-html="$t(`projects.items.descriptions[${data.id - 1}]`)"
       />
+      
       <Button
         :text="$t(`projects.buttons.${data.btnLabel}`)"
         :to="data.to"

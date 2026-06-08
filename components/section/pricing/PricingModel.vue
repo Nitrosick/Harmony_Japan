@@ -3,7 +3,9 @@
     <p class="model-eyebrow">
       {{ $t('pricing.model.eyebrow') }}
     </p>
+
     <h2>{{ $t('pricing.model.title') }}</h2>
+
     <p class="model-text">
       {{ $t('pricing.model.intro') }}
     </p>
@@ -25,7 +27,12 @@
 </template>
 
 <script setup>
-const itemKeys = ['volume', 'independence', 'commercial_terms', 'preliminary_estimate']
+const itemKeys = [
+  'volume',
+  'independence',
+  'commercial_terms',
+  'preliminary_estimate'
+]
 </script>
 
 <style lang="scss" scoped>

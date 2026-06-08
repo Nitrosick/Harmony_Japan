@@ -3,6 +3,7 @@
     <p class="flow-eyebrow">
       {{ $t('saf_solution_development.flow.eyebrow') }}
     </p>
+    
     <h2>{{ $t('saf_solution_development.flow.title') }}</h2>
 
     <ol class="flow-list">

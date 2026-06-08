@@ -3,7 +3,9 @@
     <p class="bundles-eyebrow">
       {{ $t('pricing.bundles.eyebrow') }}
     </p>
+
     <h2>{{ $t('pricing.bundles.title') }}</h2>
+
     <p class="bundles-text">
       {{ $t('pricing.bundles.text') }}
     </p>
@@ -15,6 +17,7 @@
         class="bundles-card"
       >
         <h3>{{ $t(`pricing.bundles.items.${bundleKey}.title`) }}</h3>
+
         <p>
           {{ $t(`pricing.bundles.items.${bundleKey}.text`) }}
         </p>
@@ -24,7 +27,12 @@
 </template>
 
 <script setup>
-const bundleKeys = ['cybersecurity_siem', 'it_ops', 'compliance', 'custom_configuration']
+const bundleKeys = [
+  'cybersecurity_siem',
+  'it_ops',
+  'compliance',
+  'custom_configuration'
+]
 </script>
 
 <style lang="scss" scoped>

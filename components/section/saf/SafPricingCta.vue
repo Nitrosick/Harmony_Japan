@@ -3,7 +3,9 @@
     <p class="pricing-cta-eyebrow">
       {{ $t('saf.page.pricing_cta.eyebrow') }}
     </p>
+
     <h2>{{ $t('saf.page.pricing_cta.title') }}</h2>
+    
     <p class="pricing-cta-text">
       {{ $t('saf.page.pricing_cta.text') }}
     </p>

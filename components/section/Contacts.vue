@@ -5,16 +5,19 @@
   >
     <div class="contacts-content content">
       <h2>{{ $t('contacts.title') }}</h2>
+
       <p
         class="contacts-description"
         v-html="$t('contacts.description')"
       />
+
       <a
         href="mailto:info@harmonytec.jp"
         class="contacts-mail"
       >
         info@harmonytec.jp
       </a>
+
       <img
         src="/public/images/qr.svg"
         alt="qr code"
@@ -26,10 +29,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-
-</script>
 
 <style lang="scss" scoped>
 .contacts {

@@ -3,6 +3,7 @@
     <h2 class="direct-title">
       {{ $t('contact.direct.title') }}
     </h2>
+    
     <p class="direct-text">
       {{ $t('contact.direct.text') }}
     </p>

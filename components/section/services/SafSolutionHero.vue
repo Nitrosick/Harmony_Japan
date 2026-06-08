@@ -3,7 +3,9 @@
     <p class="hero-eyebrow">
       {{ $t('saf_solution_development.hero.eyebrow') }}
     </p>
+
     <h1>{{ $t('saf_solution_development.hero.title') }}</h1>
+    
     <p class="hero-description">
       {{ $t('saf_solution_development.hero.description') }}
     </p>

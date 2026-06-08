@@ -7,10 +7,13 @@
       >
         {{ eyebrow }}
       </p>
+
       <h1>{{ t(`${namespace}.hero.title`) }}</h1>
+
       <p class="page-description">
         {{ t(`${namespace}.hero.description`) }}
       </p>
+
       <div
         v-if="primaryTo || secondaryTo"
         class="page-actions"
@@ -35,12 +38,14 @@
       class="page-section content"
     >
       <h2>{{ section.title }}</h2>
+
       <p
         v-if="section.text"
         class="page-section-text"
       >
         {{ section.text }}
       </p>
+      
       <ul
         v-if="section.items?.length"
         class="page-list"

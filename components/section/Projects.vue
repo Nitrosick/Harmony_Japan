@@ -6,6 +6,7 @@
     <h2 class="projects-title">
       {{ $t('projects.title') }}
     </h2>
+    
     <ProjectCard
       v-for="project in projects"
       :key="project.id"

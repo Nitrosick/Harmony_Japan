@@ -3,7 +3,9 @@
     <p class="audience-eyebrow">
       {{ $t('home.audience.eyebrow') }}
     </p>
+
     <h2>{{ $t('home.audience.title') }}</h2>
+
     <p class="audience-text">
       {{ $t('home.audience.text') }}
     </p>
@@ -22,7 +24,12 @@
 </template>
 
 <script setup>
-const audienceKeys = ['enterprises', 'system_integrators', 'msp_mssp', 'technology_partners']
+const audienceKeys = [
+  'enterprises',
+  'system_integrators',
+  'msp_mssp',
+  'technology_partners'
+]
 </script>
 
 <style lang="scss" scoped>

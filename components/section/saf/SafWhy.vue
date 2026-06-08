@@ -3,7 +3,9 @@
     <p class="why-eyebrow">
       {{ $t('saf.page.why.eyebrow') }}
     </p>
+
     <h2>{{ $t('saf.page.why.title') }}</h2>
+    
     <p class="why-text">
       {{ $t('saf.page.why.text') }}
     </p>

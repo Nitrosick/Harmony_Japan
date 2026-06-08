@@ -2,9 +2,11 @@
   <section class="final-cta">
     <div class="final-cta-content content">
       <h2>{{ $t('home.final_cta.title') }}</h2>
+
       <p class="final-cta-text">
         {{ $t('home.final_cta.text') }}
       </p>
+      
       <div class="final-cta-actions">
         <Button
           :text="$t('home.final_cta.primary_cta')"

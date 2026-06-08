@@ -3,7 +3,9 @@
     <p class="materials-eyebrow">
       {{ $t('saf.page.materials.eyebrow') }}
     </p>
+
     <h2>{{ $t('saf.page.materials.title') }}</h2>
+
     <p class="materials-text">
       {{ $t('saf.page.materials.text') }}
     </p>
@@ -28,7 +30,11 @@
 </template>
 
 <script setup>
-const materialKeys = ['overview', 'use_case_pack', 'partner_discussion']
+const materialKeys = [
+  'overview',
+  'use_case_pack',
+  'partner_discussion'
+]
 </script>
 
 <style lang="scss" scoped>

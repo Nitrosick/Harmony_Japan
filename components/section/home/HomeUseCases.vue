@@ -3,7 +3,9 @@
     <p class="use-cases-eyebrow">
       {{ $t('home.use_cases.eyebrow') }}
     </p>
+
     <h2>{{ $t('home.use_cases.title') }}</h2>
+    
     <p class="use-cases-text">
       {{ $t('home.use_cases.text') }}
     </p>

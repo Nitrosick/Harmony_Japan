@@ -3,6 +3,7 @@
     <p class="support-eyebrow">
       {{ $t('home.support.eyebrow') }}
     </p>
+
     <h2>{{ $t('home.support.title') }}</h2>
 
     <div class="support-grid">
@@ -12,9 +13,11 @@
         class="support-card"
       >
         <h3>{{ $t(`home.support.cards.${key}.title`) }}</h3>
+
         <p class="support-card-text">
           {{ $t(`home.support.cards.${key}.text`) }}
         </p>
+
         <Button
           v-if="cardLinks[key]"
           :text="$t(`home.support.cards.${key}.cta`)"
@@ -27,7 +30,11 @@
 </template>
 
 <script setup>
-const cardKeys = ['platform', 'development', 'automation']
+const cardKeys = [
+  'platform',
+  'development',
+  'automation'
+]
 
 const cardLinks = {
   platform: '/saf',

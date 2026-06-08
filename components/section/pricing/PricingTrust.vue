@@ -3,7 +3,9 @@
     <p class="trust-eyebrow">
       {{ $t('pricing.trust.eyebrow') }}
     </p>
+
     <h2>{{ $t('pricing.trust.title') }}</h2>
+    
     <p class="trust-text">
       {{ $t('pricing.trust.text') }}
     </p>

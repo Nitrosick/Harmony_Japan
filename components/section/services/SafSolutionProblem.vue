@@ -3,6 +3,7 @@
     <p class="problem-eyebrow">
       {{ $t('saf_solution_development.problem.eyebrow') }}
     </p>
+    
     <h2>{{ $t('saf_solution_development.problem.title') }}</h2>
 
     <ul class="problem-list">

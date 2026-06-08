@@ -3,6 +3,7 @@
     <p class="scenarios-eyebrow">
       {{ $t('partners.scenarios.eyebrow') }}
     </p>
+    
     <h2>{{ $t('partners.scenarios.title') }}</h2>
 
     <div class="scenarios-grid">

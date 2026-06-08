@@ -6,7 +6,9 @@
     <p class="calculator-eyebrow">
       {{ $t('pricing.calculator.eyebrow') }}
     </p>
+
     <h2>{{ $t('pricing.calculator.title') }}</h2>
+
     <p class="calculator-text">
       {{ $t('pricing.calculator.text') }}
     </p>
@@ -164,16 +166,20 @@
       class="calculator-result"
     >
       <h3>{{ $t('pricing.calculator.result.title') }}</h3>
+
       <p class="calculator-result-value">
         {{ $t('pricing.calculator.result.annual_estimate') }}:
         <strong>{{ formatUsd(result.total) }}</strong>
       </p>
+
       <p class="calculator-result-meta">
         {{ $t('pricing.calculator.result.bundle_label') }}: {{ result.bundleLabel }}
       </p>
+
       <p class="calculator-result-meta">
         {{ $t('pricing.calculator.result.storage_label') }}: {{ result.storageNumber.toFixed(2) }} TB
       </p>
+      
       <p class="calculator-disclaimer">
         {{ $t('pricing.calculator.disclaimer') }}
       </p>

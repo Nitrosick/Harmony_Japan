@@ -10,11 +10,14 @@
         transition: { duration: 8 }
       }"
     />
+
     <h1>{{ $t('main.title') }}</h1>
+
     <p
       class="main-text"
       v-html="$t('main.description')"
     />
+
     <div class="main-actions">
       <Button
         :text="$t('main.primary_cta')"
@@ -28,10 +31,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-
-</script>
 
 <style lang="scss" scoped>
 .main {

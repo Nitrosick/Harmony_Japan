@@ -3,6 +3,7 @@
     <h1 class="hero-title">
       {{ $t('contact.hero.title') }}
     </h1>
+    
     <p class="hero-description">
       {{ $t('contact.hero.description') }}
     </p>

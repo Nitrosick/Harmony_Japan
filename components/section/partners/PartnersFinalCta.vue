@@ -1,6 +1,7 @@
 <template>
   <section class="final-cta content">
     <h2>{{ $t('partners.final_cta.title') }}</h2>
+    
     <p class="final-cta-text">
       {{ $t('partners.final_cta.text') }}
     </p>

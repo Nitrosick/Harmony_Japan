@@ -3,7 +3,9 @@
     <p class="hero-eyebrow">
       {{ $t('pricing.hero.eyebrow') }}
     </p>
+
     <h1>{{ $t('pricing.hero.title') }}</h1>
+    
     <p class="hero-text">
       {{ $t('pricing.hero.description') }}
     </p>

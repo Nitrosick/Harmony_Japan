@@ -13,10 +13,6 @@
   </div>
 </template>
 
-<script setup>
-
-</script>
-
 <style lang="scss" scoped>
 .description {
   padding: fluid(120, 80) fluid(80, 20);

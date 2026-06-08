@@ -3,6 +3,7 @@
     <p class="faq-eyebrow">
       {{ $t('saf.page.faq.eyebrow') }}
     </p>
+
     <h2>{{ $t('saf.page.faq.title') }}</h2>
 
     <div class="faq-list">
@@ -19,7 +20,12 @@
 </template>
 
 <script setup>
-const faqKeys = ['what_is_saf', 'where_value_comes_from', 'what_harmony_does', 'is_pricing_public']
+const faqKeys = [
+  'what_is_saf',
+  'where_value_comes_from',
+  'what_harmony_does',
+  'is_pricing_public'
+]
 </script>
 
 <style lang="scss" scoped>

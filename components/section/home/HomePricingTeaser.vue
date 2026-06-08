@@ -4,10 +4,13 @@
       <p class="pricing-eyebrow">
         {{ $t('home.pricing_teaser.eyebrow') }}
       </p>
+
       <h2>{{ $t('home.pricing_teaser.title') }}</h2>
+
       <p class="pricing-text">
         {{ $t('home.pricing_teaser.text') }}
       </p>
+      
       <p class="pricing-note">
         {{ $t('home.pricing_teaser.note') }}
       </p>

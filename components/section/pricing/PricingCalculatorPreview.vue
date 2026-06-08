@@ -6,10 +6,13 @@
     <p class="preview-eyebrow">
       {{ $t('pricing.calculator_preview.eyebrow') }}
     </p>
+
     <h2>{{ $t('pricing.calculator_preview.title') }}</h2>
+
     <p class="preview-text">
       {{ $t('pricing.calculator_preview.text') }}
     </p>
+    
     <p class="preview-note">
       {{ $t('pricing.calculator_preview.note') }}
     </p>

@@ -3,7 +3,9 @@
     <p class="features-eyebrow">
       {{ $t('saf.page.modules.eyebrow') }}
     </p>
+
     <h2>{{ $t('saf.page.modules.title') }}</h2>
+
     <p class="features-description">
       {{ $t('saf.page.modules.text') }}
     </p>
@@ -45,9 +47,11 @@
       >
         <div class="features-content-text">
           <h3>{{ currentModule.title }}</h3>
+
           <p class="features-content-description">
             {{ currentModule.description }}
           </p>
+          
           <Button
             :text="$t('saf.page.modules.cta')"
             to="/contact"

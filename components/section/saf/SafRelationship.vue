@@ -4,7 +4,9 @@
       <p class="relationship-eyebrow">
         {{ $t('saf.page.relationship.eyebrow') }}
       </p>
+
       <h2>{{ $t('saf.page.relationship.title') }}</h2>
+      
       <p class="relationship-text">
         {{ $t('saf.page.relationship.text') }}
       </p>

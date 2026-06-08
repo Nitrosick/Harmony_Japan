@@ -3,7 +3,9 @@
     <p class="hero-eyebrow">
       {{ $t('partners.hero.eyebrow') }}
     </p>
+
     <h1>{{ $t('partners.hero.title') }}</h1>
+    
     <p class="hero-description">
       {{ $t('partners.hero.description') }}
     </p>

@@ -3,6 +3,7 @@
     <p class="why-eyebrow">
       {{ $t('home.why.eyebrow') }}
     </p>
+
     <h2>{{ $t('home.why.title') }}</h2>
 
     <div class="why-grid">
@@ -19,7 +20,12 @@
 </template>
 
 <script setup>
-const itemKeys = ['market_focus', 'partner_communication', 'solution_alignment', 'long_term_view']
+const itemKeys = [
+  'market_focus',
+  'partner_communication',
+  'solution_alignment',
+  'long_term_view'
+]
 </script>
 
 <style lang="scss" scoped>

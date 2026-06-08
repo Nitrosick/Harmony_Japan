@@ -3,7 +3,9 @@
     <p class="maintenance-eyebrow">
       {{ $t('saf.page.partner_value.eyebrow') }}
     </p>
+
     <h2>{{ $t('saf.page.partner_value.title') }}</h2>
+    
     <p class="maintenance-description">
       {{ $t('saf.page.partner_value.text') }}
     </p>

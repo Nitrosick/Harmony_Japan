@@ -3,6 +3,7 @@
     <p class="flow-eyebrow">
       {{ $t('partners.flow.eyebrow') }}
     </p>
+    
     <h2>{{ $t('partners.flow.title') }}</h2>
 
     <ol class="flow-list">

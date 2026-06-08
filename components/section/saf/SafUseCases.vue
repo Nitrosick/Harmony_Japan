@@ -3,7 +3,9 @@
     <p class="use-cases-eyebrow">
       {{ $t('saf.page.use_cases.eyebrow') }}
     </p>
+
     <h2>{{ $t('saf.page.use_cases.title') }}</h2>
+
     <p class="use-cases-text">
       {{ $t('saf.page.use_cases.text') }}
     </p>
@@ -28,7 +30,12 @@
 </template>
 
 <script setup>
-const useCaseKeys = ['security_operations', 'observability', 'incident_investigation', 'compliance_visibility']
+const useCaseKeys = [
+  'security_operations',
+  'observability',
+  'incident_investigation',
+  'compliance_visibility'
+]
 </script>
 
 <style lang="scss" scoped>

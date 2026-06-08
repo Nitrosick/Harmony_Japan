@@ -3,7 +3,9 @@
     <p class="modes-eyebrow">
       {{ $t('pricing.modes.eyebrow') }}
     </p>
+
     <h2>{{ $t('pricing.modes.title') }}</h2>
+
     <p class="modes-text">
       {{ $t('pricing.modes.text') }}
     </p>
@@ -17,13 +19,17 @@
         <p class="modes-card-label">
           {{ $t(`pricing.modes.cards.${modeKey}.label`) }}
         </p>
+
         <h3>{{ $t(`pricing.modes.cards.${modeKey}.title`) }}</h3>
+
         <p class="modes-card-text">
           {{ $t(`pricing.modes.cards.${modeKey}.description`) }}
         </p>
+
         <p class="modes-card-inputs">
           {{ $t(`pricing.modes.cards.${modeKey}.inputs`) }}
         </p>
+
         <p
           v-if="modeKey !== 'direct_tb'"
           class="modes-card-formula"
@@ -36,7 +42,11 @@
 </template>
 
 <script setup>
-const modeKeys = ['direct_tb', 'flow', 'eps']
+const modeKeys = [
+  'direct_tb',
+  'flow',
+  'eps'
+]
 </script>
 
 <style lang="scss" scoped>

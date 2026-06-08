@@ -4,10 +4,13 @@
       <p class="eyebrow">
         SAF in practice
       </p>
+
       <h1>Use Cases</h1>
+
       <p class="subtitle">
         Examples of how SAF helps organizations search, analyze, correlate, and visualize machine data across cybersecurity, IT operations, and business processes.
       </p>
+
       <p class="description">
         SAF is used in projects where organizations need to work with large volumes of distributed machine data, improve visibility, reduce investigation time, and connect technical events with business impact.
       </p>
@@ -15,6 +18,7 @@
 
     <section class="overview content">
       <h2>Category overview</h2>
+
       <div class="pill-group">
         <span
           v-for="category in categories"
@@ -24,6 +28,7 @@
           {{ category }}
         </span>
       </div>
+
       <div class="pill-group">
         <span
           v-for="industry in industries"
@@ -37,6 +42,7 @@
 
     <section class="catalog content">
       <h2>Use case catalog</h2>
+
       <div class="catalog-grid">
         <article
           v-for="item in useCases"
@@ -46,10 +52,13 @@
           <p class="case-meta">
             {{ item.meta }}
           </p>
+
           <h3>{{ item.title }}</h3>
+
           <p class="case-summary">
             {{ item.summary }}
           </p>
+
           <ul class="case-highlights">
             <li
               v-for="highlight in item.highlights"
@@ -64,6 +73,7 @@
 
     <section class="common content">
       <h2>What these projects have in common</h2>
+
       <ul class="common-list">
         <li>SAF connects data from different systems without forcing all analytics into one rigid tool.</li>
         <li>Security, IT operations, and business teams can work with the same machine data from different perspectives.</li>
@@ -75,9 +85,11 @@
 
     <section class="final-cta content">
       <h2>Discuss a SAF use case for your organization</h2>
+
       <p>
         Harmony Technology can help discuss where SAF may fit in your data, security, monitoring, or operational analytics landscape in Japan.
       </p>
+      
       <div class="final-cta-actions">
         <Button
           text="Start the conversation"
