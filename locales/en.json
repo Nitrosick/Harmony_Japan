@@ -24,12 +24,13 @@
   "home": {
     "hero": {
       "eyebrow": "Japan-focused partner of SAF-Systems",
-      "title": "Turn distributed enterprise data into actionable insight.",
-      "description": "Harmony Technology is a Japan-focused partner of SAF-Systems, supporting the introduction, communication, and development of Search Anywhere Framework solutions for enterprises, system integrators, MSPs, MSSPs, and technology partners.",
+      "title": "Technologies Inspiring Confidence",
+      "description": "Delivering clarity and efficiency through innovative tools and expertise",
       "actions": {
         "materials": "Request SAF Materials",
         "demo": "Schedule an Online Demo",
-        "pricing": "Open Pricing Calculator"
+        "pricing": "Open Pricing Calculator",
+        "contact": "Contact us"
       }
     },
     "relationship": {
@@ -62,6 +63,27 @@
         }
       }
     },
+    "company_intro": {
+      "title": "Technology that solves real business problems.",
+      "text": "Harmony Technology provides independent solutions in data analytics, event management, and custom development, designed to match your specific needs. Each product works on its own, so you only invest in what truly matters to your business."
+    },
+    "product_strengths": {
+      "title": "Product strengths",
+      "items": {
+        "uniqueness": {
+          "title": "Uniqueness",
+          "text": "Works across distributed data sources and helps teams obtain a unified view without forcing every system into a single storage model."
+        },
+        "technology": {
+          "title": "Technology",
+          "text": "Combines search, analytics, monitoring, and integration capabilities to support practical enterprise data scenarios."
+        },
+        "price": {
+          "title": "Price",
+          "text": "Designed to support flexible adoption and cost-conscious planning for teams evaluating enterprise data platforms."
+        }
+      }
+    },
     "support": {
       "eyebrow": "What We Support",
       "title": "Focused support around SAF and SAF-based delivery",
@@ -85,33 +107,33 @@
     },
     "why": {
       "eyebrow": "Why Harmony Technology",
-      "title": "What Harmony Technology contributes",
+      "title": "Why Harmony Technology",
       "items": {
         "market_focus": {
           "title": "Japan market focus",
-          "text": "Support communication and next-step planning for organizations, partners, and projects that need a Japan-focused business context."
+          "text": "We support Japan-focused communication, materials, and practical next steps for local stakeholders."
         },
         "partner_communication": {
           "title": "Partner communication",
-          "text": "Help connect product positioning, local stakeholder discussions, and practical delivery conversations without overstating legal or channel status."
+          "text": "We help technical and business teams discuss SAF use cases, demonstrations, pricing questions, and possible cooperation formats."
         },
         "solution_alignment": {
-          "title": "SAF-based solution alignment",
-          "text": "Frame SAF-based use cases, delivery scenarios, and integration ideas around real operational requirements."
+          "title": "Careful solution alignment",
+          "text": "We help frame SAF-based scenarios so they can fit into existing systems, processes, and partner portfolios without forcing unnecessary disruption."
         },
         "long_term_view": {
           "title": "Long-term relationship view",
-          "text": "Support gradual, practical B2B progress across product evaluation, market engagement, and delivery planning."
+          "text": "We focus on practical B2B cooperation, clear expectations, and gradual development of solution opportunities."
         }
       }
     },
     "use_cases": {
       "eyebrow": "Typical Use Cases",
-      "title": "Typical scenarios worth exploring first",
+      "title": "Typical Use Cases",
       "text": "Search Anywhere Framework can support several operational scenarios where distributed data, fragmented tooling, and time-to-insight are major constraints.",
       "items": {
         "security_operations": {
-          "title": "Security operations",
+          "title": "Security Operations",
           "text": "Support detection, triage, correlation, and security analysis across multiple enterprise data environments."
         },
         "observability": {
@@ -119,11 +141,11 @@
           "text": "Improve service and infrastructure visibility across distributed environments without forcing a full data centralization program first."
         },
         "incident_investigation": {
-          "title": "Incident investigation",
+          "title": "Incident Investigation",
           "text": "Accelerate cross-system investigation and root-cause analysis by connecting relevant signals and records across teams and sources."
         },
         "compliance_visibility": {
-          "title": "Compliance visibility",
+          "title": "Compliance",
           "text": "Support compliance reporting, evidence gathering, and operational visibility across the systems that already matter to the organization."
         }
       },

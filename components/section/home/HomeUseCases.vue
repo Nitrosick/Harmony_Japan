@@ -1,11 +1,8 @@
 <template>
   <section class="use-cases content">
-    <p class="use-cases-eyebrow">
-      {{ $t('home.use_cases.eyebrow') }}
-    </p>
-
-    <h2>{{ $t('home.use_cases.title') }}</h2>
-    
+    <h2 class="use-cases-title">
+      {{ $t('home.use_cases.title') }}
+    </h2>
     <p class="use-cases-text">
       {{ $t('home.use_cases.text') }}
     </p>
@@ -37,32 +34,40 @@ const caseKeys = ['security_operations', 'observability', 'incident_investigatio
 .use-cases {
   display: flex;
   flex-direction: column;
-  gap: rem(18);
-  padding: rem(64) fluid(80, 20);
+  align-items: center;
+  gap: rem(30);
+  margin-top: rem(120);
+  padding: 0 fluid(80, 20);
 }
 
-.use-cases-eyebrow {
-  margin: 0;
-  font-size: rem(14);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.55;
+.use-cases-title {
+  max-width: rem(1280);
+  font-size: fluid(60, 36);
+  line-height: 1.12;
+  text-align: center;
 }
 
 .use-cases-text {
-  max-width: rem(920);
+  max-width: rem(1118);
   margin: 0;
-  opacity: 0.72;
+  color: var(--color-light-grey);
+  font-size: rem(22);
+  line-height: rem(32);
+  text-align: center;
 }
 
 .use-cases-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: rem(20);
-  margin: rem(10) 0 rem(6);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: rem(24);
+  width: min(100%, rem(1280));
+  margin: rem(30) 0 0;
 
-  @include bp-sm {
+  @include bp-lg {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include bp-md {
     grid-template-columns: 1fr;
   }
 }
@@ -70,13 +75,81 @@ const caseKeys = ['security_operations', 'observability', 'incident_investigatio
 .use-cases-card {
   display: flex;
   flex-direction: column;
-  gap: rem(14);
-  padding: fluid(28, 22);
-  border-radius: rem(28);
-  background: var(--card-bg-gradient);
+  gap: rem(16);
+  justify-content: flex-start;
+  min-height: rem(432);
+  padding: rem(44) rem(40);
+  border-radius: rem(32);
+  background: linear-gradient(180deg, rgba(5, 47, 50, 0.4) 39.82%, rgba(13, 36, 50, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
+
+  h4 {
+    margin: 0;
+    font-size: rem(28);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+  }
 
   p {
-    opacity: 0.72;
+    margin: 0;
+    color: var(--color-light-grey);
+    font-size: rem(22);
+    line-height: rem(32);
+    opacity: 0.95;
+  }
+}
+
+:deep(.button) {
+  width: rem(340);
+  min-height: rem(72);
+  align-self: center;
+  border-radius: rem(24);
+  padding: rem(19) rem(20);
+  font-size: rem(20);
+  line-height: rem(22);
+}
+
+@include bp-md {
+  .use-cases {
+    margin-top: rem(84);
+    gap: rem(24);
+  }
+
+  .use-cases-text {
+    font-size: rem(20);
+    line-height: rem(30);
+  }
+}
+
+@include bp-sm {
+  .use-cases {
+    margin-top: rem(68);
+  }
+
+  .use-cases-grid {
+    margin-top: rem(24);
+  }
+
+  .use-cases-card {
+    min-height: rem(360);
+    padding: rem(32) rem(20);
+
+    h4 {
+      font-size: rem(24);
+    }
+  }
+
+  .use-cases-text {
+    font-size: rem(18);
+    line-height: rem(28);
+  }
+
+  :deep(.button) {
+    width: 100%;
+    min-height: rem(64);
+    font-size: rem(18);
   }
 }
 </style>
