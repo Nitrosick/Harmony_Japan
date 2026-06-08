@@ -7,150 +7,85 @@
       class="form"
       @submit.prevent="onSubmit"
     >
-      <div class="form-grid">
-        <label class="form-field">
-          <span class="form-label">{{ $t('contact.form.fields.name.label') }}*</span>
-          <input
-            v-model.trim="form.name"
-            type="text"
-            class="form-input"
-          >
-          <span
-            v-if="errors.name"
-            class="form-error"
-          >
-            {{ errors.name }}
-          </span>
-        </label>
+      <FormGrid>
+        <FormInput
+          v-model="form.name"
+          :label="$t('contact.form.fields.name.label')"
+          required
+          :error="errors.name"
+        />
 
-        <label class="form-field">
-          <span class="form-label">{{ $t('contact.form.fields.company.label') }}*</span>
-          <input
-            v-model.trim="form.company"
-            type="text"
-            class="form-input"
-          >
-          <span
-            v-if="errors.company"
-            class="form-error"
-          >
-            {{ errors.company }}
-          </span>
-        </label>
+        <FormInput
+          v-model="form.company"
+          :label="$t('contact.form.fields.company.label')"
+          required
+          :error="errors.company"
+        />
 
-        <label class="form-field">
-          <span class="form-label">{{ $t('contact.form.fields.job_title.label') }}</span>
-          <input
-            v-model.trim="form.job_title"
-            type="text"
-            class="form-input"
-          >
-        </label>
+        <FormInput
+          v-model="form.job_title"
+          :label="$t('contact.form.fields.job_title.label')"
+          :error="errors.job_title"
+        />
 
-        <label class="form-field">
-          <span class="form-label">{{ $t('contact.form.fields.email.label') }}*</span>
-          <input
-            v-model.trim="form.email"
-            type="email"
-            class="form-input"
-          >
-          <span
-            v-if="errors.email"
-            class="form-error"
-          >
-            {{ errors.email }}
-          </span>
-        </label>
+        <FormInput
+          v-model="form.email"
+          :label="$t('contact.form.fields.email.label')"
+          type="email"
+          required
+          :error="errors.email"
+        />
 
-        <label class="form-field">
-          <span class="form-label">{{ $t('contact.form.fields.phone.label') }}</span>
-          <input
-            v-model.trim="form.phone"
-            type="tel"
-            class="form-input"
-          >
-        </label>
+        <FormInput
+          v-model="form.phone"
+          :label="$t('contact.form.fields.phone.label')"
+          type="tel"
+          :error="errors.phone"
+        />
 
-        <label class="form-field">
-          <span class="form-label">{{ $t('contact.form.fields.country_region.label') }}</span>
-          <input
-            v-model.trim="form.country_region"
-            type="text"
-            class="form-input"
-          >
-        </label>
+        <FormInput
+          v-model="form.country_region"
+          :label="$t('contact.form.fields.country_region.label')"
+          :error="errors.country_region"
+        />
 
-        <label class="form-field form-field-full">
-          <span class="form-label">{{ $t('contact.form.fields.inquiry_type.label') }}</span>
-          <select
-            v-model="form.inquiry_type"
-            class="form-input form-select"
-          >
-            <option value=""></option>
-            <option
-              v-for="option in inquiryOptions"
-              :key="option.value"
-              :value="option.value"
-            >
-              {{ option.label }}
-            </option>
-          </select>
-        </label>
+        <FormSelect
+          v-model="form.inquiry_type"
+          :label="$t('contact.form.fields.inquiry_type.label')"
+          :error="errors.inquiry_type"
+          full-width
+          :options="inquiryOptions"
+        />
 
-        <label class="form-field form-field-full">
-          <span class="form-label">{{ $t('contact.form.fields.message.label') }}*</span>
-          <textarea
-            v-model.trim="form.message"
-            class="form-input form-textarea"
-            rows="4"
-          ></textarea>
-          <span
-            v-if="errors.message"
-            class="form-error"
-          >
-            {{ errors.message }}
-          </span>
-        </label>
-      </div>
+        <FormTextarea
+          v-model="form.message"
+          :label="$t('contact.form.fields.message.label')"
+          :error="errors.message"
+          required
+          full-width
+        />
+      </FormGrid>
 
       <input
         v-model="form.selected_pricing_configuration"
         type="hidden"
       >
-      <input
-        v-model="form.website"
-        type="text"
-        class="form-honeypot"
-        tabindex="-1"
-        autocomplete="off"
-        aria-hidden="true"
-      >
 
-      <label class="form-consent">
-        <input
-          v-model="form.consent"
-          type="checkbox"
-          class="form-consent-input"
-        >
-        <span class="form-consent-text">
-          {{ $t('contact.form.fields.consent.label') }}
-        </span>
-      </label>
-      <span
-        v-if="errors.consent"
-        class="form-error form-error-consent"
-      >
-        {{ errors.consent }}
-      </span>
+      <FormHoneypot
+        v-model="form.website"
+      />
+
+      <FormConsent
+        v-model="form.consent"
+        :label="$t('contact.form.fields.consent.label')"
+        :error="errors.consent"
+      />
 
       <div class="form-actions">
-        <button
-          type="submit"
-          class="form-submit"
+        <Button
+          :text="submitButtonText"
           :disabled="loading"
-        >
-          {{ submitButtonText }}
-        </button>
+        />
       </div>
 
       <p
@@ -165,6 +100,8 @@
 </template>
 
 <script setup>
+import FormSelect from '~/components/form/FormSelect.vue'
+
 const route = useRoute()
 const { t } = useI18n()
 
@@ -335,125 +272,6 @@ const onSubmit = async () => {
   gap: rem(24);
 }
 
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: rem(24);
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: rem(8);
-}
-
-.form-field-full {
-  grid-column: 1 / -1;
-}
-
-.form-label {
-  padding: 0 rem(4);
-  color: $color-text;
-  font-size: rem(16);
-  font-weight: 400;
-  line-height: rem(26);
-}
-
-.form-input {
-  width: 100%;
-  height: rem(56);
-  border-radius: rem(20);
-  border: 1px solid rgba(1, 180, 235, 0.1);
-  background: rgba(1, 180, 235, 0.1);
-  color: $color-text;
-  font-family: $font-main;
-  font-size: rem(16);
-  font-weight: 400;
-  line-height: rem(26);
-  padding: 0 rem(20);
-  transition: border-color $transition-time, background-color $transition-time;
-
-  &:focus {
-    border-color: rgba(1, 180, 235, 0.5);
-    background: rgba(1, 180, 235, 0.16);
-  }
-}
-
-.form-select {
-  appearance: none;
-  background-image:
-    linear-gradient(45deg, transparent 50%, var(--color-light-grey) 50%),
-    linear-gradient(135deg, var(--color-light-grey) 50%, transparent 50%);
-  background-position:
-    calc(100% - #{rem(24)}) calc(50% - #{rem(4)}),
-    calc(100% - #{rem(18)}) calc(50% - #{rem(4)});
-  background-size: rem(6) rem(6), rem(6) rem(6);
-  background-repeat: no-repeat;
-  padding-right: rem(44);
-}
-
-.form-textarea {
-  min-height: rem(114);
-  height: rem(114);
-  padding-top: rem(15);
-  padding-bottom: rem(15);
-  resize: none;
-}
-
-.form-honeypot {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.form-consent {
-  display: flex;
-  align-items: flex-start;
-  gap: rem(24);
-}
-
-.form-consent-input {
-  appearance: none;
-  display: grid;
-  place-content: center;
-  width: rem(24);
-  height: rem(24);
-  margin-top: rem(6);
-  border: 2px solid var(--color-light-grey);
-  border-radius: rem(6);
-  background: transparent;
-  flex-shrink: 0;
-  cursor: pointer;
-
-  &::before {
-    content: '';
-    width: rem(10);
-    height: rem(10);
-    border-radius: rem(2);
-    background-color: $color-text;
-    transform: scale(0);
-    transition: transform $transition-time;
-  }
-
-  &:checked {
-    border-color: $color-text;
-  }
-
-  &:checked::before {
-    transform: scale(1);
-  }
-}
-
-.form-consent-text {
-  color: var(--color-light-grey);
-  font-size: rem(16);
-  font-weight: 400;
-  line-height: rem(26);
-}
-
 .form-actions {
   display: flex;
   justify-content: center;
@@ -483,18 +301,6 @@ const onSubmit = async () => {
   }
 }
 
-.form-error {
-  color: #f09a9a;
-  font-size: rem(14);
-  line-height: 1.5;
-  padding-left: rem(4);
-}
-
-.form-error-consent {
-  margin-top: rem(-14);
-  padding-left: rem(48);
-}
-
 .form-status {
   margin: 0;
   text-align: center;
@@ -515,19 +321,6 @@ const onSubmit = async () => {
     gap: rem(20);
   }
 
-  .form-grid {
-    grid-template-columns: 1fr;
-    gap: rem(20);
-  }
-
-  .form-consent {
-    gap: rem(16);
-  }
-
-  .form-consent-input {
-    margin-top: rem(4);
-  }
-
   .form-submit {
     width: 100%;
     max-width: rem(340);
@@ -535,12 +328,6 @@ const onSubmit = async () => {
 }
 
 @include bp-sm {
-  .form-label,
-  .form-input,
-  .form-consent-text {
-    font-size: rem(15);
-  }
-
   .form-submit {
     height: rem(64);
     font-size: rem(18);

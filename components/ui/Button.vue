@@ -3,7 +3,10 @@
     v-if="to"
     :to="$localePath(to)"
     class="button"
-    :class="{ 'button-adaptable': adaptable }"
+    :class="{
+      'button-adaptable': adaptable,
+      'button-disabled': disabled
+    }"
   >
     <div class="button-text">
       <span v-if="text">{{ text }}</span>
@@ -21,6 +24,7 @@
     :download="download"
     :target="target"
     class="button"
+    :class="{ 'button-disabled': disabled }"
   >
     <div class="button-text">
       <span v-if="text">{{ text }}</span>
@@ -39,7 +43,8 @@ const props = defineProps({
   href: { type: String, default: undefined },
   to: { type: String, default: undefined },
   download: { type: [String, Boolean], default: undefined },
-  adaptable: { type: Boolean, default: true }
+  adaptable: { type: Boolean, default: true },
+  disabled: { type: Boolean, default: false }
 })
 
 const target = computed(() => {
@@ -95,5 +100,10 @@ const target = computed(() => {
       border-color: $color-text;
     }
   }
+}
+
+.button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 </style>

@@ -17,6 +17,7 @@ export default defineNuxtConfig({
   components: {
     dirs: [
       'components/ui',
+      'components/form',
       'components/app',
       'components/section'
     ]
