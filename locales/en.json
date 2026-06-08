@@ -1017,7 +1017,7 @@
   "contact": {
     "hero": {
       "eyebrow": "Contact",
-      "title": "Contact Harmony Technology",
+      "title": "Contact us",
       "description": "Request SAF materials, discuss a partnership opportunity, schedule an online demo, ask about pricing, or explore SAF-based solution support.",
       "actions": {
         "materials": "Request SAF Materials",
@@ -1028,7 +1028,7 @@
     "form": {
       "eyebrow": "Inquiry Form",
       "title": "Prepare your inquiry",
-      "submit": "Send Inquiry",
+      "submit": "Submit",
       "sending": "Sending...",
       "status_success": "Your inquiry has been sent successfully. We will get back to you soon.",
       "status_error": "We could not send your inquiry right now. Please try again later.",
@@ -1064,7 +1064,7 @@
           "placeholder": "Optional"
         },
         "inquiry_type": {
-          "label": "Inquiry Type",
+          "label": "Inquiry type",
           "placeholder": "Select an inquiry type",
           "options": {
             "saf": "SAF",
@@ -1081,7 +1081,7 @@
           "placeholder": "Describe your project context, SAF or partner scenario, estimated data volume if pricing-related, and the next step you would like to discuss."
         },
         "consent": {
-          "label": "I understand that this first-release contact form prepares an email draft and should not include confidential information."
+          "label": "I understand that this first-release contact form prepares an email draft and should not include confidential information"
         }
       }
     },

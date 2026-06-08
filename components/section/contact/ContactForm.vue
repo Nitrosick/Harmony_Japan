@@ -1,58 +1,92 @@
 <template>
   <section
     id="contact-form"
-    class="form-section content"
+    class="contact-form"
   >
-    <p class="form-eyebrow">
-      {{ $t('contact.form.eyebrow') }}
-    </p>
-    <h2>{{ $t('contact.form.title') }}</h2>
-
     <form
       class="form"
       @submit.prevent="onSubmit"
     >
       <div class="form-grid">
-        <label
-          v-for="field in textFields"
-          :key="field.key"
-          class="form-field"
-        >
-          <span class="form-label">
-            {{ $t(`contact.form.fields.${field.key}.label`) }}
-            <span
-              v-if="field.required"
-              class="form-required"
-            >
-              *
-            </span>
-          </span>
+        <label class="form-field">
+          <span class="form-label">{{ $t('contact.form.fields.name.label') }}*</span>
           <input
-            v-model.trim="form[field.key]"
-            :type="field.type"
-            :placeholder="$t(`contact.form.fields.${field.key}.placeholder`)"
+            v-model.trim="form.name"
+            type="text"
             class="form-input"
           >
           <span
-            v-if="errors[field.key]"
+            v-if="errors.name"
             class="form-error"
           >
-            {{ errors[field.key] }}
+            {{ errors.name }}
           </span>
         </label>
 
-        <label class="form-field form-field-full">
-          <span class="form-label">
-            {{ $t('contact.form.fields.inquiry_type.label') }}
-            <span class="form-required">*</span>
-          </span>
-          <select
-            v-model="form.inquiry_type"
+        <label class="form-field">
+          <span class="form-label">{{ $t('contact.form.fields.company.label') }}*</span>
+          <input
+            v-model.trim="form.company"
+            type="text"
             class="form-input"
           >
-            <option value="">
-              {{ $t('contact.form.fields.inquiry_type.placeholder') }}
-            </option>
+          <span
+            v-if="errors.company"
+            class="form-error"
+          >
+            {{ errors.company }}
+          </span>
+        </label>
+
+        <label class="form-field">
+          <span class="form-label">{{ $t('contact.form.fields.job_title.label') }}</span>
+          <input
+            v-model.trim="form.job_title"
+            type="text"
+            class="form-input"
+          >
+        </label>
+
+        <label class="form-field">
+          <span class="form-label">{{ $t('contact.form.fields.email.label') }}*</span>
+          <input
+            v-model.trim="form.email"
+            type="email"
+            class="form-input"
+          >
+          <span
+            v-if="errors.email"
+            class="form-error"
+          >
+            {{ errors.email }}
+          </span>
+        </label>
+
+        <label class="form-field">
+          <span class="form-label">{{ $t('contact.form.fields.phone.label') }}</span>
+          <input
+            v-model.trim="form.phone"
+            type="tel"
+            class="form-input"
+          >
+        </label>
+
+        <label class="form-field">
+          <span class="form-label">{{ $t('contact.form.fields.country_region.label') }}</span>
+          <input
+            v-model.trim="form.country_region"
+            type="text"
+            class="form-input"
+          >
+        </label>
+
+        <label class="form-field form-field-full">
+          <span class="form-label">{{ $t('contact.form.fields.inquiry_type.label') }}</span>
+          <select
+            v-model="form.inquiry_type"
+            class="form-input form-select"
+          >
+            <option value=""></option>
             <option
               v-for="option in inquiryOptions"
               :key="option.value"
@@ -61,25 +95,15 @@
               {{ option.label }}
             </option>
           </select>
-          <span
-            v-if="errors.inquiry_type"
-            class="form-error"
-          >
-            {{ errors.inquiry_type }}
-          </span>
         </label>
 
         <label class="form-field form-field-full">
-          <span class="form-label">
-            {{ $t('contact.form.fields.message.label') }}
-            <span class="form-required">*</span>
-          </span>
+          <span class="form-label">{{ $t('contact.form.fields.message.label') }}*</span>
           <textarea
             v-model.trim="form.message"
-            :placeholder="$t('contact.form.fields.message.placeholder')"
             class="form-input form-textarea"
-            rows="7"
-          />
+            rows="4"
+          ></textarea>
           <span
             v-if="errors.message"
             class="form-error"
@@ -106,25 +130,27 @@
         <input
           v-model="form.consent"
           type="checkbox"
+          class="form-consent-input"
         >
-        <span>{{ $t('contact.form.fields.consent.label') }}</span>
+        <span class="form-consent-text">
+          {{ $t('contact.form.fields.consent.label') }}
+        </span>
       </label>
       <span
         v-if="errors.consent"
-        class="form-error"
+        class="form-error form-error-consent"
       >
         {{ errors.consent }}
       </span>
 
-      <p class="form-disclaimer">
-        {{ $t('contact.form.disclaimer') }}
-      </p>
-
       <div class="form-actions">
-        <Button
-          :text="submitButtonText"
-          :adaptable="false"
-        />
+        <button
+          type="submit"
+          class="form-submit"
+          :disabled="loading"
+        >
+          {{ submitButtonText }}
+        </button>
       </div>
 
       <p
@@ -141,15 +167,6 @@
 <script setup>
 const route = useRoute()
 const { t } = useI18n()
-
-const textFields = [
-  { key: 'name', type: 'text', required: true },
-  { key: 'company', type: 'text', required: true },
-  { key: 'job_title', type: 'text', required: false },
-  { key: 'email', type: 'email', required: true },
-  { key: 'phone', type: 'tel', required: false },
-  { key: 'country_region', type: 'text', required: false }
-]
 
 const inquiryOptionKeys = ['saf', 'pricing', 'partnership', 'saf_based_development', 'demo', 'media', 'other']
 
@@ -194,7 +211,6 @@ const errors = reactive({
   name: '',
   company: '',
   email: '',
-  inquiry_type: '',
   message: '',
   consent: ''
 })
@@ -226,10 +242,6 @@ const validate = () => {
     errors.email = t('contact.form.errors.required')
   } else if (!emailPattern.test(form.email)) {
     errors.email = t('contact.form.errors.email')
-  }
-
-  if (!form.inquiry_type) {
-    errors.inquiry_type = t('contact.form.errors.required')
   }
 
   if (!form.message) {
@@ -281,7 +293,7 @@ const onSubmit = async () => {
       email: form.email,
       phone: form.phone || '',
       countryRegion: form.country_region || '',
-      inquiryType: form.inquiry_type,
+      inquiryType: form.inquiry_type || 'other',
       message: form.message,
       selectedPricingConfiguration: form.selected_pricing_configuration || '',
       consent: form.consent,
@@ -311,38 +323,22 @@ const onSubmit = async () => {
 </script>
 
 <style lang="scss" scoped>
-.form-section {
-  display: flex;
-  flex-direction: column;
-  gap: rem(20);
-  padding: 0 fluid(80, 20) rem(64);
-}
-
-.form-eyebrow {
-  margin: 0;
-  font-size: rem(14);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.55;
+.contact-form {
+  max-width: rem(920);
+  margin: 0 auto;
+  filter: drop-shadow(0 rem(4) rem(2) rgba(0, 0, 0, 0.25));
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: rem(18);
-  width: 100%;
-  max-width: rem(980);
+  gap: rem(24);
 }
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: rem(18);
-
-  @include bp-md {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: rem(24);
 }
 
 .form-field {
@@ -356,47 +352,52 @@ const onSubmit = async () => {
 }
 
 .form-label {
-  font-weight: 600;
-}
-
-.form-required {
-  color: #f09a9a;
+  padding: 0 rem(4);
+  color: $color-text;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: rem(26);
 }
 
 .form-input {
   width: 100%;
-  border-radius: rem(18);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
+  height: rem(56);
+  border-radius: rem(20);
+  border: 1px solid rgba(1, 180, 235, 0.1);
+  background: rgba(1, 180, 235, 0.1);
   color: $color-text;
-  padding: rem(16) rem(18);
+  font-family: $font-main;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: rem(26);
+  padding: 0 rem(20);
+  transition: border-color $transition-time, background-color $transition-time;
 
-  &::placeholder {
-    color: rgba(255, 255, 255, 0.45);
+  &:focus {
+    border-color: rgba(1, 180, 235, 0.5);
+    background: rgba(1, 180, 235, 0.16);
   }
+}
+
+.form-select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--color-light-grey) 50%),
+    linear-gradient(135deg, var(--color-light-grey) 50%, transparent 50%);
+  background-position:
+    calc(100% - #{rem(24)}) calc(50% - #{rem(4)}),
+    calc(100% - #{rem(18)}) calc(50% - #{rem(4)});
+  background-size: rem(6) rem(6), rem(6) rem(6);
+  background-repeat: no-repeat;
+  padding-right: rem(44);
 }
 
 .form-textarea {
-  resize: vertical;
-  min-height: rem(180);
-}
-
-.form-consent {
-  display: flex;
-  align-items: flex-start;
-  gap: rem(10);
-  max-width: rem(980);
-
-  input {
-    margin-top: rem(4);
-  }
-}
-
-.form-disclaimer,
-.form-status {
-  max-width: rem(980);
-  margin: 0;
-  opacity: 0.72;
+  min-height: rem(114);
+  height: rem(114);
+  padding-top: rem(15);
+  padding-bottom: rem(15);
+  resize: none;
 }
 
 .form-honeypot {
@@ -405,34 +406,144 @@ const onSubmit = async () => {
   width: 1px;
   height: 1px;
   opacity: 0;
+  pointer-events: none;
+}
+
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: rem(24);
+}
+
+.form-consent-input {
+  appearance: none;
+  display: grid;
+  place-content: center;
+  width: rem(24);
+  height: rem(24);
+  margin-top: rem(6);
+  border: 2px solid var(--color-light-grey);
+  border-radius: rem(6);
+  background: transparent;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    width: rem(10);
+    height: rem(10);
+    border-radius: rem(2);
+    background-color: $color-text;
+    transform: scale(0);
+    transition: transform $transition-time;
+  }
+
+  &:checked {
+    border-color: $color-text;
+  }
+
+  &:checked::before {
+    transform: scale(1);
+  }
+}
+
+.form-consent-text {
+  color: var(--color-light-grey);
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: rem(26);
 }
 
 .form-actions {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: rem(16);
+  justify-content: center;
+  width: 100%;
 }
 
-.form-mailto {
+.form-submit {
+  width: rem(340);
+  height: rem(72);
+  border-radius: rem(24);
+  background-color: $color-text;
+  color: var(--color-blue);
+  font-family: $font-main;
+  font-size: rem(20);
   font-weight: 600;
-  text-decoration: underline;
+  line-height: rem(22);
+  transition: color $transition-time, opacity $transition-time;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-light-blue);
+  }
+
+  &:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
 }
 
 .form-error {
   color: #f09a9a;
   font-size: rem(14);
+  line-height: 1.5;
+  padding-left: rem(4);
+}
+
+.form-error-consent {
+  margin-top: rem(-14);
+  padding-left: rem(48);
 }
 
 .form-status {
+  margin: 0;
+  text-align: center;
+  font-size: rem(16);
+  line-height: rem(26);
+
   &.success {
     color: #9ad6a5;
-    opacity: 1;
   }
 
   &.error {
     color: #f09a9a;
-    opacity: 1;
+  }
+}
+
+@include bp-md {
+  .form {
+    gap: rem(20);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: rem(20);
+  }
+
+  .form-consent {
+    gap: rem(16);
+  }
+
+  .form-consent-input {
+    margin-top: rem(4);
+  }
+
+  .form-submit {
+    width: 100%;
+    max-width: rem(340);
+  }
+}
+
+@include bp-sm {
+  .form-label,
+  .form-input,
+  .form-consent-text {
+    font-size: rem(15);
+  }
+
+  .form-submit {
+    height: rem(64);
+    font-size: rem(18);
   }
 }
 </style>

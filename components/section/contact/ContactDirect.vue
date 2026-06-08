@@ -1,9 +1,8 @@
 <template>
-  <section class="direct content">
-    <p class="direct-eyebrow">
-      {{ $t('contact.direct.eyebrow') }}
-    </p>
-    <h2>{{ $t('contact.direct.title') }}</h2>
+  <section class="direct">
+    <h2 class="direct-title">
+      {{ $t('contact.direct.title') }}
+    </h2>
     <p class="direct-text">
       {{ $t('contact.direct.text') }}
     </p>
@@ -21,27 +20,66 @@
 .direct {
   display: flex;
   flex-direction: column;
-  gap: rem(18);
-  padding: 0 fluid(80, 20) rem(96);
+  align-items: center;
+  gap: rem(32);
+  max-width: rem(814);
+  margin: rem(144) auto 0;
+  text-align: center;
 }
 
-.direct-eyebrow {
+.direct-title {
   margin: 0;
-  font-size: rem(14);
+  font-size: rem(60);
   font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.55;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
 }
 
 .direct-text {
-  max-width: rem(920);
+  max-width: rem(814);
   margin: 0;
-  opacity: 0.72;
+  color: var(--color-light-grey);
+  font-size: rem(22);
+  font-weight: 500;
+  line-height: rem(32);
 }
 
 .direct-mail {
-  font-size: fluid(36, 24);
+  font-size: rem(48);
   font-weight: 700;
+  line-height: rem(48);
+  letter-spacing: -0.4px;
+
+  @include bp-md {
+    font-size: fluid(48, 34);
+    line-height: 1.2;
+  }
+}
+
+@include bp-md {
+  .direct {
+    gap: rem(24);
+    margin-top: rem(120);
+  }
+
+  .direct-title {
+    font-size: fluid(60, 40);
+  }
+
+  .direct-text {
+    font-size: rem(20);
+    line-height: rem(30);
+  }
+}
+
+@include bp-sm {
+  .direct {
+    margin-top: rem(96);
+  }
+
+  .direct-text {
+    font-size: rem(18);
+    line-height: rem(28);
+  }
 }
 </style>
