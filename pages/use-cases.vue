@@ -20,23 +20,17 @@
       <h2>Category overview</h2>
 
       <div class="pill-group">
-        <span
-          v-for="category in categories"
+        <button
+          v-for="category in categoryOptions"
           :key="category"
-          class="pill"
+          type="button"
+          class="pill pill-filter"
+          :class="{ 'pill-active': isCategoryActive(category) }"
+          :aria-pressed="isCategoryActive(category)"
+          @click="onCategoryClick(category)"
         >
           {{ category }}
-        </span>
-      </div>
-
-      <div class="pill-group">
-        <span
-          v-for="industry in industries"
-          :key="industry"
-          class="pill pill-secondary"
-        >
-          {{ industry }}
-        </span>
+        </button>
       </div>
     </section>
 
@@ -45,7 +39,7 @@
 
       <div class="catalog-grid">
         <article
-          v-for="item in useCases"
+          v-for="item in filteredUseCases"
           :key="item.title"
           class="case-card"
         >
@@ -106,24 +100,7 @@
 </template>
 
 <script setup>
-const categories = [
-  'Cybersecurity',
-  'IT Operations',
-  'Business Intelligence',
-  'Anti-fraud',
-  'Monitoring & Observability',
-  'Data Lake / SIEM Migration'
-]
-
-const industries = [
-  'Finance',
-  'Manufacturing',
-  'Oil & Gas',
-  'Online Services',
-  'Retail',
-  'Telecom',
-  'Transport'
-]
+const ALL_CATEGORIES = 'All Categories'
 
 const useCases = [
   {
@@ -314,6 +291,41 @@ const useCases = [
     ]
   }
 ]
+
+const selectedCategory = ref(ALL_CATEGORIES)
+
+const normalizeCategory = (value) => String(value || '').toLowerCase().trim()
+
+const splitCategories = (categoryLabel) => {
+  return String(categoryLabel || '')
+    .split('/')
+    .map((item) => item.trim())
+    .filter(Boolean)
+}
+
+const categoryOptions = computed(() => {
+  const categories = useCases.flatMap((item) => splitCategories(item.meta))
+
+  return [ALL_CATEGORIES, ...Array.from(new Set(categories))]
+})
+
+const isCategoryActive = (category) => {
+  return normalizeCategory(selectedCategory.value) === normalizeCategory(category)
+}
+
+const onCategoryClick = (category) => {
+  selectedCategory.value = category
+}
+
+const filteredUseCases = computed(() => {
+  if (isCategoryActive(ALL_CATEGORIES)) return useCases
+
+  return useCases.filter((item) =>
+    splitCategories(item.meta).some(
+      (category) => normalizeCategory(category) === normalizeCategory(selectedCategory.value)
+    )
+  )
+})
 </script>
 
 <style lang="scss" scoped>
@@ -457,6 +469,31 @@ h3 {
   color: #ffffff;
   font-size: rem(16);
   line-height: rem(24);
+}
+
+.pill-filter {
+  appearance: none;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  transition: border-color $transition-time, background-color $transition-time, color $transition-time, opacity $transition-time;
+
+  &:hover,
+  &:focus-visible {
+    border-color: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(113, 255, 195, 0.45);
+    outline-offset: 2px;
+  }
+}
+
+.pill-active {
+  border-color: rgba(255, 255, 255, 0.48);
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
 }
 
 .pill-secondary {
