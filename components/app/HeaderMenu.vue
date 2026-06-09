@@ -1,7 +1,7 @@
 <template>
   <nav class="menu">
     <NuxtLink
-      v-for="item in menuItems"
+      v-for="item in visibleMenuItems"
       :key="item.id"
       :to="localePath(item.to)"
       class="menu-item"
@@ -23,9 +23,11 @@ const menuItems = [
   { id: 2, to: '/use-cases', key: 'use_cases' },
   { id: 3, to: '/pricing', key: 'pricing' },
   { id: 4, to: '/technology', key: 'technology' },
-  { id: 5, to: '/blog', key: 'blog' },
+  { id: 5, to: '/blog', key: 'blog', hidden: true },
   { id: 6, to: '/contact', key: 'contact' }
 ]
+
+const visibleMenuItems = computed(() => menuItems.filter((item) => !item.hidden))
 </script>
 
 <style lang="scss" scoped>
