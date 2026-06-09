@@ -318,9 +318,62 @@ const useCases = [
 
 <style lang="scss" scoped>
 .use-cases-page {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: rem(24);
+  gap: 0;
+  overflow: hidden;
+  background-color: #000212;
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 50%;
+    content: '';
+    width: rem(1840);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &::before {
+    top: rem(900);
+    height: rem(1800);
+    background: radial-gradient(
+      ellipse at center,
+      rgba(7, 63, 61, 0.65) 0%,
+      rgba(7, 63, 61, 0.3) 44%,
+      rgba(7, 63, 61, 0) 70%
+    );
+    filter: blur(rem(40));
+    transform: translateX(-50%) scaleY(-1);
+  }
+
+  &::after {
+    top: rem(3600);
+    height: rem(2200);
+    background: radial-gradient(
+      ellipse at center,
+      rgba(7, 63, 61, 0.6) 0%,
+      rgba(7, 63, 61, 0.28) 38%,
+      rgba(7, 63, 61, 0) 66%
+    );
+    filter: blur(rem(40));
+    transform: translateX(-50%) scaleY(-1);
+  }
+
+  @include bp-md {
+    &::before,
+    &::after {
+      width: rem(1420);
+    }
+  }
 }
 
 .hero,
@@ -330,56 +383,91 @@ const useCases = [
 .final-cta {
   display: flex;
   flex-direction: column;
-  gap: rem(16);
-  padding: rem(64) fluid(80, 20);
+  gap: rem(24);
+  width: min(100%, rem(1280));
+  margin: 0 auto;
+  padding: rem(96) fluid(80, 20) 0;
 }
 
 .hero {
-  padding-top: rem(150);
+  min-height: rem(760);
+  justify-content: center;
+  padding-top: rem(160);
+  padding-bottom: rem(54);
 }
 
 .eyebrow {
   margin: 0;
-  font-size: rem(14);
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  color: #adadad;
+  font-size: rem(20);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  opacity: 0.55;
+  opacity: 1;
+}
+
+h1 {
+  max-width: rem(1100);
+  font-size: fluid(72, 44);
+  line-height: fluid(70, 48);
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: fluid(60, 36);
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+h3 {
+  font-size: rem(28);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
 }
 
 .subtitle,
 .description {
-  max-width: rem(960);
+  max-width: rem(1080);
   margin: 0;
-  opacity: 0.78;
+  color: #adadad;
+  font-size: rem(22);
+  font-weight: 500;
+  line-height: rem(32);
+  opacity: 0.95;
 }
 
 .description {
-  opacity: 0.68;
+  max-width: rem(1020);
+  opacity: 0.86;
 }
 
 .pill-group {
   display: flex;
   flex-wrap: wrap;
-  gap: rem(10);
+  gap: rem(14);
 }
 
 .pill {
-  padding: rem(8) rem(14);
+  padding: rem(10) rem(18);
   border-radius: rem(999);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background-color: rgba(255, 255, 255, 0.06);
-  font-size: rem(14);
+  border: 1px solid rgba(113, 255, 195, 0.2);
+  background: rgba(1, 180, 235, 0.1);
+  color: #ffffff;
+  font-size: rem(16);
+  line-height: rem(24);
 }
 
 .pill-secondary {
-  opacity: 0.85;
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .catalog-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: rem(20);
+  gap: rem(24);
 
   @include bp-lg {
     grid-template-columns: 1fr;
@@ -389,54 +477,179 @@ const useCases = [
 .case-card {
   display: flex;
   flex-direction: column;
-  gap: rem(12);
-  padding: fluid(28, 20);
-  border-radius: rem(24);
-  background: var(--card-bg-gradient);
+  gap: rem(16);
+  padding: rem(36) rem(32);
+  border-radius: rem(32);
+  background: radial-gradient(91.71% 91.71% at 100% 100%, rgba(255, 255, 255, 0.08) 0%, rgba(3, 0, 20, 0) 100%);
+  border: 1px solid rgba(113, 255, 195, 0.2);
+  box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
 }
 
 .case-meta {
   margin: 0;
-  font-size: rem(13);
+  color: #adadad;
+  font-size: rem(16);
+  line-height: rem(26);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  opacity: 0.62;
+  opacity: 0.9;
 }
 
 .case-summary {
   margin: 0;
-  opacity: 0.74;
+  color: #adadad;
+  font-size: rem(22);
+  line-height: rem(32);
+  opacity: 0.95;
 }
 
 .case-highlights {
   margin: 0;
-  padding-left: rem(18);
+  padding-left: rem(22);
   display: flex;
   flex-direction: column;
-  gap: rem(6);
-  opacity: 0.78;
+  gap: rem(10);
+  color: #ffffff;
+  font-size: rem(20);
+  line-height: rem(30);
+  opacity: 0.92;
+
+  li::marker {
+    color: rgba(113, 255, 195, 0.82);
+  }
 }
 
 .common-list {
   margin: 0;
-  padding-left: rem(20);
+  padding-left: rem(24);
   display: flex;
   flex-direction: column;
-  gap: rem(10);
-  max-width: rem(980);
-  opacity: 0.78;
+  gap: rem(14);
+  max-width: rem(1120);
+  color: #adadad;
+  font-size: rem(22);
+  line-height: rem(32);
+  opacity: 0.95;
+
+  li::marker {
+    color: rgba(113, 255, 195, 0.82);
+  }
 }
 
 .final-cta p {
-  max-width: rem(920);
+  max-width: rem(980);
   margin: 0;
-  opacity: 0.72;
+  color: #adadad;
+  font-size: rem(22);
+  line-height: rem(32);
+  opacity: 0.95;
 }
 
 .final-cta-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: rem(16);
-  margin-top: rem(8);
+  gap: rem(20);
+  margin-top: rem(16);
+}
+
+.final-cta-actions :deep(.button) {
+  width: rem(340);
+  min-height: rem(72);
+  border-radius: rem(24);
+  padding: rem(19) rem(20);
+  font-size: rem(20);
+  line-height: rem(22);
+}
+
+.final-cta-actions :deep(.button:nth-child(2)) {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
+}
+
+.final-cta-actions :deep(.button:nth-child(2):hover),
+.final-cta-actions :deep(.button:nth-child(2):focus-visible) {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.78);
+}
+
+@include bp-md {
+  .hero,
+  .overview,
+  .catalog,
+  .common,
+  .final-cta {
+    gap: rem(20);
+    padding-top: rem(76);
+  }
+
+  .hero {
+    min-height: rem(600);
+    padding-top: rem(128);
+  }
+
+  .subtitle,
+  .description,
+  .case-summary,
+  .common-list,
+  .final-cta p {
+    font-size: rem(20);
+    line-height: rem(30);
+  }
+
+  .case-highlights {
+    font-size: rem(18);
+    line-height: rem(28);
+  }
+
+  .case-card {
+    padding: rem(30) rem(24);
+  }
+}
+
+@include bp-sm {
+  .hero,
+  .overview,
+  .catalog,
+  .common,
+  .final-cta {
+    padding-top: rem(64);
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: rem(116);
+    padding-bottom: rem(42);
+  }
+
+  .eyebrow {
+    font-size: rem(14);
+  }
+
+  .subtitle,
+  .description,
+  .case-summary,
+  .common-list,
+  .final-cta p {
+    font-size: rem(18);
+    line-height: rem(28);
+  }
+
+  .case-meta {
+    font-size: rem(14);
+    line-height: rem(22);
+  }
+
+  .case-highlights {
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+
+  .final-cta-actions :deep(.button) {
+    width: 100%;
+    min-height: rem(64);
+    font-size: rem(18);
+  }
 }
 </style>
