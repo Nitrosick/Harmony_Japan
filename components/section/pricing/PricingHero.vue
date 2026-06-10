@@ -13,7 +13,7 @@
     <div class="hero-actions">
       <Button
         :text="$t('pricing.hero.actions.start_calculation')"
-        href="#calculator-preview"
+        href="#pricing-estimator"
         :adaptable="false"
       />
       <Button
