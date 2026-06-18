@@ -168,7 +168,7 @@ const onImgError = (event) => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: rem(24);
+  gap: rem(30);
   padding: rem(64) fluid(80, 20);
 }
 
@@ -241,7 +241,7 @@ const onImgError = (event) => {
 .features-content-text {
   display: flex;
   flex-direction: column;
-  gap: rem(24);
+  gap: rem(30);
   max-width: rem(500);
 }
 

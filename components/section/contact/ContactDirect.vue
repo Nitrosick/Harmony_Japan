@@ -59,7 +59,7 @@
 
 @include bp-md {
   .direct {
-    gap: rem(24);
+    gap: rem(30);
     margin-top: rem(120);
   }
 

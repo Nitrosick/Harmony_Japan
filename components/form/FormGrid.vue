@@ -8,7 +8,7 @@
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: rem(24);
+  gap: rem(30);
 }
 
 @include bp-md {

@@ -41,7 +41,7 @@ const itemKeys = ['market_focus', 'partner_communication', 'solution_alignment',
 .why-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: rem(24);
+  gap: rem(30);
   width: min(100%, rem(1280));
 
   @include bp-sm {
@@ -93,7 +93,7 @@ const itemKeys = ['market_focus', 'partner_communication', 'solution_alignment',
 @include bp-md {
   .why {
     margin-top: rem(84);
-    gap: rem(24);
+    gap: rem(30);
   }
 
   .why-card p {

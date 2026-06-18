@@ -269,7 +269,7 @@ const onSubmit = async () => {
 .form {
   display: flex;
   flex-direction: column;
-  gap: rem(24);
+  gap: rem(30);
 }
 
 .form-actions {

@@ -28,7 +28,7 @@
 .pricing {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: rem(24);
+  gap: rem(30);
   align-items: center;
   padding: rem(64) fluid(80, 20);
   border-radius: rem(32);

@@ -5,7 +5,8 @@
     class="button"
     :class="{
       'button-adaptable': adaptable,
-      'button-disabled': disabled
+      'button-disabled': disabled,
+      'button-secondary': theme !== 'primary'
     }"
   >
     <div class="button-text">
@@ -24,7 +25,10 @@
     :download="download"
     :target="target"
     class="button"
-    :class="{ 'button-disabled': disabled }"
+    :class="{
+      'button-disabled': disabled,
+      'button-secondary': theme !== 'primary'
+    }"
   >
     <div class="button-text">
       <span v-if="text">{{ text }}</span>
@@ -44,7 +48,8 @@ const props = defineProps({
   to: { type: String, default: undefined },
   download: { type: [String, Boolean], default: undefined },
   adaptable: { type: Boolean, default: true },
-  disabled: { type: Boolean, default: false }
+  disabled: { type: Boolean, default: false },
+  theme: { type: String, default: 'primary' }
 })
 
 const target = computed(() => {
@@ -67,7 +72,7 @@ const target = computed(() => {
   border-radius: fluid(24, 16);
   padding: fluid(25, 15) fluid(100, 57);
   overflow: hidden;
-  transition: color $transition-time;
+  transition: color $transition-time, background $transition-time;
 
   &-text {
     position: relative;
@@ -105,5 +110,18 @@ const target = computed(() => {
 .button-disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.button-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $color-text;
+  border: 2px solid $color-text;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: $color-text;
+  }
 }
 </style>

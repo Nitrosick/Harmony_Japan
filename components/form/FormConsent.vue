@@ -35,7 +35,7 @@ defineProps({
 .form-consent {
   display: flex;
   align-items: flex-start;
-  gap: rem(24);
+  gap: rem(30);
 }
 
 .form-consent-input {

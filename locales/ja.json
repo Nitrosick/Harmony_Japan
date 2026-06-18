@@ -26,7 +26,7 @@
     "hero": {
       "eyebrow": "Japan-focused partner of SAF-Systems",
       "title": "Search Anywhere Framework のご紹介",
-      "description": "English master version をもとに、新しい Home 構成を先行導入しています。Harmony Technology は SAF-Systems と連携し、日本市場向けの紹介・コミュニケーションを支援します。",
+      "description": "English master version をもとに、新しい Home 構成を先行導入しています。 Harmony Technology は SAF-Systems と連携し、日本市場向けの紹介・コミュニケーションを支援します。",
       "actions": {
         "materials": "資料を依頼",
         "demo": "オンラインデモを相談",
@@ -150,7 +150,7 @@
     "final_cta": {
       "title": "次の会話を始めましょう",
       "text": "資料、デモ、料金、または SAF 関連支援について相談できます。",
-      "primary_cta": "Contact",
+      "primary_cta": "Contact Us",
       "secondary_cta": "Pricing"
     }
   },

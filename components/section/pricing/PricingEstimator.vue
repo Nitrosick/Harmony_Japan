@@ -531,7 +531,7 @@ const onCalculate = async () => {
 .estimator {
   display: flex;
   flex-direction: column;
-  gap: rem(24);
+  gap: rem(30);
   max-width: rem(1280);
   padding: 0 fluid(80, 20) rem(32);
 }

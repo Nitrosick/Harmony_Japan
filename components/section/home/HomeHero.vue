@@ -10,9 +10,11 @@
       <h1 class="hero-title">
         {{ $t('home.hero.title') }}
       </h1>
-      <p class="hero-description">
-        {{ $t('home.hero.description') }}
-      </p>
+
+      <p
+        class="hero-description"
+        v-html="$t('home.hero.description')"
+      />
 
       <div class="hero-actions">
         <Button
@@ -50,12 +52,13 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: rem(40);
+  align-items: center;
+  gap: fluid(60, 30);
   width: 100%;
   max-width: rem(1280);
   margin: 0 auto;
   padding: rem(72) fluid(80, 20) 0;
+  text-align: center;
 }
 
 .hero-title {
@@ -63,15 +66,16 @@
   font-size: fluid(72, 44);
   line-height: fluid(70, 48);
   letter-spacing: -1px;
+  white-space: nowrap;
 }
 
 .hero-description {
   max-width: rem(840);
   margin: 0;
-  color: var(--color-light-grey);
-  font-size: rem(28);
+  // color: var(--color-light-grey);
+  font-size: fluid(22, 18);
+  font-weight: 500;
   line-height: rem(36);
-  opacity: 0.95;
 }
 
 .hero-actions {
@@ -98,6 +102,10 @@
   .hero-content {
     gap: rem(28);
     padding-top: rem(54);
+  }
+
+  .hero-title {
+    white-space: inherit;
   }
 
   .hero-description {

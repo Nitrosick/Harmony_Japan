@@ -41,7 +41,7 @@ const strengthKeys = ['uniqueness', 'technology', 'price']
 .strengths-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: rem(24);
+  gap: rem(30);
   width: min(100%, rem(1280));
 
   @include bp-lg {

@@ -54,7 +54,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: rem(24);
+  gap: rem(30);
   width: 100%;
   padding: rem(140) fluid(80, 20) rem(90);
 }

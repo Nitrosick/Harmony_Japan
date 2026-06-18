@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: rem(24);
+  gap: rem(30);
   padding: rem(170) fluid(80, 20) rem(80);
 }
 

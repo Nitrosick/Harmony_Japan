@@ -1,8 +1,8 @@
 <template>
   <section class="trust content">
-    <p class="trust-eyebrow">
+    <!-- <p class="trust-eyebrow">
       {{ $t('home.trust.eyebrow') }}
-    </p>
+    </p> -->
 
     <h2>{{ $t('home.trust.title') }}</h2>
     
@@ -37,18 +37,18 @@ const trustItems = computed(() => {
 .trust {
   display: flex;
   flex-direction: column;
-  gap: rem(18);
+  gap: rem(30);
   padding: rem(64) fluid(80, 20);
 }
 
-.trust-eyebrow {
-  margin: 0;
-  font-size: rem(14);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.55;
-}
+// .trust-eyebrow {
+//   margin: 0;
+//   font-size: rem(14);
+//   font-weight: 700;
+//   letter-spacing: 0.12em;
+//   text-transform: uppercase;
+//   opacity: 0.55;
+// }
 
 .trust-text {
   max-width: rem(920);

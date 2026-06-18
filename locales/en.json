@@ -64,7 +64,7 @@
       }
     },
     "company_intro": {
-      "title": "Technology that solves real business problems.",
+      "title": "Technology that solves real business problems",
       "text": "Harmony Technology provides independent solutions in data analytics, event management, and custom development, designed to match your specific needs. Each product works on its own, so you only invest in what truly matters to your business."
     },
     "product_strengths": {
@@ -171,7 +171,7 @@
     "final_cta": {
       "title": "Move the conversation forward",
       "text": "If you want SAF materials, a demo discussion, pricing direction, or a conversation about SAF-based development, Harmony Technology is ready to help.",
-      "primary_cta": "Contact Harmony Technology",
+      "primary_cta": "Contact Us",
       "secondary_cta": "View Pricing"
     }
   },

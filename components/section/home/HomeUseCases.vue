@@ -48,7 +48,7 @@ const caseKeys = ['security_operations', 'observability', 'incident_investigatio
 }
 
 .use-cases-text {
-  max-width: rem(1118);
+  max-width: rem(1024);
   margin: 0;
   color: var(--color-light-grey);
   font-size: rem(22);
@@ -59,7 +59,7 @@ const caseKeys = ['security_operations', 'observability', 'incident_investigatio
 .use-cases-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: rem(24);
+  gap: rem(30);
   width: min(100%, rem(1280));
   margin: rem(30) 0 0;
 
@@ -114,7 +114,7 @@ const caseKeys = ['security_operations', 'observability', 'incident_investigatio
 @include bp-md {
   .use-cases {
     margin-top: rem(84);
-    gap: rem(24);
+    gap: rem(30);
   }
 
   .use-cases-text {

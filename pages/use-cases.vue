@@ -395,7 +395,7 @@ const filteredUseCases = computed(() => {
 .final-cta {
   display: flex;
   flex-direction: column;
-  gap: rem(24);
+  gap: rem(30);
   width: min(100%, rem(1280));
   margin: 0 auto;
   padding: rem(96) fluid(80, 20) 0;
@@ -504,7 +504,7 @@ h3 {
 .catalog-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: rem(24);
+  gap: rem(30);
 
   @include bp-lg {
     grid-template-columns: 1fr;

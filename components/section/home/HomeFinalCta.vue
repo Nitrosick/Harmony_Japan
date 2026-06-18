@@ -16,6 +16,7 @@
         <Button
           :text="$t('home.final_cta.secondary_cta')"
           to="/pricing"
+          theme="secondary"
         />
       </div>
     </div>
@@ -25,19 +26,17 @@
 <style lang="scss" scoped>
 .final-cta {
   padding: rem(64) fluid(80, 20) rem(96);
+  background: radial-gradient(circle at bottom, rgba(3, 252, 146, 0.18), transparent 45%), var(--dark-green-gradient);
 }
 
 .final-cta-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: rem(20);
+  gap: fluid(60, 30);
   text-align: center;
   padding: fluid(44, 28);
   border-radius: rem(32);
-  background:
-    radial-gradient(circle at top, rgba(3, 252, 146, 0.18), transparent 60%),
-    var(--dark-green-gradient);
 }
 
 .final-cta-text {
@@ -47,9 +46,8 @@
 }
 
 .final-cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: rem(16);
 }
 </style>

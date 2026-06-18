@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: rem(24);
+  gap: rem(30);
   margin-top: rem(100);
   padding: 0 fluid(80, 20);
 }
@@ -26,7 +26,7 @@
 }
 
 .company-intro-text {
-  max-width: rem(1040);
+  max-width: rem(1024);
   margin: 0;
   color: var(--color-light-grey);
   font-size: rem(22);
@@ -37,7 +37,6 @@
 @include bp-md {
   .company-intro {
     margin-top: rem(76);
-    gap: rem(20);
   }
 
   .company-intro-text {
