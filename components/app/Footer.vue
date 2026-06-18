@@ -9,9 +9,10 @@
         width="271"
         height="21"
       >
-      <p class="footer-description">
-        {{ $t('footer.description') }}
-      </p>
+      <p
+        class="footer-description"
+        v-html="$t('footer.description')"
+      />
       <nav class="footer-links">
         <NuxtLink
           v-for="item in links"
@@ -61,6 +62,9 @@ const links = [
     margin: 0;
     text-align: center;
     opacity: 0.7;
+    font-size: rem(20);
+    line-height: 1.2;
+    font-weight: 400;
   }
 
   &-links {

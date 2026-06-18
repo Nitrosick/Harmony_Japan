@@ -57,19 +57,26 @@ const trustItems = computed(() => {
 }
 
 .trust-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: rem(16);
-  margin: rem(8) 0 0;
-  padding-left: rem(20);
-
-  @include bp-lg {
-    grid-template-columns: 1fr;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+  padding-left: rem(45);
+  list-style: none;
 }
 
 .trust-list-item {
-  line-height: 1.5;
-  opacity: 0.8;
+  position: relative;
+  line-height: rem(28);
+  font-weight: 500;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: rem(-50);
+    width: rem(28);
+    height: rem(28);
+    background-image: url(/icons/marker.svg);
+    background-position: center;
+  }
 }
 </style>

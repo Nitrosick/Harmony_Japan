@@ -163,14 +163,14 @@
       "title": "Built for long-term B2B relationships",
       "text": "The current website direction is designed to create clear next steps around materials, demos, pricing, partnership conversations, and SAF-based solution planning without relying on unsupported claims.",
       "items": [
-        "clear and moderate partnership wording",
-        "focus on delivery conversations, not unsupported market claims",
-        "structured next steps for materials, demos, pricing, and partner discussions"
+        "Clear and moderate partnership wording",
+        "Focus on delivery conversations, not unsupported market claims",
+        "Structured next steps for materials, demos, pricing, and partner discussions"
       ]
     },
     "final_cta": {
       "title": "Move the conversation forward",
-      "text": "If you want SAF materials, a demo discussion, pricing direction, or a conversation about SAF-based development, Harmony Technology is ready to help.",
+      "text": "If you want SAF materials, a demo discussion, pricing direction, or a conversation about SAF-based development, Harmony Technology is ready to help",
       "primary_cta": "Contact Us",
       "secondary_cta": "View Pricing"
     }
@@ -1129,6 +1129,6 @@
     }
   },
   "footer": {
-    "description": "Harmony Technology supports SAF introduction and SAF-based solution delivery for teams working in Japan."
+    "description": "Harmony Technology supports SAF introduction and\nSAF-based solution delivery for teams working in Japan."
   }
 }

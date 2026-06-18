@@ -57,12 +57,11 @@
   width: 100%;
   max-width: rem(1280);
   margin: 0 auto;
-  padding: rem(72) fluid(80, 20) 0;
+  padding: rem(120) fluid(80, 20) 0;
   text-align: center;
 }
 
 .hero-title {
-  max-width: rem(1000);
   font-size: fluid(72, 44);
   line-height: fluid(70, 48);
   letter-spacing: -1px;

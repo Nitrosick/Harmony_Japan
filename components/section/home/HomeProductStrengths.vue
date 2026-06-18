@@ -63,7 +63,7 @@ const strengthKeys = ['uniqueness', 'technology', 'price']
 
   h3 {
     margin: 0;
-    font-size: rem(32);
+    font-size: fluid(28, 24);
     line-height: 1.15;
     letter-spacing: -0.4px;
   }
@@ -71,8 +71,8 @@ const strengthKeys = ['uniqueness', 'technology', 'price']
   p {
     margin: 0;
     color: var(--color-light-grey);
-    font-size: rem(22);
-    line-height: rem(32);
+    font-size: fluid(22, 18);
+    line-height: fluid(32, 24);
     opacity: 0.95;
   }
 }

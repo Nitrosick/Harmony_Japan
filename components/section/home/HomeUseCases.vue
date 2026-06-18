@@ -22,6 +22,7 @@
       :text="$t('home.use_cases.cta')"
       to="/use-cases"
       :adaptable="false"
+      class="use-cases-button"
     />
   </section>
 </template>
@@ -38,6 +39,10 @@ const caseKeys = ['security_operations', 'observability', 'incident_investigatio
   gap: rem(30);
   margin-top: rem(120);
   padding: 0 fluid(80, 20);
+
+  &-button {
+    margin-top: rem(24);
+  }
 }
 
 .use-cases-title {
@@ -78,7 +83,7 @@ const caseKeys = ['security_operations', 'observability', 'incident_investigatio
   gap: rem(16);
   justify-content: flex-start;
   min-height: rem(432);
-  padding: rem(44) rem(40);
+  padding: fluid(44, 32) fluid(40, 32);
   border-radius: rem(32);
   background: linear-gradient(180deg, rgba(5, 47, 50, 0.4) 39.82%, rgba(13, 36, 50, 0.1) 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -86,7 +91,7 @@ const caseKeys = ['security_operations', 'observability', 'incident_investigatio
 
   h4 {
     margin: 0;
-    font-size: rem(28);
+    font-size: fluid(28, 24);
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: -0.4px;
@@ -95,8 +100,8 @@ const caseKeys = ['security_operations', 'observability', 'incident_investigatio
   p {
     margin: 0;
     color: var(--color-light-grey);
-    font-size: rem(22);
-    line-height: rem(32);
+    font-size: fluid(22, 18);
+    line-height: fluid(32, 24);
     opacity: 0.95;
   }
 }

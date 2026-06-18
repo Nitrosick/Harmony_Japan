@@ -40,9 +40,12 @@
 }
 
 .final-cta-text {
-  max-width: rem(840);
+  max-width: rem(1100);
   margin: 0;
   opacity: 0.78;
+  font-size: rem(28);
+  font-weight: 500;
+  line-height: 1.3;
 }
 
 .final-cta-actions {
