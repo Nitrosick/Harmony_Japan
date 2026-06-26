@@ -1,9 +1,5 @@
 <template>
   <section class="why content">
-    <p class="why-eyebrow">
-      {{ $t('saf.page.why.eyebrow') }}
-    </p>
-
     <h2>{{ $t('saf.page.why.title') }}</h2>
     
     <p class="why-text">
@@ -45,15 +41,6 @@ const items = [
   flex-direction: column;
   gap: rem(18);
   padding: rem(96) fluid(80, 20) rem(64);
-}
-
-.why-eyebrow {
-  margin: 0;
-  font-size: rem(14);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.55;
 }
 
 .why-text {

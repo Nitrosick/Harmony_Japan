@@ -19,12 +19,16 @@
       <h1 class="hero-title">Search Anywhere Framework</h1>
 
       <p class="hero-subtitle">
-        Universal monitoring platform for collection, analytics, and visualization of any machine data type
-      </p>
-      
-      <p class="hero-description">
+        Universal monitoring platform for collection, analytics, and visualization of any machine data type.
         Helps IT staff and business users ask questions to corporate machine data and get human-readable answers
       </p>
+
+      <Button
+        :text="$t('saf.page.hero.actions.materials')"
+        to="/contact"
+        :adaptable="false"
+        class="hero-content-btn"
+      />
     </div>
   </section>
 </template>
@@ -35,11 +39,14 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  margin-top: rem(-108);
   overflow: hidden;
 }
 
 .hero-background {
   position: absolute;
+  top: 0;
+  left: 0;
   inset: 0;
   background:
     linear-gradient(180deg, rgba(0, 3, 20, 0.42), rgba(0, 3, 20, 0.9)),
@@ -56,7 +63,11 @@
   text-align: center;
   gap: rem(30);
   width: 100%;
-  padding: rem(140) fluid(80, 20) rem(90);
+  padding: 0 fluid(80, 20);
+
+  &-btn {
+    margin-top: rem(24);
+  }
 }
 
 .hero-logo {
@@ -71,20 +82,8 @@
 .hero-subtitle {
   margin: 0;
   max-width: rem(980);
-  font-size: rem(24);
-  line-height: 1.35;
+  font-size: fluid(22, 18);
+  line-height: fluid(32, 24);
   opacity: 0.88;
-
-  @include bp-md {
-    font-size: rem(20);
-  }
-}
-
-.hero-description {
-  max-width: rem(880);
-  margin: 0;
-  font-size: rem(16);
-  line-height: 1.5;
-  opacity: 0.78;
 }
 </style>
