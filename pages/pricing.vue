@@ -9,8 +9,7 @@
 .pricing-page {
   position: relative;
   overflow: hidden;
-  padding-bottom: rem(120);
-  background-color: #000212;
+  background-color: $color-background;
 
   > * {
     position: relative;
@@ -49,10 +48,6 @@
       rgba(7, 78, 99, 0.2) 36%,
       rgba(7, 78, 99, 0) 70%
     );
-  }
-
-  @include bp-md {
-    padding-bottom: rem(88);
   }
 }
 </style>

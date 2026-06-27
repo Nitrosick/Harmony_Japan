@@ -1,12 +1,8 @@
 <template>
   <section class="hero content">
-    <p class="hero-eyebrow">
-      {{ $t('pricing.hero.eyebrow') }}
-    </p>
-
     <h1>{{ $t('pricing.hero.title') }}</h1>
     
-    <p class="hero-text">
+    <p class="description hero-text">
       {{ $t('pricing.hero.description') }}
     </p>
 
@@ -28,24 +24,16 @@
 .hero {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: rem(30);
-  padding: rem(170) fluid(80, 20) rem(80);
-}
-
-.hero-eyebrow {
-  margin: 0;
-  font-size: rem(14);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.55;
+  min-height: calc(100vh - rem(75));
+  padding: fluid(100, 75) fluid(80, 20) fluid(120, 100) fluid(80, 20);
 }
 
 .hero-text {
   max-width: rem(900);
-  margin: 0;
-  opacity: 0.72;
+  text-align: center;
 }
 
 .hero-actions {

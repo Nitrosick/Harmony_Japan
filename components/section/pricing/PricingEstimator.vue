@@ -3,41 +3,54 @@
     id="pricing-estimator"
     class="estimator content"
   >
-    <article class="step-card">
+    <article class="card">
       <p class="step-label">
         Step 1
       </p>
-      <h2 class="step-title">
-        Review the licensing model
-      </h2>
-      <p class="step-text">
+
+      <h3>Review the licensing model</h3>
+
+      <p class="description">
         The SAF license estimate is primarily based on raw data volume, selected bundle and modules, and deployment/support scope confirmed during quotation.
       </p>
+
       <div class="model-points">
         <div class="model-point">
           <h3>Raw Data Volume</h3>
-          <p>Storage is normalized to TB for pricing calculation across all supported input modes.</p>
+
+          <p class="description">
+            Storage is normalized to TB for pricing calculation across all supported input modes.
+          </p>
         </div>
+
         <div class="model-point">
           <h3>Bundle and Modules</h3>
-          <p>Bundle direction defines a baseline scope. Custom lets you choose modules manually.</p>
+
+          <p class="description">
+            Bundle direction defines a baseline scope. Custom lets you choose modules manually.
+          </p>
         </div>
+
         <div class="model-point">
           <h3>Commercial Confirmation</h3>
-          <p>This price is a preliminary estimate and is not a public offer.</p>
+
+          <p class="description">
+            This price is a preliminary estimate and is not a public offer.
+          </p>
         </div>
       </div>
     </article>
 
-    <article class="step-card">
+    <article class="card">
       <p class="step-label">
         Step 2
       </p>
-      <h2 class="step-title">
-        Estimate data volume
-      </h2>
+
+      <h3>Estimate data volume</h3>
+
       <fieldset class="mode-fieldset">
         <legend>Calculation mode</legend>
+
         <div class="mode-grid">
           <label
             v-for="option in modeOptions"
@@ -61,6 +74,7 @@
           class="field"
         >
           <span>Raw Data Volume (TB)</span>
+
           <input
             v-model="form.direct_tb"
             type="number"
@@ -73,6 +87,7 @@
         <template v-if="form.mode === 'flow'">
           <label class="field">
             <span>Daily ingest rate (GB/day)</span>
+
             <input
               v-model="form.flow_gb_day"
               type="number"
@@ -83,6 +98,7 @@
           </label>
           <label class="field">
             <span>Retention days</span>
+
             <input
               v-model="form.flow_retention_days"
               type="number"
@@ -96,6 +112,7 @@
         <template v-if="form.mode === 'eps'">
           <label class="field">
             <span>EPS</span>
+
             <input
               v-model="form.eps"
               type="number"
@@ -106,6 +123,7 @@
           </label>
           <label class="field">
             <span>Average event size (bytes)</span>
+
             <input
               v-model="form.avg_event_size"
               type="number"
@@ -116,6 +134,7 @@
           </label>
           <label class="field">
             <span>Retention days</span>
+
             <input
               v-model="form.eps_retention_days"
               type="number"
@@ -128,17 +147,17 @@
       </div>
 
       <p class="storage-line">
-        Calculated storage volume: <strong>{{ storageNumberDisplay }}</strong>
+        Calculated storage volume:
+        <strong>{{ storageNumberDisplay }}</strong>
       </p>
     </article>
 
-    <article class="step-card">
+    <article class="card">
       <p class="step-label">
         Step 3
       </p>
-      <h2 class="step-title">
-        Select bundle and modules
-      </h2>
+
+      <h3>Select bundle and modules</h3>
 
       <div class="bundle-grid">
         <button
@@ -153,7 +172,7 @@
         </button>
       </div>
 
-      <p class="helper-note">
+      <p class="description helper-note">
         For Security, IT Ops, and Compliance, module scope is preselected and locked. For Custom, choose modules manually.
       </p>
 
@@ -169,12 +188,14 @@
         >
           <div class="module-top">
             <strong>{{ module.label }}</strong>
+
             <span
               v-if="module.id === 'core'"
               class="module-tag required"
             >
               Required
             </span>
+
             <span
               v-else-if="module.visualOnly"
               class="module-tag"
@@ -182,6 +203,7 @@
               Visual only
             </span>
           </div>
+
           <div class="module-badges">
             <span
               v-for="badge in module.badges"
@@ -191,6 +213,7 @@
               {{ badge }}
             </span>
           </div>
+
           <p
             v-if="module.visualOnly"
             class="module-note"
@@ -200,12 +223,12 @@
         </button>
       </div>
 
-      <p class="helper-note helper-note-small">
+      <p class="description helper-note">
         Some advanced modules may require commercial confirmation and are included in the request summary.
       </p>
     </article>
 
-    <article class="result-card">
+    <article class="card">
       <div class="result-head">
         <h2>Estimated annual license cost</h2>
         <p>USD</p>
@@ -223,10 +246,12 @@
           <dt>Bundle</dt>
           <dd>{{ selectedBundleLabel || '-' }}</dd>
         </div>
+
         <div>
           <dt>Storage volume</dt>
           <dd>{{ storageNumberDisplay }}</dd>
         </div>
+
         <div class="result-full">
           <dt>Selected modules</dt>
           <dd>{{ selectedModuleLabelsDisplay }}</dd>
@@ -238,7 +263,7 @@
         <strong>{{ result ? formatUsd(result.total) : '-' }}</strong>
       </div>
 
-      <p class="disclaimer">
+      <p class="description helper-note">
         This price is a preliminary estimate and is not a public offer.
       </p>
 
@@ -532,22 +557,12 @@ const onCalculate = async () => {
   display: flex;
   flex-direction: column;
   gap: rem(30);
-  max-width: rem(1280);
-  padding: 0 fluid(80, 20) rem(32);
+  padding: fluid(80, 20);
 }
 
-.step-card,
-.result-card {
-  display: flex;
-  flex-direction: column;
-  gap: rem(18);
-  padding: rem(30);
-  border: 1px solid rgba(131, 221, 210, 0.28);
-  border-radius: rem(32);
-  background:
-    radial-gradient(circle at top right, rgba(54, 158, 164, 0.2), transparent 48%),
-    linear-gradient(180deg, rgba(10, 22, 44, 0.9) 0%, rgba(3, 10, 24, 0.88) 100%);
-  box-shadow: 0 rem(30) rem(70) rgba(0, 0, 0, 0.26);
+
+.card {
+  gap: rem(24);
 }
 
 .step-label {
@@ -556,33 +571,17 @@ const onCalculate = async () => {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(154, 242, 222, 0.9);
+  color: var(--color-cyan);
 }
 
-.step-title {
-  margin: 0;
-  font-size: fluid(36, 28);
-  line-height: 1.15;
-}
-
-.step-text,
-.helper-note,
-.disclaimer {
-  margin: 0;
-  font-size: rem(16);
-  line-height: 1.55;
-  opacity: 0.84;
-}
-
-.helper-note-small {
-  font-size: rem(14);
-  opacity: 0.72;
+.helper-note {
+  font-size: fluid(16, 14);
 }
 
 .model-points {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: rem(14);
+  gap: rem(16);
 
   @include bp-lg {
     grid-template-columns: 1fr;
@@ -590,20 +589,18 @@ const onCalculate = async () => {
 }
 
 .model-point {
-  padding: rem(16) rem(18);
+  padding: rem(16);
   border: 1px solid rgba(137, 212, 204, 0.26);
-  border-radius: rem(22);
-  background: rgba(9, 20, 37, 0.65);
+  border-radius: rem(16);
+  background: var(--color-dark-blue-o);
 
   h3 {
-    margin: 0 0 rem(6);
-    font-size: rem(19);
+    margin-bottom: rem(16);
+    font-size: fluid(19, 17);
   }
 
-  p {
-    margin: 0;
-    opacity: 0.8;
-    line-height: 1.52;
+  .description {
+    font-size: fluid(18, 16);
   }
 }
 
