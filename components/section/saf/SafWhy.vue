@@ -2,7 +2,7 @@
   <section class="why content">
     <h2>{{ $t('saf.page.why.title') }}</h2>
     
-    <p class="why-text">
+    <p class="description why-text">
       {{ $t('saf.page.why.text') }}
     </p>
 
@@ -13,7 +13,10 @@
         class="card"
       >
         <h3>{{ $t(`saf.page.why.items.${item.key}.title`) }}</h3>
-        <p>{{ $t(`saf.page.why.items.${item.key}.text`) }}</p>
+
+        <p class="description">
+          {{ $t(`saf.page.why.items.${item.key}.text`) }}
+        </p>
       </article>
     </div>
   </section>
@@ -32,14 +35,12 @@ const items = [
 .why {
   display: flex;
   flex-direction: column;
-  gap: rem(18);
+  gap: rem(30);
   padding: rem(96) fluid(80, 20) rem(64);
 }
 
 .why-text {
   max-width: rem(920);
-  margin: 0;
-  opacity: 0.72;
 }
 
 .why-grid {

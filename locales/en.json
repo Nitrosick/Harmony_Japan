@@ -250,7 +250,7 @@
       },
       "problem_solution": {
         "eyebrow": "Problem and Solution",
-        "title": "A practical answer to fragmented enterprise data",
+        "title": "A practical answer to&nbsp;fragmented enterprise&nbsp;data",
         "problem": {
           "title": "Problem",
           "text": "Many teams operate across log platforms, databases, infrastructure tools, business systems, and security sources that do not naturally work together. Investigation and visibility become slower when every question requires jumping between disconnected systems."

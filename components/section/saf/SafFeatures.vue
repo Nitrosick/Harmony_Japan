@@ -2,7 +2,7 @@
   <section class="features content">
     <h2>{{ $t('saf.page.modules.title') }}</h2>
 
-    <p class="features-description">
+    <p class="description features-description">
       {{ $t('saf.page.modules.text') }}
     </p>
 
@@ -43,7 +43,7 @@
         <div class="features-content-text">
           <h3>{{ currentModule.title }}</h3>
 
-          <p class="features-content-description">
+          <p class="description">
             {{ currentModule.description }}
           </p>
           
@@ -200,9 +200,7 @@ onMounted(async () => {
 
 .features-description {
   max-width: rem(960);
-  margin: 0;
   text-align: center;
-  opacity: 0.72;
 }
 
 .features-tabs {
@@ -244,26 +242,21 @@ onMounted(async () => {
   @include bp-md {
     flex-direction: column;
   }
-}
 
-.features-content-image img {
-  object-fit: contain;
+  &-image img {
+    object-fit: contain;
 
-  @include bp-md {
-    width: 100%;
-    height: auto;
+    @include bp-md {
+      width: 100%;
+      height: auto;
+    }
   }
-}
 
-.features-content-text {
-  display: flex;
-  flex-direction: column;
-  gap: rem(30);
-  max-width: rem(500);
-}
-
-.features-content-description {
-  margin: 0;
-  opacity: 0.72;
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+    max-width: rem(500);
+  }
 }
 </style>

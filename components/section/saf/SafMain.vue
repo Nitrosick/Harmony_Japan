@@ -16,9 +16,11 @@
         height="180"
       >
 
-      <h1 class="hero-title">Search Anywhere Framework</h1>
+      <h1 class="hero-title">
+        Search Anywhere Framework
+      </h1>
 
-      <p class="hero-subtitle">
+      <p class="description hero-subtitle">
         Universal monitoring platform for collection, analytics, and visualization of any machine data type.
         Helps IT staff and business users ask questions to corporate machine data and get human-readable answers
       </p>
@@ -80,10 +82,6 @@
 }
 
 .hero-subtitle {
-  margin: 0;
   max-width: rem(980);
-  font-size: fluid(22, 18);
-  line-height: fluid(32, 24);
-  opacity: 0.88;
 }
 </style>
