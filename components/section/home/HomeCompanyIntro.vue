@@ -3,7 +3,8 @@
     <h2 class="company-intro-title">
       {{ $t('home.company_intro.title') }}
     </h2>
-    <p class="company-intro-text">
+    
+    <p class="description">
       {{ $t('home.company_intro.text') }}
     </p>
   </section>
@@ -21,17 +22,6 @@
 
 .company-intro-title {
   max-width: rem(950);
-  font-size: fluid(60, 36);
-  line-height: 1.12;
-}
-
-.company-intro-text {
-  max-width: rem(1024);
-  margin: 0;
-  color: var(--color-light-grey);
-  font-size: rem(22);
-  line-height: rem(32);
-  opacity: 0.95;
 }
 
 @include bp-md {

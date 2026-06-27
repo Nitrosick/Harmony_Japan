@@ -10,15 +10,8 @@
       <article
         v-for="item in items"
         :key="item.key"
-        class="why-card"
+        class="card"
       >
-        <img
-          :src="`/icons/${item.icon}.svg`"
-          :alt="item.key"
-          loading="lazy"
-          width="48"
-          height="48"
-        >
         <h3>{{ $t(`saf.page.why.items.${item.key}.title`) }}</h3>
         <p>{{ $t(`saf.page.why.items.${item.key}.text`) }}</p>
       </article>
@@ -52,7 +45,7 @@ const items = [
 .why-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: rem(20);
+  gap: rem(30);
   margin-top: rem(10);
 
   @include bp-xl {
@@ -61,20 +54,6 @@ const items = [
 
   @include bp-sm {
     grid-template-columns: 1fr;
-  }
-}
-
-.why-card {
-  display: flex;
-  flex-direction: column;
-  gap: rem(16);
-  padding: fluid(30, 22);
-  border-radius: rem(28);
-  background: var(--card-bg-gradient);
-
-  p {
-    margin: 0;
-    opacity: 0.72;
   }
 }
 </style>

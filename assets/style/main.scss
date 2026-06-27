@@ -55,7 +55,8 @@ h1, .h1 {
 }
 
 h2 {
-  font-size: fluid(60, 30);
+  max-width: rem(1280);
+  font-size: fluid(60, 36);
   line-height: 1.2;
   letter-spacing: -0.4px;
 }
@@ -95,6 +96,35 @@ button {
 
 .plug {
   flex-grow: 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: fluid(16, 12);
+  justify-content: space-between;
+  min-height: rem(250);
+  padding: rem(36) rem(32);
+  border-radius: rem(32);
+  background: linear-gradient(180deg, rgba(5, 47, 50, 0.4) 39.82%, rgba(13, 36, 50, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
+
+  h3 {
+    margin: 0;
+    font-size: fluid(28, 24);
+    line-height: 1.15;
+    letter-spacing: -0.4px;
+  }
+}
+
+.description {
+  max-width: rem(1024);
+  margin: 0;
+  color: var(--color-light-grey);
+  font-size: fluid(22, 18);
+  line-height: 1.4;
+  opacity: 0.95;
 }
 
 ::selection {

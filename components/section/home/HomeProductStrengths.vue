@@ -8,10 +8,13 @@
       <article
         v-for="key in strengthKeys"
         :key="key"
-        class="strengths-card"
+        class="card"
       >
         <h3>{{ $t(`home.product_strengths.items.${key}.title`) }}</h3>
-        <p>{{ $t(`home.product_strengths.items.${key}.text`) }}</p>
+
+        <p class="description">
+          {{ $t(`home.product_strengths.items.${key}.text`) }}
+        </p>
       </article>
     </div>
   </section>
@@ -32,9 +35,6 @@ const strengthKeys = ['uniqueness', 'technology', 'price']
 }
 
 .strengths-title {
-  max-width: rem(1280);
-  font-size: fluid(60, 36);
-  line-height: 1.12;
   text-align: center;
 }
 
@@ -46,34 +46,6 @@ const strengthKeys = ['uniqueness', 'technology', 'price']
 
   @include bp-lg {
     grid-template-columns: 1fr;
-  }
-}
-
-.strengths-card {
-  display: flex;
-  flex-direction: column;
-  gap: rem(16);
-  justify-content: flex-start;
-  min-height: rem(300);
-  padding: rem(36) rem(32);
-  border-radius: rem(32);
-  background: linear-gradient(180deg, rgba(5, 47, 50, 0.4) 39.82%, rgba(13, 36, 50, 0.1) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
-
-  h3 {
-    margin: 0;
-    font-size: fluid(28, 24);
-    line-height: 1.15;
-    letter-spacing: -0.4px;
-  }
-
-  p {
-    margin: 0;
-    color: var(--color-light-grey);
-    font-size: fluid(22, 18);
-    line-height: fluid(32, 24);
-    opacity: 0.95;
   }
 }
 

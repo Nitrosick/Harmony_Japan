@@ -11,14 +11,22 @@
         class="why-card"
       >
         <h4>{{ $t(`home.why.items.${key}.title`) }}</h4>
-        <p>{{ $t(`home.why.items.${key}.text`) }}</p>
+
+        <p class="description">
+          {{ $t(`home.why.items.${key}.text`) }}
+        </p>
       </article>
     </div>
   </section>
 </template>
 
 <script setup>
-const itemKeys = ['market_focus', 'partner_communication', 'solution_alignment', 'long_term_view']
+const itemKeys = [
+  'market_focus',
+  'partner_communication',
+  'solution_alignment',
+  'long_term_view'
+]
 </script>
 
 <style lang="scss" scoped>
@@ -32,9 +40,6 @@ const itemKeys = ['market_focus', 'partner_communication', 'solution_alignment',
 }
 
 .why-title {
-  max-width: rem(1280);
-  font-size: fluid(60, 36);
-  line-height: 1.12;
   text-align: center;
 }
 
@@ -54,9 +59,9 @@ const itemKeys = ['market_focus', 'partner_communication', 'solution_alignment',
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: rem(16);
-  min-height: rem(236);
-  padding: rem(44) rem(32);
+  gap: fluid(16, 12);
+  min-height: rem(256);
+  padding: rem(36) rem(32);
   border-radius: rem(32);
   background: radial-gradient(91.71% 91.71% at 100% 100%, rgba(255, 255, 255, 0.08) 0%, rgba(3, 0, 20, 0) 100%);
   border: 1px solid rgba(113, 255, 195, 0.2);
@@ -68,13 +73,6 @@ const itemKeys = ['market_focus', 'partner_communication', 'solution_alignment',
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: -0.4px;
-  }
-
-  p {
-    margin: 0;
-    color: rgba(239, 237, 253, 0.72);
-    font-size: rem(22);
-    line-height: rem(32);
   }
 
   &:nth-child(2) {

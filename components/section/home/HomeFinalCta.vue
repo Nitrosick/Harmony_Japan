@@ -3,7 +3,7 @@
     <div class="final-cta-content content">
       <h2>{{ $t('home.final_cta.title') }}</h2>
 
-      <p class="final-cta-text">
+      <p class="description final-cta-text">
         {{ $t('home.final_cta.text') }}
       </p>
       
@@ -41,11 +41,9 @@
 
 .final-cta-text {
   max-width: rem(1100);
-  margin: 0;
-  opacity: 0.78;
-  font-size: rem(28);
+  opacity: 0.8;
+  font-size: fluid(28, 24);
   font-weight: 500;
-  line-height: 1.3;
 }
 
 .final-cta-actions {

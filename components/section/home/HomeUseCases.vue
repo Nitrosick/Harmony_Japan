@@ -3,7 +3,8 @@
     <h2 class="use-cases-title">
       {{ $t('home.use_cases.title') }}
     </h2>
-    <p class="use-cases-text">
+
+    <p class="description use-cases-text">
       {{ $t('home.use_cases.text') }}
     </p>
 
@@ -11,10 +12,13 @@
       <article
         v-for="key in caseKeys"
         :key="key"
-        class="use-cases-card"
+        class="card"
       >
-        <h4>{{ $t(`home.use_cases.items.${key}.title`) }}</h4>
-        <p>{{ $t(`home.use_cases.items.${key}.text`) }}</p>
+        <h3>{{ $t(`home.use_cases.items.${key}.title`) }}</h3>
+
+        <p class="description">
+          {{ $t(`home.use_cases.items.${key}.text`) }}
+        </p>
       </article>
     </div>
 
@@ -46,18 +50,10 @@ const caseKeys = ['security_operations', 'observability', 'incident_investigatio
 }
 
 .use-cases-title {
-  max-width: rem(1280);
-  font-size: fluid(60, 36);
-  line-height: 1.12;
   text-align: center;
 }
 
 .use-cases-text {
-  max-width: rem(1024);
-  margin: 0;
-  color: var(--color-light-grey);
-  font-size: rem(22);
-  line-height: rem(32);
   text-align: center;
 }
 
@@ -74,35 +70,6 @@ const caseKeys = ['security_operations', 'observability', 'incident_investigatio
 
   @include bp-md {
     grid-template-columns: 1fr;
-  }
-}
-
-.use-cases-card {
-  display: flex;
-  flex-direction: column;
-  gap: rem(16);
-  justify-content: flex-start;
-  min-height: rem(432);
-  padding: fluid(44, 32) fluid(40, 32);
-  border-radius: rem(32);
-  background: linear-gradient(180deg, rgba(5, 47, 50, 0.4) 39.82%, rgba(13, 36, 50, 0.1) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
-
-  h4 {
-    margin: 0;
-    font-size: fluid(28, 24);
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: -0.4px;
-  }
-
-  p {
-    margin: 0;
-    color: var(--color-light-grey);
-    font-size: fluid(22, 18);
-    line-height: fluid(32, 24);
-    opacity: 0.95;
   }
 }
 
