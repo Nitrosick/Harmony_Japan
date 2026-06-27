@@ -6,12 +6,12 @@
       {{ $t('saf.page.modules.text') }}
     </p>
 
-    <div class="features-tabs">
+    <div class="tabs">
       <button
         v-for="item in modules"
         :key="item.key"
-        class="features-tabs-item"
-        :class="{ 'tab-active': currentTab === item.key }"
+        class="tabs-item"
+        :class="{ 'tabs-item-active': currentTab === item.key }"
         @click.prevent="currentTab = item.key"
       >
         {{ item.title }}
@@ -201,34 +201,6 @@ onMounted(async () => {
 .features-description {
   max-width: rem(960);
   text-align: center;
-}
-
-.features-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: rem(10);
-  margin-top: rem(24);
-}
-
-.features-tabs-item {
-  padding: rem(10) rem(18);
-  border-radius: rem(999);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  opacity: 0.65;
-  transition: opacity $transition-time, border-color $transition-time, background-color $transition-time;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.tab-active {
-  opacity: 1;
-  border-color: rgba(255, 255, 255, 0.45);
-  background-color: rgba(255, 255, 255, 0.06);
-  pointer-events: none;
 }
 
 .features-content {

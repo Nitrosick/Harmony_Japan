@@ -1,13 +1,13 @@
 <template>
   <div class="use-cases-page">
     <section class="hero content">
-      <p class="eyebrow">
-        SAF in practice
+      <p class="description">
+        SAF IN PRACTICE
       </p>
 
       <h1>Use Cases</h1>
 
-      <p class="subtitle">
+      <p class="description">
         Examples of how SAF helps organizations search, analyze, correlate, and visualize machine data across cybersecurity, IT operations, and business processes.
       </p>
 
@@ -19,13 +19,12 @@
     <section class="overview content">
       <h2>Category overview</h2>
 
-      <div class="pill-group">
+      <div class="tabs">
         <button
           v-for="category in categoryOptions"
           :key="category"
-          type="button"
-          class="pill pill-filter"
-          :class="{ 'pill-active': isCategoryActive(category) }"
+          class="tabs-item"
+          :class="{ 'tabs-item-active': isCategoryActive(category) }"
           :aria-pressed="isCategoryActive(category)"
           @click="onCategoryClick(category)"
         >
@@ -41,22 +40,23 @@
         <article
           v-for="item in filteredUseCases"
           :key="item.title"
-          class="case-card"
+          class="card"
         >
-          <p class="case-meta">
+          <p class="description">
             {{ item.meta }}
           </p>
 
           <h3>{{ item.title }}</h3>
 
-          <p class="case-summary">
+          <p class="description">
             {{ item.summary }}
           </p>
 
-          <ul class="case-highlights">
+          <ul class="list">
             <li
               v-for="highlight in item.highlights"
               :key="highlight"
+              class="list-item"
             >
               {{ highlight }}
             </li>
@@ -68,19 +68,19 @@
     <section class="common content">
       <h2>What these projects have in common</h2>
 
-      <ul class="common-list">
-        <li>SAF connects data from different systems without forcing all analytics into one rigid tool.</li>
-        <li>Security, IT operations, and business teams can work with the same machine data from different perspectives.</li>
-        <li>Existing data collection infrastructure and historical data can often be reused.</li>
-        <li>The platform is relevant when investigation speed, visibility, scalability, and cost control are important.</li>
-        <li>SAF is useful when technical events need to be connected with business impact.</li>
+      <ul class="list">
+        <li class="list-item">SAF connects data from different systems without forcing all analytics into one rigid tool.</li>
+        <li class="list-item">Security, IT operations, and business teams can work with the same machine data from different perspectives.</li>
+        <li class="list-item">Existing data collection infrastructure and historical data can often be reused.</li>
+        <li class="list-item">The platform is relevant when investigation speed, visibility, scalability, and cost control are important.</li>
+        <li class="list-item">SAF is useful when technical events need to be connected with business impact.</li>
       </ul>
     </section>
 
     <section class="final-cta content">
       <h2>Discuss a SAF use case for your organization</h2>
 
-      <p>
+      <p class="description">
         Harmony Technology can help discuss where SAF may fit in your data, security, monitoring, or operational analytics landscape in Japan.
       </p>
       
@@ -93,6 +93,7 @@
         <Button
           text="View SAF overview"
           to="/saf"
+          theme="secondary"
         />
       </div>
     </section>
@@ -333,9 +334,8 @@ const filteredUseCases = computed(() => {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0;
   overflow: hidden;
-  background-color: #000212;
+  background-color: $color-background;
 
   > * {
     position: relative;
@@ -396,109 +396,22 @@ const filteredUseCases = computed(() => {
   display: flex;
   flex-direction: column;
   gap: rem(30);
-  width: min(100%, rem(1280));
-  margin: 0 auto;
-  padding: rem(96) fluid(80, 20) 0;
+  padding: fluid(80, 20);
 }
 
 .hero {
-  min-height: rem(760);
+  min-height: calc(100vh - rem(75));
   justify-content: center;
-  padding-top: rem(160);
-  padding-bottom: rem(54);
+  padding-top: fluid(100, 75);
+  padding-bottom: fluid(120, 100);
 }
 
-.eyebrow {
-  margin: 0;
-  color: #adadad;
-  font-size: rem(20);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  opacity: 1;
+.overview {
+  padding-bottom: 0;
 }
 
-h1 {
-  max-width: rem(1100);
-  font-size: fluid(72, 44);
-  line-height: fluid(70, 48);
-  letter-spacing: -1px;
-}
-
-h2 {
-  font-size: fluid(60, 36);
-  line-height: 1.2;
-  letter-spacing: -0.4px;
-}
-
-h3 {
-  font-size: rem(28);
-  font-weight: 500;
-  line-height: 1.3;
-  letter-spacing: -0.4px;
-}
-
-.subtitle,
 .description {
   max-width: rem(1080);
-  margin: 0;
-  color: #adadad;
-  font-size: rem(22);
-  font-weight: 500;
-  line-height: rem(32);
-  opacity: 0.95;
-}
-
-.description {
-  max-width: rem(1020);
-  opacity: 0.86;
-}
-
-.pill-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: rem(14);
-}
-
-.pill {
-  padding: rem(10) rem(18);
-  border-radius: rem(999);
-  border: 1px solid rgba(113, 255, 195, 0.2);
-  background: rgba(1, 180, 235, 0.1);
-  color: #ffffff;
-  font-size: rem(16);
-  line-height: rem(24);
-}
-
-.pill-filter {
-  appearance: none;
-  font: inherit;
-  line-height: inherit;
-  cursor: pointer;
-  transition: border-color $transition-time, background-color $transition-time, color $transition-time, opacity $transition-time;
-
-  &:hover,
-  &:focus-visible {
-    border-color: rgba(255, 255, 255, 0.45);
-    background: rgba(255, 255, 255, 0.08);
-  }
-
-  &:focus-visible {
-    outline: 2px solid rgba(113, 255, 195, 0.45);
-    outline-offset: 2px;
-  }
-}
-
-.pill-active {
-  border-color: rgba(255, 255, 255, 0.48);
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-}
-
-.pill-secondary {
-  border-color: rgba(255, 255, 255, 0.24);
-  background: rgba(255, 255, 255, 0.06);
 }
 
 .catalog-grid {
@@ -509,77 +422,15 @@ h3 {
   @include bp-lg {
     grid-template-columns: 1fr;
   }
-}
 
-.case-card {
-  display: flex;
-  flex-direction: column;
-  gap: rem(16);
-  padding: rem(36) rem(32);
-  border-radius: rem(32);
-  background: radial-gradient(91.71% 91.71% at 100% 100%, rgba(255, 255, 255, 0.08) 0%, rgba(3, 0, 20, 0) 100%);
-  border: 1px solid rgba(113, 255, 195, 0.2);
-  box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
-}
-
-.case-meta {
-  margin: 0;
-  color: #adadad;
-  font-size: rem(16);
-  line-height: rem(26);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  opacity: 0.9;
-}
-
-.case-summary {
-  margin: 0;
-  color: #adadad;
-  font-size: rem(22);
-  line-height: rem(32);
-  opacity: 0.95;
-}
-
-.case-highlights {
-  margin: 0;
-  padding-left: rem(22);
-  display: flex;
-  flex-direction: column;
-  gap: rem(10);
-  color: #ffffff;
-  font-size: rem(20);
-  line-height: rem(30);
-  opacity: 0.92;
-
-  li::marker {
-    color: rgba(113, 255, 195, 0.82);
+  .list {
+    gap: rem(16);
+    margin: 0;
   }
-}
 
-.common-list {
-  margin: 0;
-  padding-left: rem(24);
-  display: flex;
-  flex-direction: column;
-  gap: rem(14);
-  max-width: rem(1120);
-  color: #adadad;
-  font-size: rem(22);
-  line-height: rem(32);
-  opacity: 0.95;
-
-  li::marker {
-    color: rgba(113, 255, 195, 0.82);
+  .list-item {
+    font-size: fluid(22, 18);
   }
-}
-
-.final-cta p {
-  max-width: rem(980);
-  margin: 0;
-  color: #adadad;
-  font-size: rem(22);
-  line-height: rem(32);
-  opacity: 0.95;
 }
 
 .final-cta-actions {
@@ -587,106 +438,5 @@ h3 {
   flex-wrap: wrap;
   gap: rem(20);
   margin-top: rem(16);
-}
-
-.final-cta-actions :deep(.button) {
-  width: rem(340);
-  min-height: rem(72);
-  border-radius: rem(24);
-  padding: rem(19) rem(20);
-  font-size: rem(20);
-  line-height: rem(22);
-}
-
-.final-cta-actions :deep(.button:nth-child(2)) {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
-}
-
-.final-cta-actions :deep(.button:nth-child(2):hover),
-.final-cta-actions :deep(.button:nth-child(2):focus-visible) {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.78);
-}
-
-@include bp-md {
-  .hero,
-  .overview,
-  .catalog,
-  .common,
-  .final-cta {
-    gap: rem(20);
-    padding-top: rem(76);
-  }
-
-  .hero {
-    min-height: rem(600);
-    padding-top: rem(128);
-  }
-
-  .subtitle,
-  .description,
-  .case-summary,
-  .common-list,
-  .final-cta p {
-    font-size: rem(20);
-    line-height: rem(30);
-  }
-
-  .case-highlights {
-    font-size: rem(18);
-    line-height: rem(28);
-  }
-
-  .case-card {
-    padding: rem(30) rem(24);
-  }
-}
-
-@include bp-sm {
-  .hero,
-  .overview,
-  .catalog,
-  .common,
-  .final-cta {
-    padding-top: rem(64);
-  }
-
-  .hero {
-    min-height: auto;
-    padding-top: rem(116);
-    padding-bottom: rem(42);
-  }
-
-  .eyebrow {
-    font-size: rem(14);
-  }
-
-  .subtitle,
-  .description,
-  .case-summary,
-  .common-list,
-  .final-cta p {
-    font-size: rem(18);
-    line-height: rem(28);
-  }
-
-  .case-meta {
-    font-size: rem(14);
-    line-height: rem(22);
-  }
-
-  .case-highlights {
-    font-size: rem(16);
-    line-height: rem(24);
-  }
-
-  .final-cta-actions :deep(.button) {
-    width: 100%;
-    min-height: rem(64);
-    font-size: rem(18);
-  }
 }
 </style>

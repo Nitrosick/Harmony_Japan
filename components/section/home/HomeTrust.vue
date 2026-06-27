@@ -6,11 +6,11 @@
       {{ $t('home.trust.text') }}
     </p>
 
-    <ul class="trust-list">
+    <ul class="list">
       <li
         v-for="item in trustItems"
         :key="item"
-        class="trust-list-item"
+        class="list-item"
       >
         {{ item }}
       </li>
@@ -41,27 +41,27 @@ const trustItems = computed(() => {
   max-width: rem(920);
 }
 
-.trust-list {
-  display: flex;
-  flex-direction: column;
-  gap: rem(30);
-  padding-left: rem(45);
-  list-style: none;
-}
+// .trust-list {
+//   display: flex;
+//   flex-direction: column;
+//   gap: rem(30);
+//   padding-left: rem(45);
+//   list-style: none;
+// }
 
-.trust-list-item {
-  position: relative;
-  line-height: rem(28);
-  font-weight: 500;
+// .trust-list-item {
+//   position: relative;
+//   line-height: rem(28);
+//   font-weight: 500;
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: rem(-50);
-    width: rem(28);
-    height: rem(28);
-    background-image: url(/icons/marker.svg);
-    background-position: center;
-  }
-}
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     left: rem(-50);
+//     width: rem(28);
+//     height: rem(28);
+//     background-image: url(/icons/marker.svg);
+//     background-position: center;
+//   }
+// }
 </style>
