@@ -36,7 +36,6 @@
   gap: fluid(60, 30);
   text-align: center;
   padding: fluid(44, 28);
-  border-radius: rem(32);
 }
 
 .final-cta-text {
