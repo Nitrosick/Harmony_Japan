@@ -24,14 +24,15 @@
   "home": {
     "hero": {
       "eyebrow": "Japan-focused partner of SAF-Systems",
-      "title": "Technologies Inspiring Confidence",
-      "description": "Delivering clarity and efficiency through innovative tools and expertise",
+      "title": "Search and analyze data across existing systems",
+      "description": "SAF — Search Anywhere Framework — helps security, IT, and data teams search, correlate, and analyze information across existing systems without replacing those systems or centralizing all data in a single repository.",
       "actions": {
-        "materials": "Request SAF Materials",
+        "materials": "Explore SAF",
         "demo": "Schedule an Online Demo",
         "pricing": "Open Pricing Calculator",
-        "contact": "Contact us"
-      }
+        "contact": "Discuss a use case"
+      },
+      "description_secondary": "Harmony Technology helps organizations and technology partners in Japan evaluate SAF and plan its practical adoption."
     },
     "relationship": {
       "eyebrow": "Relationship with SAF-Systems",
@@ -64,23 +65,24 @@
       }
     },
     "company_intro": {
-      "title": "Technology that solves real business problems",
-      "text": "Harmony Technology provides independent solutions in data analytics, event management, and custom development, designed to match your specific needs. Each product works on its own, so you only invest in what truly matters to your business."
+      "title": "Solve operational challenges without rebuilding your data architecture",
+      "text": "SAF provides a cross-system analytics layer for distributed data sources. It helps teams investigate incidents, improve service visibility, gather compliance evidence, and identify relationships between events, records, and assets without major changes to the systems and processes already in place.",
+      "text_secondary": "Harmony Technology supports use-case definition, product demos, pricing discussions, and PoC planning for organizations and technology partners in Japan."
     },
     "product_strengths": {
-      "title": "Product strengths",
+      "title": "Why SAF",
       "items": {
         "uniqueness": {
-          "title": "Uniqueness",
-          "text": "Works across distributed data sources and helps teams obtain a unified view without forcing every system into a single storage model."
+          "title": "Designed for distributed data",
+          "text": "Search and analyze information across multiple data sources without moving all data into a single repository."
         },
         "technology": {
-          "title": "Technology",
-          "text": "Combines search, analytics, monitoring, and integration capabilities to support practical enterprise data scenarios."
+          "title": "Works with existing platforms",
+          "text": "Extend existing security, monitoring, IT operations, and data platforms instead of replacing them."
         },
         "price": {
-          "title": "Price",
-          "text": "Designed to support flexible adoption and cost-conscious planning for teams evaluating enterprise data platforms."
+          "title": "Flexible licensing",
+          "text": "Estimate license costs based on data volume, selected modules, and planned use cases."
         }
       }
     },
@@ -107,49 +109,49 @@
     },
     "why": {
       "eyebrow": "Why Harmony Technology",
-      "title": "Why Harmony Technology",
+      "title": "Why work with Harmony Technology",
       "items": {
         "market_focus": {
-          "title": "Japan market focus",
-          "text": "We support Japan-focused communication, materials, and practical next steps for local stakeholders."
+          "title": "Japan-focused communication",
+          "text": "We support communication with local stakeholders, provide relevant materials, and coordinate practical next steps for the Japanese market."
         },
         "partner_communication": {
-          "title": "Partner communication",
-          "text": "We help technical and business teams discuss SAF use cases, demonstrations, pricing questions, and possible cooperation formats."
+          "title": "Vendor coordination",
+          "text": "We coordinate product discussions, demos, technical consultations, pricing requests, and follow-up with SAF-Systems."
         },
         "solution_alignment": {
-          "title": "Careful solution alignment",
-          "text": "We help frame SAF-based scenarios so they can fit into existing systems, processes, and partner portfolios without forcing unnecessary disruption."
+          "title": "Use-case and PoC planning",
+          "text": "We help define relevant data sources, practical scenarios, evaluation criteria, and a focused PoC scope."
         },
         "long_term_view": {
-          "title": "Long-term relationship view",
-          "text": "We focus on practical B2B cooperation, clear expectations, and gradual development of solution opportunities."
+          "title": "Ongoing partner support",
+          "text": "We work with customers and technology partners from the initial discussion through SAF evaluation, PoC planning, and follow-up."
         }
       }
     },
     "use_cases": {
       "eyebrow": "Typical Use Cases",
-      "title": "Typical Use Cases",
-      "text": "Search Anywhere Framework can support several operational scenarios where distributed data, fragmented tooling, and time-to-insight are major constraints.",
+      "title": "Where SAF creates value",
+      "text": "SAF connects information from existing platforms and data sources, helping teams build a unified operational picture, investigate issues, and make informed decisions faster.",
       "items": {
         "security_operations": {
-          "title": "Security Operations",
-          "text": "Support detection, triage, correlation, and security analysis across multiple enterprise data environments."
+          "title": "Security operations",
+          "text": "Correlate signals from security tools, logs, assets, and business systems to accelerate triage and investigation."
         },
         "observability": {
           "title": "Observability",
-          "text": "Improve service and infrastructure visibility across distributed environments without forcing a full data centralization program first."
+          "text": "Map service and infrastructure dependencies across distributed environments to identify the source and impact of issues faster."
         },
         "incident_investigation": {
-          "title": "Incident Investigation",
-          "text": "Accelerate cross-system investigation and root-cause analysis by connecting relevant signals and records across teams and sources."
+          "title": "Incident investigation",
+          "text": "Connect events, records, and contextual data from multiple systems to support root-cause analysis and coordinated response."
         },
         "compliance_visibility": {
           "title": "Compliance",
-          "text": "Support compliance reporting, evidence gathering, and operational visibility across the systems that already matter to the organization."
+          "text": "Collect evidence, trace activity, and improve visibility for audits, control monitoring, and regulatory reporting."
         }
       },
-      "cta": "View Use Cases"
+      "cta": "View use cases"
     },
     "pricing_teaser": {
       "eyebrow": "Pricing Calculator teaser",
@@ -160,19 +162,20 @@
     },
     "trust": {
       "eyebrow": "Trust and continuity",
-      "title": "Built for long-term B2B relationships",
-      "text": "The current website direction is designed to create clear next steps around materials, demos, pricing, partnership conversations, and SAF-based solution planning without relying on unsupported claims.",
+      "title": "A practical path to SAF evaluation",
+      "text": "Evaluate SAF through a clear, focused process built around your operational challenge.",
       "items": [
-        "Clear and moderate partnership wording",
-        "Focus on delivery conversations, not unsupported market claims",
-        "Structured next steps for materials, demos, pricing, and partner discussions"
+        "1. Define the challenge — Identify the business, security, or operational challenge to be addressed.",
+        "2. Map systems and data sources — Identify the platforms, data sources, and information needed for the selected use case.",
+        "3. Define the evaluation scope — Select the relevant SAF capabilities, modules, data sources, and evaluation criteria.",
+        "4. Validate with a demo or PoC — Test the selected scenario and assess its operational value in practice."
       ]
     },
     "final_cta": {
-      "title": "Move the conversation forward",
-      "text": "If you want SAF materials, a demo discussion, pricing direction, or a conversation about SAF-based development, Harmony Technology is ready to help",
-      "primary_cta": "Contact Us",
-      "secondary_cta": "View Pricing"
+      "title": "Discuss your SAF use case",
+      "text": "Tell us which systems and data sources you need to connect, and which operational challenge you want to solve. We will help identify the most practical next step: product materials, a technical discussion, a pricing estimate, or a focused PoC.",
+      "primary_cta": "Contact us",
+      "secondary_cta": "Estimate pricing"
     }
   },
   "description": {
@@ -1129,6 +1132,6 @@
     }
   },
   "footer": {
-    "description": "Harmony Technology supports SAF introduction and\nSAF-based solution delivery for teams working in Japan."
+    "description": "Harmony Technology helps organizations and technology partners in Japan evaluate SAF and plan SAF-based solutions."
   }
 }

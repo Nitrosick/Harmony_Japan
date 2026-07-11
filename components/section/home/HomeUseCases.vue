@@ -24,7 +24,7 @@
 
     <Button
       :text="$t('home.use_cases.cta')"
-      to="/use-cases"
+      :to="localePath('/use-cases')"
       :adaptable="false"
       class="use-cases-button"
     />
@@ -32,6 +32,7 @@
 </template>
 
 <script setup>
+const localePath = useLocalePath()
 const caseKeys = ['security_operations', 'observability', 'incident_investigation', 'compliance_visibility']
 </script>
 

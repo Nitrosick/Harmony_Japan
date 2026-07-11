@@ -10,18 +10,22 @@
       <div class="final-cta-actions">
         <Button
           :text="$t('home.final_cta.primary_cta')"
-          to="/contact"
+          :to="localePath('/contact')"
           :adaptable="false"
         />
         <Button
           :text="$t('home.final_cta.secondary_cta')"
-          to="/pricing"
+          :to="localePath('/pricing')"
           theme="secondary"
         />
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+const localePath = useLocalePath()
+</script>
 
 <style lang="scss" scoped>
 .final-cta {

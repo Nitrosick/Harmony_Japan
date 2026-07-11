@@ -11,21 +11,38 @@
         {{ $t('home.hero.title') }}
       </h1>
 
-      <p
-        class="hero-description"
-        v-html="$t('home.hero.description')"
-      />
+      <p class="hero-description">
+        <span>{{ $t('home.hero.description') }}</span>
+        <span
+          v-if="locale === 'en'"
+          class="hero-description-secondary"
+        >
+          {{ $t('home.hero.description_secondary') }}
+        </span>
+      </p>
 
       <div class="hero-actions">
         <Button
-          :text="$t('home.hero.actions.contact')"
-          to="/contact"
+          v-if="locale === 'en'"
+          :text="$t('home.hero.actions.materials')"
+          :to="localePath('/saf')"
           :adaptable="false"
+        />
+        <Button
+          :text="$t('home.hero.actions.contact')"
+          :to="localePath('/contact')"
+          :adaptable="false"
+          theme="secondary"
         />
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+const localePath = useLocalePath()
+const { locale } = useI18n()
+</script>
 
 <style lang="scss" scoped>
 .hero {
@@ -75,6 +92,14 @@
   font-size: fluid(22, 18);
   font-weight: 500;
   line-height: rem(36);
+
+  span {
+    display: block;
+  }
+}
+
+.hero-description-secondary {
+  margin-top: rem(16);
 }
 
 .hero-actions {

@@ -4,11 +4,18 @@
       {{ $t('home.company_intro.title') }}
     </h2>
     
-    <p class="description">
-      {{ $t('home.company_intro.text') }}
+    <p class="description company-intro-text">
+      <span>{{ $t('home.company_intro.text') }}</span>
+      <span v-if="locale === 'en'">
+        {{ $t('home.company_intro.text_secondary') }}
+      </span>
     </p>
   </section>
 </template>
+
+<script setup>
+const { locale } = useI18n()
+</script>
 
 <style lang="scss" scoped>
 .company-intro {
@@ -22,6 +29,12 @@
 
 .company-intro-title {
   max-width: rem(950);
+}
+
+.company-intro-text {
+  display: flex;
+  flex-direction: column;
+  gap: rem(18);
 }
 
 @include bp-md {
